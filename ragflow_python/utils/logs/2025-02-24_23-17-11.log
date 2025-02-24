@@ -1,0 +1,6 @@
+2025-02-24 23:17:11,730 - INFO - testing_bot_responses - testing_bot_responses.py:30 - Testing Rag @ 2025-02-24 23:17:11.730439+08:00
+2025-02-24 23:17:11,847 - INFO - RagFlow - RagFlow.py:74 - Asking: What is the capital of France?, Expecting: Paris
+2025-02-24 23:17:59,556 - INFO - RagFlow - RagFlow.py:74 - Asking: Who wrote '1984'?, Expecting: George Orwell
+2025-02-24 23:18:51,509 - INFO - testing_bot_responses - testing_bot_responses.py:30 - Testing Rag @ 2025-02-24 23:18:51.509599+08:00
+2025-02-24 23:18:51,616 - INFO - RagFlow - RagFlow.py:74 - Asking: What is the capital of France?, Expecting: Paris
+2025-02-24 23:19:25,942 - INFO - RagFlow - RagFlow.py:74 - Asking: Who wrote '1984'?, Expecting: George Orwell

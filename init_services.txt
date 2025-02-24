@@ -1,0 +1,39 @@
+
+# Starting MySQL Instance
+cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
+.\mysql -h 127.0.0.1 -P 5455 -u ragflow -p
+EXIT
+
+
+# Creating a new MySQL User RagFlow
+.\mysql -h 127.0.0.1 -P 5455 -u root     # Log in as Root User
+CREATE USER 'ragflow'@'%' IDENTIFIED WITH mysql_native_password BY 'infini_rag_flow';
+GRANT ALL PRIVILEGES ON rag_flow.* TO 'ragflow'@'%';
+FLUSH PRIVILEGES;
+SELECT User, Host FROM mysql.user;
+EXIT
+
+
+# Running ElasticSearch 
+cd 'C:\Users\yinki\Downloads\elasticsearch-8.17.2-windows-x86_64\elasticsearch-8.17.2'
+.\bin\elasticsearch.bat
+
+# Change the configs at config\elasticsearch.yml
+http.port: 1200
+node.name: es01
+
+# Check elasticsearch is running
+curl.exe --cacert C:\Users\yinki\Downloads\elasticsearch-8.17.2-windows-x86_64\elasticsearch-8.17.2\config\certs\http_ca.crt -u elastic:$ELASTIC_PASSWORD -k https://localhost:1200
+
+
+# Download MinIO https://min.io/open-source/download?platform=kubernetes
+# Running MinIO
+cd C:\Users\yinki\Downloads
+
+# Set if not yet 
+$env:MINIO_ACCESS_KEY="rag_flow"
+$env:MINIO_SECRET_KEY="infini_rag_flow"
+.\minio.exe server C:\data --console-address ":9001" --address ":9000"
+verify at http://localhost:9001
+
+

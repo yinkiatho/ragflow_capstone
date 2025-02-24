@@ -1,0 +1,2 @@
+2025-02-24 23:08:49,216 - INFO - testing_bot_responses - testing_bot_responses.py:30 - Testing Rag @ 2025-02-24 23:08:49.216783+08:00
+2025-02-24 23:08:49,341 - INFO - RagFlow - RagFlow.py:50 - Asking: What is the capital of France?, Expecting: Paris

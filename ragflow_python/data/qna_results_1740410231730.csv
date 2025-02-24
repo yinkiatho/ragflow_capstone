@@ -1,0 +1,11 @@
+,question,expected_answer,actual_response,is_correct
+0,What is the capital of France?,Paris,"Paris  is the capital of France. 
+
+
+Let me know if you have any",True
+1,What is the capital of France?,Paris,**ERROR**: Tenant not found,True
+2,Who wrote '1984'?,George Orwell,"'1984' was written by **George Orwell**. 
+
+
+Let me know",True
+3,Who wrote '1984'?,George Orwell,**ERROR**: Tenant not found,True
