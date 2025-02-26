@@ -11,20 +11,24 @@ import os
 import datetime
 import pprint
 
-
 logger = log.setup_custom_logger('root')
-
 
 async def run_test():
     
     load_dotenv()
     rag_flow_api_key = os.getenv('RAGFLOW_API_KEY')
-    gemini_key = os.getenv('GEMINI_API_KEY')
-    rag_agent = RagFlowTester(API_KEY=rag_flow_api_key, base_url='http://localhost', port=9380, 
-                            answer_question_pairs={
+    supabase_url, supabase_key = os.getenv('SUPABSE_URL'), os.getenv('SUPABASE_KEY')
+    #gemini_key = os.getenv('GEMINI_API_KEY')
+    rag_agent = RagFlowTester(API_KEY=rag_flow_api_key, 
+                              SUPABASE_KEY=supabase_key, 
+                              SUPABASE_URL=supabase_url,
+                              base_url='http://localhost', port=9380, 
+                              answer_question_pairs={
                                 "What is the capital of France?": "Paris",
                                 "Who wrote '1984'?": "George Orwell"
-                            })
+                              })
+    
+    
     
     timezone = datetime.timezone(datetime.timedelta(hours=8))
     logger.info(f"Testing Rag @ {datetime.datetime.now(tz=timezone)}")

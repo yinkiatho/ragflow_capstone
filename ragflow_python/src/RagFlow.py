@@ -1,17 +1,24 @@
 import ragflow_python.utils.logger as log
 from ragflow_sdk import RAGFlow, Chat
+from ragflow_sdk.modules.chunk import Chunk
 import pandas as pd
 import numpy as np
 import json
 import requests
 import time
+import datetime
 import os
+from supabase import create_client, Client
+from pprint import pprint
+from ragflow_python.utils.data_types import *
 
 logger = log.setup_custom_logger('root')
 
 class RagFlowTester: 
     
     def __init__(self, API_KEY: str, 
+                       SUPABASE_KEY: str, 
+                       SUPABASE_URL: str,
                        base_url: str, 
                        port: int = 80,
                        answer_question_pairs: dict = {}):
@@ -27,6 +34,10 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
+        
+        # Supabase Client Settings
+        self.supabase = create_client(supabase_url=SUPABASE_URL,
+                                             supabase_key=SUPABASE_KEY)
         
         # Default LLM Settings
         self.llm = Chat.LLM(self.rag_object, 
@@ -51,41 +62,94 @@ class RagFlowTester:
                                              "prompt": None})
         
         
-    def test_rag(self, dataset_name: str = None):
+    def test_rag(self, test_id: int, 
+                       attack_type: Attack_Type=None, 
+                       defense_type: Defense_Type=None,
+                       is_attack: bool = False,
+                       is_defense: bool = False):
         '''
         Function that initialises the chat session and executes the series of questions, testing against the answers
         '''
-        
-        # Create chat assistant
-        testing_time = int(time.time() * 1000)
-        datasets = self.rag_object.list_datasets()
-        dataset_ids = []
-        for dataset in datasets:
-            dataset_ids.append(dataset.id)
+        try:
+            # Create chat assistant
+            testing_time = int(time.time() * 1000)
+            datasets = self.rag_object.list_datasets()
+            dataset_ids = []
+            for dataset in datasets:
+                dataset_ids.append(dataset.id)
+                
+            print(f"Queried Datasets: {[i.name for i in datasets]}")
+            assistant = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=dataset_ids,
+                                                    llm=self.llm, prompt=self.prompt)
+            session = assistant.create_session()
             
-        print(f"Queried Datasets: {[i.name for i in datasets]}")
-        assistant = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=dataset_ids,
-                                                llm=self.llm, prompt=self.prompt)
-        session = assistant.create_session()
-        
-        results = []
-        
-        for question, expected_answer in self.answer_question_pairs.items():
-            logger.info(f"Asking: {question}, Expecting: {expected_answer}")
-            for ans in session.ask(question, stream=False):
+            result_queries = []
+            result_chunks = []
+            chunk_query_params = []
+            for question, expected_answer in self.answer_question_pairs.items():
+                
+                # Querying using Chat Session
+                logger.info(f"Asking: {question}, Expecting: {expected_answer}")
+                ans = session.ask(question, stream=False)
                 response = ans.content
                 is_correct = self.verify_response(response=str(response), answer=expected_answer)
-                results.append({
-                    'question': question,
+                result_queries.append({
+                    'test_id': test_id,
+                    'timestamp': datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),
+                    'attack_type': attack_type if is_attack else None,
+                    'defense_type': defense_type if is_defense else None,
+                    'input_parameters': attack_type.get_parameters() if is_attack else (defense_type.get_parameters() if is_defense else None),
+                    'input_question': question,
+                    'response': response,
                     'expected_answer': expected_answer,
-                    'actual_response': response,
-                    'is_correct': is_correct
                 })
+                
+                # Looking at Chunks retrieved, make sure to add return data_json as well so it looks like this 
+                '''
+                ################# CHANGE IN ragflow_sdk.RAGFlow.retrieve() ############################
+                 if res.get("code") ==0:
+                    chunks=[]
+                    for chunk_data in res["data"].get("chunks"):
+                        chunk=Chunk(self,chunk_data)
+                        chunks.append(chunk)
+                    return chunks, data_json
+                '''
+                chunk_list, retrieval_params = self.rag_object.retrieve(question = question,
+                                                      dataset_ids=dataset_ids,
+                                                      page_size=2572) ## Total number of chunks in the current Knowledge Base
+                
+                result_chunks.append([ChunkWrapper.from_rag_chunk(chunk).to_json for chunk in chunk_list])
+                chunk_query_params.append(retrieval_params)
+                                
+                                
+            # df = pd.DataFrame(result_queries)
+            # df.to_csv(f"ragflow_python/data/qna_results_{testing_time}.csv")
+            
+            # Inserting Data into Supabase
+            response_res_queries = (
+                self.supabase.table("FILL UP HERE")
+                .insert(result_queries)
+                .execute()
+            )
+            
+            response_res_chunks = (
+                self.supabase.table("CHUNK_Table name")
+                .insert(result_chunks)
+                .execute()
+            )
+            
+            response_res_chunk_params = (
+                self.supabase.table('cunk_params_table')
+                .insert(result_chunks)
+                .execute()
+            )
+            
+            
+            return response_res_queries and response_res_chunks and response_res_chunk_params
         
-        df = pd.DataFrame(results)
-        df.to_csv(f"ragflow_python/data/qna_results_{testing_time}.csv")
-        
-        return df
+        except Exception as e:
+            logger.error(f"Exception encountered in test_rag: {e}")
+            return e
                 
         
     @staticmethod
