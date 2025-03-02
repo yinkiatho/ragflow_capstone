@@ -11,6 +11,15 @@ import os
 from supabase import create_client, Client
 from pprint import pprint
 from ragflow_python.utils.data_types import *
+from deepeval.metrics import (
+    ContextualPrecisionMetric,
+    ContextualRecallMetric,
+    ContextualRelevancyMetric
+)
+from deepeval import evaluate
+from deepeval.evaluate import EvaluationResult
+from ragflow_python.utils.helpers import *
+
 
 logger = log.setup_custom_logger('root')
 
@@ -21,18 +30,22 @@ class RagFlowTester:
                        SUPABASE_URL: str,
                        base_url: str, 
                        port: int = 80,
-                       answer_question_pairs: dict = {}):
+                       test_cases: list = []):
         
         self.api_key = API_KEY
         self.base_url = base_url
         self.rag_object = RAGFlow(api_key=self.api_key, base_url=f"{base_url}:{port}")
         
-        self.answer_question_pairs = answer_question_pairs
+        self.test_cases = test_cases
         
         print(f"Current Configuration")
         print(f"API KEY: {self.api_key}")
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
+        
+        self.contextual_precision = ContextualPrecisionMetric()
+        self.contextual_recall = ContextualRecallMetric()
+        self.contextual_relevancy = ContextualRelevancyMetric()
         
         
         # Supabase Client Settings
@@ -86,13 +99,23 @@ class RagFlowTester:
             result_queries = []
             result_chunks = []
             chunk_query_params = []
-            for question, expected_answer in self.answer_question_pairs.items():
+            
+            result_test_case = [] ## List[LLMTestCase]
+            
+            for test_case in self.test_cases.items():
                 
                 # Querying using Chat Session
+                question, expected_answer = test_case.input, test_case.expected_output
                 logger.info(f"Asking: {question}, Expecting: {expected_answer}")
                 ans = session.ask(question, stream=False)
                 response = ans.content
-                is_correct = self.verify_response(response=str(response), answer=expected_answer)
+                
+                test_case.actual_output = ans
+                
+                # Append to collected test_case results
+                assert test_case.actual_output == ans
+                result_test_case.append(test_case)
+                
                 result_queries.append({
                     'test_id': test_id,
                     'timestamp': datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8))).isoformat(),
@@ -124,6 +147,22 @@ class RagFlowTester:
                                 
             # df = pd.DataFrame(result_queries)
             # df.to_csv(f"ragflow_python/data/qna_results_{testing_time}.csv")
+            
+            
+            # Evaluating the testcase LLMTestCase with the precision, recall, accuracy
+            results_metrics = evaluate(
+                test_cases=result_test_case,
+                metrics=[self.contextual_precision, self.contextual_recall, self.contextual_relevancy]
+            )
+            
+            results_metrics_json = evaluation_result_to_json(results_metrics)
+            
+            logger.info(f"Successful Metrics Length Results: {len(results_metrics.test_results)}")
+            response_res_metrics = (
+                self.supabase.table(f"Test Metrics")
+                .insert(results_metrics_json)
+                .execute()
+            )
             
             # Inserting Data into Supabase
             response_res_queries = (
@@ -165,7 +204,7 @@ if __name__ == "__main__":
     tester = RagFlowTester(
         api_key="your_api_key",
         base_url="localhost",
-        answer_question_pairs={
+        test_cases={
             "What is the capital of France?": "Paris",
             "Who wrote '1984'?": "George Orwell"
         }
