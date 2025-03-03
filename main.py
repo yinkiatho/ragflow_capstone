@@ -14,7 +14,8 @@ import asyncio
 import sys
 import signal
 import numexpr as ne
-from ragflow_python.testing_bot.testing_bot_responses import run_test
+#from ragflow_python.testing_bot.testing_bot_responses import run_test
+from ragflow_python.testing_bot.base_attack_script import run_test
 
     
 # Set to desired number of threads

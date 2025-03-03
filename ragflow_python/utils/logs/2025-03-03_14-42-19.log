@@ -1,0 +1,12 @@
+2025-03-03 14:42:20,467 - INFO - base_attack_script - base_attack_script.py:72 - Testing Attack @ 2025-03-03 14:42:20.467540+08:00
+2025-03-03 14:42:26,819 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,824 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,829 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,833 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,839 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,846 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,852 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,856 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,862 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,866 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-03 14:42:26,871 - INFO - _client - _client.py:1038 - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 404 Not Found"

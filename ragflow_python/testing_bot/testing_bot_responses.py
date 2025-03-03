@@ -22,7 +22,8 @@ async def run_test():
     supabase_url, supabase_key = os.getenv('SUPABSE_URL'), os.getenv('SUPABASE_KEY')
     #gemini_key = os.getenv('GEMINI_API_KEY')
     DEEPEVAL_KEY = os.getenv('DEEPEVAL_API_KEY')
-    deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
+    #deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
+    
     raw_test_cases = [
                       {
                         "input":"what is the legal age for crime in singapore?",

@@ -19,6 +19,7 @@ from deepeval.metrics import (
 from deepeval import evaluate
 from deepeval.evaluate import EvaluationResult
 from ragflow_python.utils.helpers import *
+from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
 
 
 logger = log.setup_custom_logger('root')
@@ -43,14 +44,15 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        self.contextual_precision = ContextualPrecisionMetric()
-        self.contextual_recall = ContextualRecallMetric()
-        self.contextual_relevancy = ContextualRelevancyMetric()
+        self.local_model = CustomGemma2B()
+        self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
+        self.contextual_recall = ContextualRecallMetric(model=self.local_model)
+        self.contextual_relevancy = ContextualRelevancyMetric(model=self.local_model)
         
         
         # Supabase Client Settings
         self.supabase = create_client(supabase_url=SUPABASE_URL,
-                                             supabase_key=SUPABASE_KEY)
+                                    supabase_key=SUPABASE_KEY)
         
         # Default LLM Settings
         self.llm = Chat.LLM(self.rag_object, 
@@ -73,6 +75,10 @@ class RagFlowTester:
                                              "opener": None,
                                              "show_quote": True,
                                              "prompt": None})
+        
+        # Caching Chat Data
+        self.session = None
+        self.dataset_ids = None
         
         
     def test_rag(self, test_id: int, 
@@ -114,7 +120,6 @@ class RagFlowTester:
                 
                 # Append to collected test_case results
                 assert test_case.actual_output == ans
-                result_test_case.append(test_case)
                 
                 result_queries.append({
                     'test_id': test_id,
@@ -140,9 +145,12 @@ class RagFlowTester:
                 chunk_list, retrieval_params = self.rag_object.retrieve(question = question,
                                                       dataset_ids=dataset_ids,
                                                       page_size=2572) ## Total number of chunks in the current Knowledge Base
-                
-                result_chunks.append([ChunkWrapper.from_rag_chunk(chunk).to_json for chunk in chunk_list])
+                processed_chunks = [ChunkWrapper.from_rag_chunk(chunk).to_json() for chunk in chunk_list]
+                result_chunks.append(processed_chunks)
                 chunk_query_params.append(retrieval_params)
+                test_case.retrieval_context = [chunk_p.content for chunk_p in processed_chunks]
+                
+                result_test_case.append(test_case)
                                 
                                 
             # df = pd.DataFrame(result_queries)
@@ -197,6 +205,30 @@ class RagFlowTester:
         Function verifies the response with the answer
         '''
         return True
+    
+    async def target_model_callback(self, prompt: str) -> str:
+        try:
+            testing_time = int(time.time() * 1000)
+            if self.dataset_ids is None:
+                datasets = self.rag_object.list_datasets()
+                dataset_ids = []
+                for dataset in datasets:
+                    dataset_ids.append(dataset.id)
+                self.dataset_ids = dataset_ids
+            if self.session is None:
+                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
+                                                            llm=self.llm, prompt=self.prompt).create_session()
+                
+            rag_response = self.session.ask(prompt, stream=False)
+            response_content = ""  
+            for message in rag_response:  # Iterate over the generator
+                response_content += message.content  # Extract content
+            
+            logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            return response_content
+        
+        except Exception as e:
+            logger.error(f"Error at Target Model Callback: {e}")        
            
 
 # Example usage
