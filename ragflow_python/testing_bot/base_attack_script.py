@@ -58,7 +58,8 @@ async def run_test():
     
     vulnerabilities = [
                         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
-                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS])
+                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS,]) 
+                                              #MisinformationType.UNSUPPORTED_CLAIMS, MisinformationType.EXPERTISE_MISREPRESENTATION])
                         ]
     attack_enchancements = {
             AttackEnhancement.BASE64: 0.25,
@@ -66,7 +67,7 @@ async def run_test():
             AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
             AttackEnhancement.MULTILINGUAL: 0.25,
         }
-    attacks_per_v = 5
+    attacks_per_v = 1
     
     results = red_teamer.scan(
         target_model_callback=rag_agent.target_model_callback,
@@ -74,18 +75,24 @@ async def run_test():
         vulnerabilities=vulnerabilities,
         attack_enhancements=attack_enchancements,
     )
+
     print("Red Teaming Results: ")
     pprint.pprint(results)
+    pprint.pprint(red_teamer.vulnerability_scores_breakdown)
     
     attack_results = {
-        'vulnerabilities': vulnerabilities,
-        'attack_enhancements': attack_enchancements,
+        'vulnerabilities': [v.get_values() for v in vulnerabilities],
+        'attack_enhancements': {k.name: value for k, value in attack_enchancements.items()},
         'attacks_per_v': attacks_per_v, 
-        'Red Team Result': results.to_dict()
+        # 'Red Team Result': results.to_dict(),
+        # 'Red Team Result Breakdown': red_teamer.vulnerability_scores_breakdown.to_dict()
     }
-    
-    with open(f'ragflow_python/data/attack_results_{timestamp}.json', 'w') as json_file:
+
+    with open(f'ragflow_capstone/ragflow_python/data/attack_results_{timestamp}.json', 'w') as json_file:
         json.dump(attack_results, json_file, indent=4)
+        
+    results.to_csv(f'ragflow_capstone/ragflow_python/data/red_team_result_{timestamp}.csv')
+    red_teamer.vulnerability_scores_breakdown.to_csv(f'ragflow_capstone/ragflow_python/data/red_team_result_breakdown_{timestamp}.csv')
 
     logger.info(f"Results saved as: attack_results_{timestamp}.json")
 

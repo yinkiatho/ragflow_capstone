@@ -224,7 +224,7 @@ class RagFlowTester:
             for message in rag_response:  # Iterate over the generator
                 response_content += message.content  # Extract content
             
-            logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            #logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
         except Exception as e:

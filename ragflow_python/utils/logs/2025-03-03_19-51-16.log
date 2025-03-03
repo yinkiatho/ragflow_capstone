@@ -1,0 +1,5 @@
+2025-03-03 19:51:20,543 - INFO - base_attack_script - base_attack_script.py:56 - Testing Attack @ 2025-03-03 19:51:20.543823+08:00
+2025-03-03 19:52:49,429 - INFO - _client - _client.py:1038 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-03 19:56:19,832 - INFO - _client - _client.py:1038 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-03 19:57:38,817 - INFO - _client - _client.py:1038 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-03 20:03:36,510 - INFO - _client - _client.py:1038 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
