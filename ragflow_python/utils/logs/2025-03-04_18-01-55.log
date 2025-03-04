@@ -1,0 +1,14 @@
+2025-03-04 18:01:58,485 - INFO - base_attack_script - base_attack_script.py:56 - Testing Attack @ 2025-03-04 18:01:58.485509+08:00
+2025-03-04 18:02:19,149 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:02:31,709 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:02:41,510 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:02:49,124 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:03:00,374 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:03:09,554 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:03:20,864 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:03:32,594 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:03:42,319 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:04:42,276 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:07:50,684 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:11:51,056 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 18:11:51,278 - INFO - base_attack_script - base_attack_script.py:104 - Results saved in: ragflow_capstone/ragflow_python/data/data_2025-03-04_18-01-58

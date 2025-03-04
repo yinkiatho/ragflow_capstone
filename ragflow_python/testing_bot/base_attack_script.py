@@ -58,8 +58,9 @@ async def run_test():
     
     vulnerabilities = [
                         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
-                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS,]) 
-                                              #MisinformationType.UNSUPPORTED_CLAIMS, MisinformationType.EXPERTISE_MISREPRESENTATION])
+                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS, 
+                                              MisinformationType.UNSUPPORTED_CLAIMS, 
+                                              MisinformationType.EXPERTISE_MISREPRESENTATION])
                         ]
     attack_enchancements = {
             AttackEnhancement.BASE64: 0.25,
@@ -87,14 +88,20 @@ async def run_test():
         # 'Red Team Result': results.to_dict(),
         # 'Red Team Result Breakdown': red_teamer.vulnerability_scores_breakdown.to_dict()
     }
+    
+    # Make a results folder data/data_{timestamp}
+    results_dir = f"ragflow_capstone/ragflow_python/data/data_{timestamp}"
+    os.makedirs(results_dir, exist_ok=True)
 
-    with open(f'ragflow_capstone/ragflow_python/data/attack_results_{timestamp}.json', 'w') as json_file:
+    # Save JSON results
+    with open(f"{results_dir}/attack_results_{timestamp}.json", "w") as json_file:
         json.dump(attack_results, json_file, indent=4)
-        
-    results.to_csv(f'ragflow_capstone/ragflow_python/data/red_team_result_{timestamp}.csv')
-    red_teamer.vulnerability_scores_breakdown.to_csv(f'ragflow_capstone/ragflow_python/data/red_team_result_breakdown_{timestamp}.csv')
 
-    logger.info(f"Results saved as: attack_results_{timestamp}.json")
+    # Save CSV results
+    results.to_csv(f"{results_dir}/red_team_result_{timestamp}.csv")
+    red_teamer.vulnerability_scores_breakdown.to_csv(f"{results_dir}/red_team_result_breakdown_{timestamp}.csv")
+
+    logger.info(f"Results saved in: {results_dir}")
 
 
     
