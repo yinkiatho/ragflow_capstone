@@ -3,7 +3,6 @@ from dataclasses import dataclass, field, asdict
 from typing import Dict, Any, List
 from ragflow_sdk.modules.chunk import Chunk
 
-
 class Attack_Type(Enum):
     RAG_POISONING = "RAG_POISONING"
     PROMPT_INJECTION = "PROMPT_INJECTION"
@@ -65,3 +64,11 @@ class ChunkWrapper:
     def to_json(self) -> Dict[str, Any]:
         """Returns a dictionary representation of the ChunkWrapper."""
         return asdict(self)
+    
+    
+    
+
+    
+    
+    
+

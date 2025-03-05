@@ -156,7 +156,6 @@ class RagFlowTester:
             # df = pd.DataFrame(result_queries)
             # df.to_csv(f"ragflow_python/data/qna_results_{testing_time}.csv")
             
-            
             # Evaluating the testcase LLMTestCase with the precision, recall, accuracy
             results_metrics = evaluate(
                 test_cases=result_test_case,
