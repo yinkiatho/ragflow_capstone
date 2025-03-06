@@ -128,7 +128,7 @@ async def run_test():
     }
         
     # Make a results folder data/data_{timestamp}
-    results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
+    results_dir = os.path.join(current_dir, "ragflow_capstone", "ragflow_python", "data", f"data_{timestamp}")
     os.makedirs(results_dir, exist_ok=True)
 
     # Save JSON results
