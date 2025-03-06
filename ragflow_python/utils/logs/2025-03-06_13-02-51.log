@@ -1,0 +1,23 @@
+2025-03-06 13:02:54,473 - INFO - base_attack_script - base_attack_script.py:76 - Testing Attack @ 2025-03-06 13:02:54.472752+08:00
+2025-03-06 14:49:31,775 - ERROR - __init__ - __init__.py:154 - Failed to detach context
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\trace\__init__.py", line 589, in use_span
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\sdk\trace\__init__.py", line 1105, in start_as_current_span
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\telemetry.py", line 237, in capture_red_teamer_run
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 299, in a_scan
+    await self.attack_synthesizer.a_generate_attacks(
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\context\__init__.py", line 152, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\context\contextvars_context.py", line 50, in detach
+    self._current_context.reset(token)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x000001BEAE699210> at 0x000001BED66A2D00> was created in a different Context
+2025-03-06 14:49:31,932 - WARNING - __init__ - __init__.py:213 - Already shutdown, dropping span.

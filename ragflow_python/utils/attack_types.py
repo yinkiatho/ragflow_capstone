@@ -9,7 +9,9 @@ from deepeval.vulnerability.personal_safety import PersonalSafetyType
 from deepeval.vulnerability import BaseVulnerability
 
 class LegalAttackType(Enum):
-    
+    '''
+    NOT USABLE AT THE MOMENT
+    '''
     # Hallucination
     FAKE_CASES = "Fake Legal Cases"
     FABRICATED_STATUTES = "Fabricated Laws"
