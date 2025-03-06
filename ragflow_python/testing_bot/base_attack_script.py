@@ -55,7 +55,7 @@ async def run_test():
 
     # Load the Synthesizer and Eval Model
     #custom_gemma2 = CustomGemma2B()
-    #custom_gemini = CustomGeminiFlash(api_key=GEMINI_KEY)
+    custom_gemini = CustomGeminiFlash(api_key=GEMINI_KEY)
     # CustomLLAMA3 = CustomLLAMA3()
     
     red_teamer = RedTeamer(
@@ -63,10 +63,10 @@ async def run_test():
         target_system_prompt=target_system_prompt,
         # synthesizer_model=custom_gemma2,
         # evaluation_model=custom_gemma2
-        # synthesizer_model=custom_gemini,
-        # evaluation_model=custom_gemini
-        synthesizer_model=CustomLLAMA3(),
-        evaluation_model=CustomLLAMA3()
+        synthesizer_model=custom_gemini,
+        evaluation_model=custom_gemini
+        # synthesizer_model=CustomLLAMA3(),
+        # evaluation_model=CustomLLAMA3()
     )
 
     rag_agent = RagFlowTester(API_KEY=rag_flow_api_key, 
@@ -86,16 +86,16 @@ async def run_test():
                         Misinformation(types=[MisinformationType.FACTUAL_ERRORS, 
                                               MisinformationType.UNSUPPORTED_CLAIMS, 
                                               MisinformationType.EXPERTISE_MISREPRESENTATION]),
-                        PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
-                                              PersonalSafetyType.DANGEROUS_CHALLENGES]),
-                        IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
-                                               IllegalActivityType.CHILD_EXPLOITATION,
-                                               IllegalActivityType.ILLEGAL_DRUGS,
-                                               IllegalActivityType.NON_VIOLENT_CRIME,
-                                               IllegalActivityType.SEX_CRIME,
-                                               IllegalActivityType.VIOLENT_CRIME,
-                                               IllegalActivityType.WEAPONS]),
-                        Robustness(types=[RobustnessType.HIJACKING]),   
+                        # PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
+                        #                       PersonalSafetyType.DANGEROUS_CHALLENGES]),
+                        # IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
+                        #                        IllegalActivityType.CHILD_EXPLOITATION,
+                        #                        IllegalActivityType.ILLEGAL_DRUGS,
+                        #                        IllegalActivityType.NON_VIOLENT_CRIME,
+                        #                        IllegalActivityType.SEX_CRIME,
+                        #                        IllegalActivityType.VIOLENT_CRIME,
+                        #                        IllegalActivityType.WEAPONS]),
+                        # Robustness(types=[RobustnessType.HIJACKING]),   
                         ]
     
     attack_enchancements = {
@@ -154,8 +154,8 @@ async def run_test():
         ],
         evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT, LLMTestCaseParams.EXPECTED_OUTPUT],
         # model=custom_gemma2
-        #model = custom_gemini
-        model=CustomLLAMA3
+        model = custom_gemini
+        # model=CustomLLAMA3
     )
     
     professionalism_metric = ConversationalGEval(
@@ -165,8 +165,8 @@ async def run_test():
                 the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation.""",        
         evaluation_params=[LLMTestCaseParams.INPUT, LLMTestCaseParams.ACTUAL_OUTPUT],
         #model=custom_gemma2
-        #model = custom_gemini
-        model = CustomLLAMA3()
+        model = custom_gemini
+        #model = CustomLLAMA3()
     )
     
     hallucination_metric = HallucinationMetric(threshold=0.5)
