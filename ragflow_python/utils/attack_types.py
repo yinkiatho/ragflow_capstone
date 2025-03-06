@@ -7,6 +7,7 @@ from deepeval.vulnerability.illegal_activity import IllegalActivityType
 from deepeval.vulnerability.personal_safety import PersonalSafetyType 
 
 from deepeval.vulnerability import BaseVulnerability
+import ragflow_python.utils.logger as log
 
 class LegalAttackType(Enum):
     '''
@@ -61,15 +62,25 @@ enum_classes = {
     "LegalAttackType": LegalAttackType,
 }
 
-def get_enum_value(enum_string: str, enum_classes: dict = enum_classes) -> str:
-    """Extracts the enum value from a string like 'MisinformationType.UNSUPPORTED_CLAIMS'"""
-    try:
-        enum_class_name, enum_member_name = enum_string.split(".")
-        enum_class = enum_classes.get(enum_class_name)  # Get the enum class dynamically
-        
-        if enum_class is None:
-            raise ValueError(f"Unknown enum type: {enum_class_name}")
-        
-        return enum_class[enum_member_name].value  # Get the actual value
-    except (KeyError, ValueError) as e:
-        return f"Invalid Enum Entry: {enum_string} ({e})"
+def get_enum_value(enum_input, enum_classes: dict = enum_classes) -> str:
+    """Extracts the enum value from a string like 'MisinformationType.UNSUPPORTED_CLAIMS'
+    or directly from an enum instance."""
+    
+    # If the input is already an Enum instance, return its value directly
+    if isinstance(enum_input, Enum):
+        return enum_input.value
+
+    # If the input is a string, process it normally
+    if isinstance(enum_input, str):
+        try:
+            enum_class_name, enum_member_name = enum_input.split(".")
+            enum_class = enum_classes.get(enum_class_name)  # Get the enum class dynamically
+            
+            if enum_class is None:
+                raise ValueError(f"Unknown enum type: {enum_class_name}")
+            
+            return enum_class[enum_member_name].value  # Get the actual value
+        except (KeyError, ValueError) as e:
+            return f"Invalid Enum Entry: {enum_input} ({e})"
+    logger.error(f"Failed to parse correct enum value")
+    return f"Invalid Input Type: {type(enum_input)}"
