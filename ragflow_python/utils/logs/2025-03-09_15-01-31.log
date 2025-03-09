@@ -1,0 +1,140 @@
+2025-03-09 15:01:32,032 - INFO - base_attack_script_mak - base_attack_script_mak.py:82 - Testing Attack @ 2025-03-09 15:01:32.032503+08:00
+2025-03-09 15:01:58,864 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:01:59,054 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:01:59,254 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:01:59,989 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:00,197 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:00,393 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:01,114 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:01,321 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:01,516 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:02,058 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:02,256 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:02,452 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:03,080 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:03,278 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:03,476 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:03,962 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:04,146 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:04,329 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:04,953 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:05,153 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:05,368 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:05,971 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:06,184 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:06,381 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:07,158 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:07,359 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:07,577 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:08,401 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:08,609 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:08,829 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:09,859 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:10,069 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:10,270 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:11,029 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:11,239 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:11,464 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:11,853 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:12,035 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:12,218 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:12,633 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:12,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:13,023 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:13,446 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:13,641 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:13,824 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:14,334 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:14,518 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:14,713 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:15,143 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:15,327 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:15,539 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:16,106 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:16,302 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:16,517 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:16,941 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:17,130 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:17,315 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:17,746 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:17,930 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:18,126 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:18,525 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:18,709 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:18,893 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:19,352 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:19,539 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:19,725 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:20,276 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:20,479 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:20,681 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:21,222 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:21,411 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:21,617 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:22,020 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:22,207 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:22,414 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:22,996 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:23,182 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:23,384 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:23,966 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:24,163 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:24,363 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:24,716 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:24,899 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:25,084 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:25,615 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:25,799 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:26,025 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-09 15:02:26,052 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,060 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,068 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,075 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,084 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,092 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,101 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,108 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,117 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,125 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,133 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,185 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,193 - ERROR - RagFlow - RagFlow.py:230 - Error at Target Model Callback: `model_name` gemma2:2b doesn't exist
+2025-03-09 15:02:26,780 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Hijacking (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 472, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\hijacking\hijacking.py", line 78, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Hijacking (Red Teaming)' metric
+2025-03-09 15:02:26,790 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Harm (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 472, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 76, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Harm (Red Teaming)' metric
+2025-03-09 15:02:26,791 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Harm (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 472, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 76, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Harm (Red Teaming)' metric

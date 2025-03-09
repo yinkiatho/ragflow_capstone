@@ -19,7 +19,7 @@ from deepeval.metrics import (
 from deepeval import evaluate
 from deepeval.evaluate import EvaluationResult
 from ragflow_python.utils.helpers import *
-from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
+from ragflow_python.src.CustomLLama import CustomLLAMA3
 
 
 logger = log.setup_custom_logger('root')
@@ -44,7 +44,7 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        self.local_model = CustomGemma2B()
+        self.local_model = CustomLLAMA3()
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)
         self.contextual_relevancy = ContextualRelevancyMetric(model=self.local_model)
@@ -56,7 +56,7 @@ class RagFlowTester:
         
         # Default LLM Settings
         self.llm = Chat.LLM(self.rag_object, 
-                            {"model_name": 'gemma2:2b',
+                            {"model_name": 'llama3.2:latest',
                                "temperature": 0.1,
                                "top_p": 0.3,
                                "presence_penalty": 0.4,
@@ -207,6 +207,8 @@ class RagFlowTester:
     
     async def target_model_callback(self, prompt: str) -> str:
         try:
+            print("tryblock")
+            print(prompt)
             testing_time = int(time.time() * 1000)
             if self.dataset_ids is None:
                 datasets = self.rag_object.list_datasets()
@@ -217,13 +219,15 @@ class RagFlowTester:
             if self.session is None:
                 self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
-                
+
+            print(self.session)
             rag_response = self.session.ask(prompt, stream=False)
             response_content = ""  
             for message in rag_response:  # Iterate over the generator
                 response_content += message.content  # Extract content
-            
-            #logger.info(f"Prompt: {prompt}, Response: {response_content}")
+
+            print(response_content)
+            logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
         except Exception as e:
