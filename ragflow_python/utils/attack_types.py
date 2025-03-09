@@ -9,6 +9,8 @@ from deepeval.vulnerability.personal_safety import PersonalSafetyType
 from deepeval.vulnerability import BaseVulnerability
 import ragflow_python.utils.logger as log
 
+logger = log.setup_custom_logger('root')
+
 class LegalAttackType(Enum):
     '''
     NOT USABLE AT THE MOMENT
