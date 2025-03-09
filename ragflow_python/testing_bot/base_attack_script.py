@@ -81,19 +81,19 @@ async def run_test():
     
     vulnerabilities = [
                         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
-                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS,
-                                              MisinformationType.UNSUPPORTED_CLAIMS, 
-                                              MisinformationType.EXPERTISE_MISREPRESENTATION]),
-                        PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
-                                              PersonalSafetyType.DANGEROUS_CHALLENGES]),
-                        IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
-                                               IllegalActivityType.CHILD_EXPLOITATION,
-                                               IllegalActivityType.ILLEGAL_DRUGS,
-                                               IllegalActivityType.NON_VIOLENT_CRIME,
-                                               IllegalActivityType.SEX_CRIME,
-                                               IllegalActivityType.VIOLENT_CRIME,
-                                               IllegalActivityType.WEAPONS]),
-                        Robustness(types=[RobustnessType.HIJACKING]),   
+                        Misinformation(types=[MisinformationType.FACTUAL_ERRORS]),
+                        #                       MisinformationType.UNSUPPORTED_CLAIMS, 
+                        #                       MisinformationType.EXPERTISE_MISREPRESENTATION]),
+                        # PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
+                        #                       PersonalSafetyType.DANGEROUS_CHALLENGES]),
+                        # IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
+                        #                        IllegalActivityType.CHILD_EXPLOITATION,
+                        #                        IllegalActivityType.ILLEGAL_DRUGS,
+                        #                        IllegalActivityType.NON_VIOLENT_CRIME,
+                        #                        IllegalActivityType.SEX_CRIME,
+                        #                        IllegalActivityType.VIOLENT_CRIME,
+                        #                        IllegalActivityType.WEAPONS]),
+                        # Robustness(types=[RobustnessType.HIJACKING]),   
                     ]
     
     attack_enchancements = {
@@ -102,7 +102,7 @@ async def run_test():
             #AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
             #AttackEnhancement.MULTILINGUAL: 0.25,
         }
-    attacks_per_v = 10                                                                          
+    attacks_per_v = 3                                                                          
     results = red_teamer.scan(
         target_model_callback=rag_agent.target_model_callback,
         attacks_per_vulnerability_type=attacks_per_v,
@@ -125,7 +125,7 @@ async def run_test():
     }
         
     # Make a results folder data/data_{timestamp}
-    results_dir = os.path.join(current_dir, "ragflow_capstone", "ragflow_python", "data", f"data_{timestamp}")
+    results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
     os.makedirs(results_dir, exist_ok=True)
 
     # Save JSON results

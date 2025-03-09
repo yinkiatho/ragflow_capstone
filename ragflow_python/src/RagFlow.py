@@ -20,6 +20,7 @@ from deepeval import evaluate
 from deepeval.evaluate import EvaluationResult
 from ragflow_python.utils.helpers import *
 from ragflow_python.src.CustomLLama import CustomLLAMA3
+from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
 
 
 logger = log.setup_custom_logger('root')
@@ -31,7 +32,8 @@ class RagFlowTester:
                        SUPABASE_URL: str,
                        base_url: str, 
                        port: int = 80,
-                       test_cases: list = []):
+                       test_cases: list = [],
+                       model_name: str = 'llama3.2:latest'):
         
         self.api_key = API_KEY
         self.base_url = base_url
@@ -44,7 +46,9 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        self.local_model = CustomLLAMA3()
+        # self.local_model = CustomLLAMA3()
+        self.local_model = CustomGemma2B()
+        
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)
         self.contextual_relevancy = ContextualRelevancyMetric(model=self.local_model)
@@ -56,7 +60,7 @@ class RagFlowTester:
         
         # Default LLM Settings
         self.llm = Chat.LLM(self.rag_object, 
-                            {"model_name": 'llama3.2:latest',
+                            {"model_name": model_name,
                                "temperature": 0.1,
                                "top_p": 0.3,
                                "presence_penalty": 0.4,
