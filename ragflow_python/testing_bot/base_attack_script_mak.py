@@ -102,7 +102,7 @@ async def run_test():
     attack_enchancements = {
             AttackEnhancement.BASE64: 0.25,
             AttackEnhancement.GRAY_BOX_ATTACK: 0.25,
-            AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
+            #AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
             #AttackEnhancement.MULTILINGUAL: 0.25,
         }
     attacks_per_v = 1
