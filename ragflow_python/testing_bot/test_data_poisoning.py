@@ -14,7 +14,7 @@ contextual_recall = ContextualRecallMetric()
 contextual_relevancy = ContextualRelevancyMetric()
 
 # Directory containing JSON files
-directory = "/Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing"
+directory = "your json path"
 
 # List to store JSON data
 json_data = []
