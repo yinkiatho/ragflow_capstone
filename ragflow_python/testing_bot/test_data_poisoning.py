@@ -9,6 +9,12 @@ from deepeval.metrics import (
 from deepeval.test_case import LLMTestCase
 from deepeval import evaluate
 
+'''
+TO DO NEXT:
+upload test data to supabase, referring to test_cases_db.py
+for pre-attack/post-attack labelling, just label it in the experiment_type (to think about later!)
+'''
+
 contextual_precision = ContextualPrecisionMetric()
 contextual_recall = ContextualRecallMetric()
 contextual_relevancy = ContextualRelevancyMetric()
