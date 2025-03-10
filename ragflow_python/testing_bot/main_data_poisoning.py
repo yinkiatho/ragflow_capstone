@@ -9,7 +9,7 @@ data = data[["Question", "Corrected Answers"]].dropna()
 # data = data[:1] # for smaller sampling
 
 # PARAMS
-api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
+api_key = "YOUR API KEY"
 base_url = "http://127.0.0.1:9380"
 kb_name = "Sample 1" # <-- change to your KB name
 k = 5
