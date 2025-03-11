@@ -1,0 +1,6 @@
+2025-03-11 16:03:21,895 - INFO - base_attack_script_mak - base_attack_script_mak.py:82 - Testing Attack @ 2025-03-11 16:03:21.895552+08:00
+2025-03-11 16:03:38,192 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-11 16:03:38,241 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-11 16:03:38,291 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-11 16:03:38,340 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-11 16:03:38,392 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"

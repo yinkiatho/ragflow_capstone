@@ -100,12 +100,14 @@ async def run_test():
                         ]
     
     attack_enchancements = {
-            AttackEnhancement.BASE64: 0.25,
+            #AttackEnhancement.BASE64: 0.25,
             AttackEnhancement.GRAY_BOX_ATTACK: 0.25,
             #AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
+            AttackEnhancement.LEETSPEAK: 0.25,
+            AttackEnhancement.MATH_PROBLEM: 0.25
             #AttackEnhancement.MULTILINGUAL: 0.25,
         }
-    attacks_per_v = 1
+    attacks_per_v = 20
     
     results = red_teamer.scan(
         target_model_callback=rag_agent.target_model_callback,
@@ -129,7 +131,7 @@ async def run_test():
     }
         
     # Make a results folder data/data_{timestamp}
-    results_dir = os.path.join(current_dir, "ragflow_capstone", "ragflow_python", "data", f"data_{timestamp}")
+    results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
     os.makedirs(results_dir, exist_ok=True)
 
     # Save JSON results
