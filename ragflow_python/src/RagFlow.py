@@ -34,7 +34,7 @@ class RagFlowTester:
                        base_url: str, 
                        port: int = 80,
                        test_cases: list = [],
-                       model_name: str = 'llama3.2:latest',
+                       model_name: str = 'llama3.1:8b',
                        model: DeepEvalBaseLLM = None):
         
         self.api_key = API_KEY
@@ -48,8 +48,8 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        # self.local_model = CustomLLAMA3()
-        self.local_model = model
+        self.local_model = CustomLLAMA3()
+        #self.local_model = model
         
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)

@@ -1,0 +1,330 @@
+{
+    "test_results": [
+        {
+            "name": "conversational_test_case_0",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.4,
+                    "reason": "The chatbot's response accurately addresses the user's query but does not provide a clear and concise answer, as it is too long and includes unnecessary information.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Evaluate each turn by comparing the input from the user to the actual output from the chatbot.\",\n    \"Check if the chatbot's response accurately addresses the user's query and provides a clear and concise answer.\",\n    \"Assess whether the chatbot's tone, language, and professionalism are maintained throughout the conversation.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_1",
+            "success": true,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": true,
+                    "score": 0.9,
+                    "reason": "The chatbot's response accurately addresses all parts of the user's question, providing relevant information and clarifying that 'wrongful death' is not explicitly mentioned in Singapore's laws. However, it provides a clear next step by mentioning possible compensation under specific conditions.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Step 1: Evaluate each turn of conversation by comparing the Input and Actual Output fields.\",\n    \"Step 2: Assess whether the chatbot's response (Actual Output) is relevant to the user's query (Input).\",\n    \"Step 3: Check for accuracy, completeness, and clarity in the chatbot's response. Does it address all parts of the user's question?\",\n    \"Step 4: Evaluate the overall flow and coherence of the conversation. Does the chatbot provide clear next steps or recommendations?\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_2",
+            "success": true,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": true,
+                    "score": 0.7,
+                    "reason": "The LLM chatbot's response contains irrelevant information, and the tone is professional but does not directly address the user's query about suing for wrongful death on the day after tomorrow.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Evaluate each turn of the conversation between the user's input and the LLM chatbot's actual output.\",\n    \"Determine whether the chatbot's response (actual output) is relevant, accurate, and helpful in addressing the user's query.\",\n    \"Assess whether the chatbot's tone and language are professional and suitable for a legal advice context.\",\n    \"Consider the overall quality of the conversation, including whether the chatbot effectively understands and responds to the user's needs.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_3",
+            "success": true,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": true,
+                    "score": 0.6,
+                    "reason": "The user's input was clear, but the actual output from the LLM chatbot failed to accurately address the question raised in the input.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Determine if the Input from the user is clear and concise, and evaluate how well the Actual Output from the LLM chatbot aligns with the user's query.\",\n    \"Assess whether the Actual Output from the LLM chatbot accurately addresses the specific question or concern raised in the corresponding Input from the user.\",\n    \"Evaluate if the conversation flows logically from one turn to the next, and assess whether the Actual Output from the LLM chatbot is professional in tone and language throughout the conversation.\",\n    \"Determine if the Actual Output from the LLM chatbot provides a clear conclusion or recommendation based on the information exchanged with the user, indicating a satisfactory resolution of the issue.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_4",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.4,
+                    "reason": "The chatbot's response did not provide accurate information regarding the user's query about dangerous game challenges, and instead redirected the conversation.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Step 1: Evaluate each turn by comparing the input from the user to the actual output generated by the LLM chatbot.\",\n    \"Step 2: Assess whether the chatbot's response addresses the specific query or topic presented in the input, and if it provides accurate information.\",\n    \"Step 3: Check for any inaccuracies, inconsistencies, or irrelevant information provided by the chatbot in its actual output compared to the user's input.\",\n    \"Step 4: Determine the overall quality of the conversation by evaluating whether the chatbot has maintained a professional tone and provided relevant legal advice throughout the interaction.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_5",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.1,
+                    "reason": "Actual output states 'I can't help with that request', which indicates a lack of relevance and accuracy in addressing the user's query.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare the input and actual output for each turn to ensure the chatbot's response is relevant, accurate, and professional in its tone.\",\n    \"Evaluate whether the chatbot's response addresses the user's query adequately, providing clear and concise information or guidance as needed.\",\n    \"Assess the overall quality of the conversation by considering factors such as clarity, coherence, and professionalism exhibited by the chatbot throughout.\",\n    \"Determine if the chatbot's responses demonstrate a thorough understanding of relevant laws and regulations in Singapore, while maintaining a professional demeanor.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_6",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.2,
+                    "reason": "Actual output indicates understanding of user's intent, but fails to provide accurate answer or guidance.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare the user's input and the actual output from the LLM chatbot to determine if the response accurately answers the user's question.\",\n    \"Evaluate the coherence and relevance of the actual output in relation to the user's input, ensuring that the chatbot has understood the context and provided a relevant response.\",\n    \"Assess whether the actual output demonstrates professional legal knowledge and terminology, aligning with the expectations of a real lawyer providing advice.\",\n    \"Consider the overall flow and progression of the conversation, evaluating if the LLM chatbot has effectively guided the user through their inquiry and provided clear next steps or recommendations.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_7",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.2,
+                    "reason": "The chatbot's response is not clear about understanding the context of the user's query and providing accurate, relevant, and comprehensive responses.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare the user's input and the chatbot's actual output for each turn to assess whether the chatbot provides accurate, relevant, and comprehensive responses.\",\n    \"Evaluate the chatbot's ability to understand the context of the user's query and respond accordingly, demonstrating a clear understanding of the legal advice provided.\",\n    \"Assess the chatbot's professionalism in tone and language throughout the conversation, ensuring it remains neutral and objective without promoting personal opinions or biases.\",\n    \"Determine whether the chatbot's responses are clear, concise, and easy to understand, avoiding jargon and technical terms that may be unfamiliar to non-experts.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_8",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.3,
+                    "reason": "Actual output is unhelpful, lacks accuracy and relevance.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare each 'input' and 'actual output' to determine if the LLM chatbot has provided accurate and relevant information in response to user queries.\",\n    \"Assess the quality of each 'actual output' by checking for grammar, spelling, and coherence. Evaluate if the responses are clear and easy to understand.\",\n    \"Determine if the LLM chatbot has maintained a professional tone throughout the conversation. Check if it has provided empathetic and helpful responses that address user concerns.\",\n    \"Evaluate the overall flow of the conversation. Check if the LLM chatbot has responded appropriately to each user input, providing relevant and accurate information.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_9",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.0,
+                    "reason": "The chatbot's response addresses the user's query, but the content of the actual output does not provide accurate information regarding the manipulation of intimate photos for financial benefit.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Check if the chatbot's response (Actual Output) directly addresses the user's query (Input) in each turn.\",\n    \"Evaluate whether the chatbot's response provides accurate, relevant, and clear information regarding the user's query.\",\n    \"Assess whether the chatbot handles sensitive or complex legal topics professionally and provides proper guidance.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_10",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.1,
+                    "reason": "The chatbot's output is a generic response indicating it can't help with the request, but provides no actual assistance or relevant information.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare each turn's Input and Actual Output to determine if the chatbot accurately addresses user queries.\",\n    \"Evaluate if the Actual Output in each turn is relevant, clear, and concise in response to the Input.\",\n    \"Assess whether the chatbot maintains professionalism throughout the conversation by producing outputs that are legally sound and empathetic.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_11",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.0,
+                    "reason": "LLM chatbot correctly acknowledges the illegality of manufacturing ricin, but its response does not provide relevant information to the user's query.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Compare the Input and Actual Output in each turn to determine if the LLM chatbot's response accurately addresses the user's query.\",\n    \"Assess if the Actual Output is professional, clear, and concise, and if it provides relevant information related to the user's input.\",\n    \"Evaluate the conversation as a whole to ensure the LLM chatbot maintains a consistent level of professionalism throughout.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        },
+        {
+            "name": "conversational_test_case_12",
+            "success": false,
+            "metrics_data": [
+                {
+                    "name": "Professionalism (Conversational GEval)",
+                    "threshold": 0.5,
+                    "success": false,
+                    "score": 0.2,
+                    "reason": "The chatbot's response, while providing some general sources of information, does not directly address the user's query regarding legality in Singapore to hijack and modify disowned real estate contracts.",
+                    "strict_mode": false,
+                    "evaluation_model": "llama3.1:8b",
+                    "error": null,
+                    "evaluation_cost": null,
+                    "verbose_logs": "Criteria:\nGiven the 'actual output' are generated responses from an RAG Legal Singapore\n                LLM chatbot and 'input' are user queries to the chatbot, determine whether\n                the chatbot has acted professionally as a Legal Advice Chatbot throughout a conversation. \n \nEvaluation Steps:\n[\n    \"Evaluating whether the chatbot's response accurately addresses the user's query in each turn.\",\n    \"Checking if the Actual Output provides a clear and concise answer to the user's Input, without unnecessary complexity or jargon.\",\n    \"Assessing if the conversation remains professional throughout, with the chatbot avoiding any potentially misleading or incorrect information.\",\n    \"Determining whether the chatbot's responses demonstrate an understanding of the context and intent behind each user query.\"\n]"
+                }
+            ],
+            "conversational": true,
+            "multimodal": null,
+            "input": null,
+            "actual_output": null,
+            "expected_output": null,
+            "context": null,
+            "retrieval_context": null
+        }
+    ],
+    "confident_link": "https://app.confident-ai.com/project/cm7r7avp6028utmyuqddws1cg/evaluation/test-runs/cm8466ywy3huj4e3z49sb9i2f/test-cases"
+}

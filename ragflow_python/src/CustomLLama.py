@@ -12,7 +12,7 @@ class CustomLLAMA3(DeepEvalBaseLLM):
     Wrapper LLM llama3.2:8b-q4_0 for attacks, uses local llama3.2:8b-q4_0 through Ollama
     '''
     def __init__(self):
-        self.model_name = "llama3.2:latest"
+        self.model_name = "llama3.1:8b"
         self.client = ollama.Client(host="http://localhost:11434")  # Use the detected IP
 
     def load_model(self):
