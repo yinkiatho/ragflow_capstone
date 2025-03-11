@@ -1,0 +1,120 @@
+2025-03-10 14:41:03,057 - INFO - testing_goldens - testing_goldens.py:78 - Loaded total of 791 Chunks
+2025-03-10 14:41:23,444 - ERROR - __init__ - __init__.py:154 - Failed to detach context
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\trace\__init__.py", line 589, in use_span
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\sdk\trace\__init__.py", line 1105, in start_as_current_span
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\telemetry.py", line 203, in capture_synthesizer_run
+    yield span
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\progress_context.py", line 53, in synthesizer_progress_context
+    yield progress_bar
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 400, in a_generate_goldens_from_contexts
+    await asyncio.gather(*tasks)
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\context\__init__.py", line 152, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\opentelemetry\context\contextvars_context.py", line 50, in detach
+    self._current_context.reset(token)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x0000015E2B57B380> at 0x0000015E54844B40> was created in a different Context
+2025-03-10 14:41:23,450 - WARNING - __init__ - __init__.py:213 - Already shutdown, dropping span.
+2025-03-10 14:41:23,472 - ERROR - base_events - base_events.py:1785 - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Synthesizer.task_wrapper() done, defined at C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py:966> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\main.py", line 36, in main
+    loop.run_until_complete(run_test())
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\testing_bot\testing_goldens.py", line 110, in run_test
+    attacks = synthesizer.generate_goldens_from_contexts(contexts=context,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 258, in generate_goldens_from_contexts
+    loop.run_until_complete(
+  File "C:\Users\yinki\AppData\Roaming\Python\Python311\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "C:\Users\yinki\AppData\Roaming\Python\Python311\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 277, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 968, in task_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 423, in _a_generate_from_context
+    synthetic_inputs: List[SyntheticData] = await self._a_generate_inputs(
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 697, in _a_generate_inputs
+    res: SyntheticDataList = await self._a_generate_schema(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 923, in _a_generate_schema
+    res = await model.a_generate(prompt, schema=schema)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\src\CustomGemma2_2b.py", line 41, in a_generate
+    return self.generate(prompt, schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\src\CustomGemma2_2b.py", line 24, in generate
+    response = self.client.chat(model=self.model_name,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\ollama\_client.py", line 333, in chat
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\ollama\_client.py", line 178, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\ollama\_client.py", line 118, in _request_raw
+    r = self._client.request(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection_pool.py", line 216, in handle_request
+    raise exc from None
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection_pool.py", line 196, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\connection.py", line 101, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 143, in handle_request
+    raise exc
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 113, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 186, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_sync\http11.py", line 224, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\sync.py", line 126, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

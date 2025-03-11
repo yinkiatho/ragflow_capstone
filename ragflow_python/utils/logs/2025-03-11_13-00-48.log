@@ -1,0 +1,5 @@
+2025-03-11 13:00:53,500 - INFO - testing_goldens - testing_goldens.py:84 - Loaded total of 791 Chunks
+2025-03-11 13:00:54,313 - INFO - testing_goldens - testing_goldens.py:251 - Testing Attack @ 2025-03-11 13:00:54.313003+08:00
+2025-03-11 13:00:58,967 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-11 13:00:58,980 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-03-11 13:00:58,989 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

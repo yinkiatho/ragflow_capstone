@@ -21,6 +21,7 @@ from deepeval.evaluate import EvaluationResult
 from ragflow_python.utils.helpers import *
 from ragflow_python.src.CustomLLama import CustomLLAMA3
 from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
+from deepeval.models import DeepEvalBaseLLM
 
 
 logger = log.setup_custom_logger('root')
@@ -33,7 +34,8 @@ class RagFlowTester:
                        base_url: str, 
                        port: int = 80,
                        test_cases: list = [],
-                       model_name: str = 'llama3.2:latest'):
+                       model_name: str = 'llama3.2:latest',
+                       model: DeepEvalBaseLLM = None):
         
         self.api_key = API_KEY
         self.base_url = base_url
@@ -47,7 +49,7 @@ class RagFlowTester:
         print(f"Directory: {os.getcwd()}")
         
         # self.local_model = CustomLLAMA3()
-        self.local_model = CustomGemma2B()
+        self.local_model = model
         
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)
@@ -211,8 +213,8 @@ class RagFlowTester:
     
     async def target_model_callback(self, prompt: str) -> str:
         try:
-            print("tryblock")
-            print(prompt)
+            #print("tryblock")
+            #print(prompt)
             testing_time = int(time.time() * 1000)
             if self.dataset_ids is None:
                 datasets = self.rag_object.list_datasets()
@@ -224,13 +226,19 @@ class RagFlowTester:
                 self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
-            print(self.session)
-            rag_response = self.session.ask(prompt, stream=False)
+            #print(self.session)
+            rag_response = self.session.ask(question=prompt, stream=True)
+            #print(rag_response)
+            
             response_content = ""  
-            for message in rag_response:  # Iterate over the generator
-                response_content += message.content  # Extract content
+            # for message in rag_response:  # Iterate over the generator
+            #     response_content += message.content  # Extract content
+            
+            for ans in rag_response:
+                #print(ans.content[len(cont):], end='', flush=True)
+                response_content = ans.content
 
-            print(response_content)
+           # print(response_content)
             logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
