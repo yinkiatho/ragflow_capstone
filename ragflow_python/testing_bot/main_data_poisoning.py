@@ -2,24 +2,46 @@ import numpy as np
 import pandas as pd
 from DataPoisoningAttack import DataPoisoningAttack
 from PoisonGemma2_2b import PoisonGemma2B
+import os
+import requests
 
 
-data = pd.read_csv("qa.csv")
+data = pd.read_csv("../data/qa.csv", encoding="utf-8")
 data = data[["Question", "Corrected Answers"]].dropna()
 # data = data[:1] # for smaller sampling
 
 # PARAMS
-api_key = "YOUR API KEY"
-base_url = "http://127.0.0.1:9380"
-kb_name = "Sample 1" # <-- change to your KB name
+api_key = 'ragflow-g5Y2UwOWFlZmM1NzExZWZhMzQ2MDI0Mm'
+base_url = "http://localhost:9380"
+kb_name = "Singapore Criminal Law" # <-- change to your KB name
 k = 5
 path = './ragflow_test.txt' # create an empty file in the directory named "ragflow_test.txt" to hold the poisoned chunk and upload to the KB
                             # so that it doesn't get mixed up with other clean documents
 display_name = "test_retrieve_chunks.txt"
 llm = PoisonGemma2B()
 n = 3 # number of tests
-chat_id = "70563e72f38f11efb4780242ac110002"
+# chat_id = ""
 
+
+def create_new_chat():
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}"
+    }
+
+    # Create a new chat
+    create_chat_url = f"{base_url}/api/chats"
+    response = requests.post(create_chat_url, headers=headers)
+
+    if response.status_code == 200:
+        chat_data = response.json()
+        return chat_data.get("id")  # Return the new chat ID
+    else:
+        print(f"Failed to create chat: {response.status_code}")
+        print(response.text)
+        return None
+
+chat_id = create_new_chat()
 
 # ITERATION
 for index, row in data.iterrows():

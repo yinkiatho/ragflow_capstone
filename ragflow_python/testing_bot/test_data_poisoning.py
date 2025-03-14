@@ -22,7 +22,7 @@ from deepeval import evaluate
 
 # Parameters
 json_data = []
-directory = "DIRECTORY/TO/JSON/DATA"
+directory = "../data/data_poisoning"
 url = "https://bggngaqkkmslamsbebew.supabase.co"
 key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnZ25nYXFra21zbGFtc2JlYmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA0MDgxNzIsImV4cCI6MjA1NTk4NDE3Mn0.B4D-5t0oxa8D6xMSoywufdB7aSmGy1s8bvytH0znows"
 supabase = create_client(url, key)

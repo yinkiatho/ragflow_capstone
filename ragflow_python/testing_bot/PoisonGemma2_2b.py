@@ -9,7 +9,8 @@ class PoisonGemma2B(DeepEvalBaseLLM):
     Uses local Gemma 2B through Ollama.
     '''
     def __init__(self):
-        self.model_name = "gemma2:2b"
+        # self.model_name = "gemma2:2b"
+        self.model_name = "llama3.1:8b"
         self.client = ollama.Client(host="http://localhost:11434")  # Local Ollama instance
 
     def load_model(self):
