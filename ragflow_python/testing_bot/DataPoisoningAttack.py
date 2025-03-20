@@ -1,3 +1,5 @@
+import os
+
 from data_poisoning_functions import *
 from PoisonGemma2_2b import PoisonGemma2B
 import json
@@ -47,9 +49,12 @@ class DataPoisoningAttack:
             # Generate timestamp
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             filename = f"result_at_{timestamp}.txt"
+            dir = "../data/data_poisoning"
+            file_path = os.path.join(dir, filename)
+            os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
             # Write results into txt file
-            with open(filename, "w") as f:
+            with open(file_path, "w") as f:
                 f.write("------------------------- RESULTS -------------------------\n")
                 f.write(f"Poisoned Chunks = {self.POISONED_CHUNKS}\n")
                 f.write(f"Prompt Question = {self.PROMPT}\n")
@@ -121,7 +126,10 @@ class DataPoisoningAttack:
     def save_results_to_json(self):
         timestamp2 = time.strftime("%Y%m%d_%H%M%S")
         filename = f"combined_results_at {timestamp2}.json"
-        with open(filename, "w", encoding="utf-8") as f:
+        dir = "../data/data_poisoning"
+        file_path = os.path.join(dir, filename)
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, "w", encoding="utf-8") as f:
             json.dump({"pre_attack": self.RESULTS[0], "post_attack": self.RESULTS[1]}, f, indent=4)
     
 

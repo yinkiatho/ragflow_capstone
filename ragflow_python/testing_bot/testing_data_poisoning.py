@@ -18,11 +18,16 @@ from deepeval.metrics import (
 )
 from deepeval.test_case import LLMTestCase
 from deepeval import evaluate
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # Parameters
 json_data = []
 directory = "../data/data_poisoning"
+
+
 url = "https://bggngaqkkmslamsbebew.supabase.co"
 key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnZ25nYXFra21zbGFtc2JlYmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA0MDgxNzIsImV4cCI6MjA1NTk4NDE3Mn0.B4D-5t0oxa8D6xMSoywufdB7aSmGy1s8bvytH0znows"
 supabase = create_client(url, key)
@@ -39,10 +44,18 @@ def generate_unique_id():
         if not response.data:  # If no existing retrieval_id found, it's unique
             return new_id
 
+
+def generate_unique_experiment_id():
+    while True:
+        new_id = random.randint(1, 10000)
+        response = supabase.table("Evaluation_Table").select("evaluation_id").eq("evaluation_id", new_id).execute()
+
+        if not response.data:  # If no existing retrieval_id found, it's unique
+            return new_id
+
 def process_attack_results(data):
     """Processes a single test case and inserts data into Supabase"""
     
-    retrieval_id = generate_unique_id()
 
     # Initialize metrics
     contextual_precision = ContextualPrecisionMetric()
@@ -53,6 +66,8 @@ def process_attack_results(data):
 
     # Create data test case for both pre and post attack
     for key, value in data.items():
+        retrieval_id = generate_unique_id()
+        evaluation_id = generate_unique_experiment_id()
         test_case = LLMTestCase(
             input= value[0],
             actual_output=value[3],
@@ -96,15 +111,17 @@ def process_attack_results(data):
             ex_id = post_attack_experiment_id
 
         evaluation_response = supabase.table("Evaluation_Table").insert({
-            "experiment_type_id" : ex_id,
-            "contextual_precision": precision_score, 
+            "evaluation_id": evaluation_id,
+            "experiment_type_id": ex_id,
+            "contextual_precision": precision_score,
             "contextual_recall": recall_score,
             "contextual_relevancy": relevancy_score,
             "answer_relevancy": answer_score,
             "faithfulness": faithfulness_score,
             "retrieval_id": retrieval_id,  # This key now exists in RAGFlow_Response
             "ground_truth": value[1],
-            "question": value[0]
+            "question": value[0],
+            "model": "llama3.1:8b"
         }).execute()
 
         print(f"✅ Test case '{value[0]}' inserted successfully!\n")
@@ -122,12 +139,14 @@ for filename in os.listdir(directory):
 test_cases = json_data
 MAX_WORKERS = min(5, len(test_cases))  # Limit to 5 workers or number of test cases
 with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-    executor.map(process_attack_results, test_cases)
+    list(executor.map(process_attack_results, test_cases))
 
 print("✅ All test cases processed successfully!")
 
 
-
+if __name__ == "__main__":
+    # Your code is already here
+    print("Script executed directly")
 
         
 
