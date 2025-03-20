@@ -1,5 +1,5 @@
 from deepeval.evaluate import EvaluationResult, TestResult, MetricData
-
+import random
 
 def evaluation_result_to_json(result: EvaluationResult):
     results_metrics_json = result.model_dump()
@@ -37,3 +37,13 @@ def load_all_chunks():
         json.dump(all_chunks, f, indent=4, ensure_ascii=False)
 
     print("JSON file saved successfully as chunks_data.json")
+    
+    
+def generate_unique_id(supabase, table_name, end_range=10000):
+    """Generate a unique retrieval_id that does not exist in RAGFlow_Response"""
+    while True:
+        new_id = random.randint(1, end_range)
+        response = supabase.table(table_name).select("retrieval_id").eq("retrieval_id", new_id).execute()
+        
+        if not response.data:  # If no existing retrieval_id found, it's unique
+            return new_id

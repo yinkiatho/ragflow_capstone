@@ -6,7 +6,7 @@ from ragflow_python.src.RagFlow import RagFlowTester
 import pandas as pd
 import numpy as np
 import json
-import requests
+from supabase import create_client
 import time
 from dotenv import load_dotenv
 import os
@@ -40,8 +40,13 @@ import random
 from deepeval.metrics import (
     ContextualPrecisionMetric,
     ContextualRecallMetric,
-    ContextualRelevancyMetric
+    ContextualRelevancyMetric,
+    AnswerRelevancyMetric,
+    FaithfulnessMetric
 )
+
+from concurrent.futures import ThreadPoolExecutor
+from supabase import create_client
 
 
 logger = log.setup_custom_logger('root')
@@ -56,6 +61,8 @@ async def run_test(generate_attacks=False):
     #deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
     
     current_dir = os.getcwd()
+    
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     
     vulnerabilities = [
         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
@@ -147,13 +154,14 @@ async def run_test(generate_attacks=False):
     else:
         # Feed base attacks into Synthesizer to enhance
         base_attacks = SYNTHETIC_GOLDEN_ATTACKS
+        
     
     # Make a results folder data/data_{timestamp}
-    results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
-    os.makedirs(results_dir, exist_ok=True)
+    # results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
+    # os.makedirs(results_dir, exist_ok=True)
     
-    with open(f"{results_dir}/base_attacks_goldens_{timestamp}.json", "w") as json_file:
-        json.dump(base_attacks, json_file, indent=4)
+    # with open(f"{results_dir}/base_attacks_goldens_{timestamp}.json", "w") as json_file:
+    #     json.dump(base_attacks, json_file, indent=4)
     
     
     # Start of RedTeamer Paramterization
@@ -180,7 +188,7 @@ async def run_test(generate_attacks=False):
     
     timezone = datetime.timezone(datetime.timedelta(hours=8))
     logger.info(f"Testing Attack @ {datetime.datetime.now(tz=timezone)}")
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    
     
     red_teamer = RedTeamer(
         target_purpose=target_purpose,
@@ -210,6 +218,9 @@ async def run_test(generate_attacks=False):
         # 'Red Team Result': results.to_dict(),
         # 'Red Team Result Breakdown': red_teamer.vulnerability_scores_breakdown.to_dict()
     }
+    
+    results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
+    os.makedirs(results_dir, exist_ok=True)
         
     # Save JSON results
     with open(f"{results_dir}/attack_results_{timestamp}.json", "w") as json_file:
@@ -226,6 +237,8 @@ async def run_test(generate_attacks=False):
     contextual_precision = ContextualPrecisionMetric(model=model)
     contextual_recall = ContextualRecallMetric(model=model)
     contextual_relevancy = ContextualRelevancyMetric(model=model)
+    answer_relevancy = AnswerRelevancyMetric(model=model)
+    faithfulness = FaithfulnessMetric(model=model)
     
     test_cases = []
     
@@ -238,14 +251,17 @@ async def run_test(generate_attacks=False):
         expected_output = base_attack['Expected Output']
         
         test_case = LLMTestCase(
-            input=target_input, actual_output=actual_output, expected_output=expected_output,
+            input=target_input, 
+            actual_output=actual_output, 
+            expected_output=expected_output,
             retrieval_context=retrieval_context
         )
         
         test_cases.append(test_case)
         
     eval_result = evaluate(test_cases=test_cases,
-                           metrics=[contextual_precision, contextual_recall, contextual_relevancy])
+                           metrics=[contextual_precision, contextual_recall, contextual_relevancy,
+                                    answer_relevancy, faithfulness])
     
     
     eval_result_json = evaluation_result_to_json(eval_result)
@@ -258,7 +274,54 @@ async def run_test(generate_attacks=False):
         json.dump(eval_result_json, json_file, indent=4)
         
     logger.info(f"Saved to {results_dir}")
+    
+    ### Upload to Superbase ###
+    logger.info(f"Uploading to Supabase.............")
+    supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
+    
+    table_name = 'Attack_Type'
+    retrieval_id = generate_unique_id(supabase=supabase, table_name=table_name)
+    
+    for i, test_case in enumerate(eval_result_json['test_results']):
         
+        relevant_llm_test_case = test_cases[i]
+        test_case_time = timestamp
+        time_of_eval = timestamp
+        attack_id = i
+        experiment_id = retrieval_id
+        
+        attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'] + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
+        attacked_chunks = relevant_llm_test_case.retrieval_context
+        
+        # Extract metric scores
+        precision_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Contextual Precision")
+        recall_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Contextual Recall")
+        relevancy_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Contextual Relevancy")
+        answer_relevancy_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Answer Relevancy")
+        faithfulness_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Faithfulness")
+        
+        # Insert into Supabase
+        evaluation_response = supabase.table("Attack_Type").insert({
+            "attack_id": attack_id,
+            "created_at": datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'),
+            "experiment_id": experiment_id,
+            "attack_name": attack_name,
+            "attacked_answer": attacked_answer,
+            "attacked_chunks": attacked_chunks,
+            "attacked_contextual_precision": precision_score,
+            "attacked_contextual_recall": recall_score,
+            "attacked_contextual_relevancy": relevancy_score,
+            "attacked_answer_relevancy": answer_relevancy_score,
+            "attacked_faithfulness": faithfulness_score,
+        }).execute()
+        
+        logger.info(f"✅ Test case {i}' {attack_name}' inserted successfully!\n")
+        
+        
+    
+    
+
+    
         
         
     
