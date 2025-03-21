@@ -232,7 +232,6 @@ async def run_test(generate_attacks=False):
 
     logger.info(f"Results saved in: {results_dir}")
     
-    
     # Running Gege's RAG Evaluation Metrics
     contextual_precision = ContextualPrecisionMetric(model=model)
     contextual_recall = ContextualRecallMetric(model=model)
@@ -260,8 +259,11 @@ async def run_test(generate_attacks=False):
         test_cases.append(test_case)
         
     eval_result = evaluate(test_cases=test_cases,
-                           metrics=[contextual_precision, contextual_recall, contextual_relevancy,
-                                    answer_relevancy, faithfulness])
+                           metrics=[contextual_precision, 
+                                    contextual_recall, 
+                                    contextual_relevancy,
+                                    answer_relevancy, 
+                                    faithfulness])
     
     
     eval_result_json = evaluation_result_to_json(eval_result)
@@ -274,6 +276,7 @@ async def run_test(generate_attacks=False):
         json.dump(eval_result_json, json_file, indent=4)
         
     logger.info(f"Saved to {results_dir}")
+    
     
     ### Upload to Superbase ###
     logger.info(f"Uploading to Supabase.............")

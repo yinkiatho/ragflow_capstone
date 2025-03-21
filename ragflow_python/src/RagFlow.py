@@ -22,6 +22,7 @@ from ragflow_python.utils.helpers import *
 from ragflow_python.src.CustomLLama import CustomLLAMA3
 from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
 from deepeval.models import DeepEvalBaseLLM
+from deepeval.guardrails import Guardrails
 
 
 logger = log.setup_custom_logger('root')
@@ -85,6 +86,9 @@ class RagFlowTester:
         # Caching Chat Data
         self.session = None
         self.dataset_ids = None
+        
+        # Guard Rails Dataset 
+        self.df_defense = []
         
         
     def test_rag(self, test_id: int, 
@@ -211,7 +215,7 @@ class RagFlowTester:
         '''
         return True
     
-    async def target_model_callback(self, prompt: str) -> str:
+    async def target_model_callback(self, prompt: str, guardrails: Guardrails) -> str:
         try:
             #print("tryblock")
             #print(prompt)
@@ -226,7 +230,13 @@ class RagFlowTester:
                 self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
-            #print(self.session)
+            if guardrails:
+                guard_result = guardrails.guard_input(input=prompt)
+                isBreached = guard_result.breached
+                
+                print(f"Guard Data")
+                print(guard_result.guard_data)
+                
             rag_response = self.session.ask(question=prompt, stream=True)
             #print(rag_response)
             
@@ -240,6 +250,14 @@ class RagFlowTester:
 
            # print(response_content)
             logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            
+            if guardrails:
+                guard_result_o = guardrails.guard_output(input=prompt, output=response_content)
+                isBreached = guard_result_o.breached
+                
+                print(f"Guard Data Output")
+                print(guard_result.guard_data)
+                
             return response_content
         
         except Exception as e:
