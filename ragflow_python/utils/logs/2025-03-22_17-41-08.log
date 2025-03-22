@@ -1,0 +1,11 @@
+2025-03-22 17:41:13,743 - INFO - testing_goldens_mak - testing_goldens_mak.py:89 - Loading Chunks from Knowledge Base
+2025-03-22 17:43:02,698 - INFO - testing_goldens_mak - testing_goldens_mak.py:116 - Loaded total of 851 Chunks
+2025-03-22 17:43:04,231 - INFO - testing_goldens_mak - testing_goldens_mak.py:209 - Testing Attack @ 2025-03-22 17:43:04.231441+08:00
+2025-03-22 17:43:06,345 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,352 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,358 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,366 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,373 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,381 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,388 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
+2025-03-22 17:43:06,397 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
