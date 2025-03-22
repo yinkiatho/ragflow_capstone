@@ -51,7 +51,7 @@ from supabase import create_client
 
 logger = log.setup_custom_logger('root')
 
-async def run_test(generate_attacks=False):
+async def run_test(generate_attacks=False, fetch_chunks=False):
     
     load_dotenv()
     rag_flow_api_key = os.getenv('RAGFLOW_API_KEY')
@@ -84,17 +84,36 @@ async def run_test(generate_attacks=False):
     model = CustomGemma2B()
     #model = CustomGeminiFlash(api_key=GEMINI_KEY)
     
-    
-    # Open and load the JSON file
-    with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'r', encoding='utf-8') as json_file:
-        raw_chunks = json.load(json_file)
-        logger.info(f"Loaded total of {len(raw_chunks)} Chunks")
+    if fetch_chunks:
+
+        logger.info(f"Loading Chunks from Knowledge Base")
+        # Load all the chunks
+        rag_object = RAGFlow(api_key=rag_flow_api_key, base_url=f"http://localhost:9380")
+        dataset = rag_object.list_datasets(0)
+        
+        raw_chunks = []
+        for ds in dataset:
+            docs = ds.list_documents(page=1, page_size=500)
+            print(f"Documents in Knowledge Base: {docs}")
+            for doc in docs:
+                for page_num in range(1, DOCUMENT_PAGES.get(doc.name)):
+                    #print(page_num)
+                    for chunk in doc.list_chunks(page=page_num, page_size=10):
+                        chunk_json = chunk.to_json()
+                        raw_chunks.append(chunk_json)
+    else:
+        # Open and load the JSON file
+        with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'r', encoding='utf-8') as json_file:
+            raw_chunks = json.load(json_file)
+            
     
     
     # Preprocess Chunks
     processed_chunks = []
     for chunk in raw_chunks:
         processed_chunks.append(chunk['content'])
+        
+    logger.info(f"Loaded total of {len(processed_chunks)} Chunks")
         
     attacks_per_vul = 1
     base_attacks = []
