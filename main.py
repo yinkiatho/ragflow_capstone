@@ -4,8 +4,8 @@ import signal
 import numexpr as ne
 #from ragflow_python.testing_bot.testing_bot_responses import run_test
 #from ragflow_python.testing_bot.base_attack_script import run_test
-from ragflow_python.testing_bot.base_attack_script_mak import run_test
-#from ragflow_python.testing_bot.testing_goldens import run_test#
+#from ragflow_python.testing_bot.base_attack_script_mak import run_test
+from ragflow_python.testing_bot.testing_goldens import run_test#
     
 # Set to desired number of threads
 ne.set_num_threads(16)
@@ -33,7 +33,7 @@ def main():
         print("Signal handlers are not supported on Windows, use CTRL+C to stop.")
 
     try:
-        loop.run_until_complete(run_test())
+        loop.run_until_complete(run_test(generate_attacks=True))
     except KeyboardInterrupt:
         print("Manual interruption, shutting down...")
     finally:

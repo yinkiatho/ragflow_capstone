@@ -47,7 +47,7 @@ from deepeval.metrics import (
 logger = log.setup_custom_logger('root')
 
 async def run_test(generate_attacks=False):
-    
+
     load_dotenv()
     rag_flow_api_key = os.getenv('RAGFLOW_API_KEY')
     supabase_url, supabase_key = os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_KEY')
@@ -56,6 +56,7 @@ async def run_test(generate_attacks=False):
     #deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
     
     current_dir = os.getcwd()
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     
     vulnerabilities = [
         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
@@ -74,7 +75,8 @@ async def run_test(generate_attacks=False):
         Robustness(types=[RobustnessType.HIJACKING]),   
     ]
     
-    model = CustomGemma2B()
+    #model = CustomGemma2B()
+    model = CustomLLAMA3()
     #model = CustomGeminiFlash(api_key=GEMINI_KEY)
     
     
@@ -152,8 +154,8 @@ async def run_test(generate_attacks=False):
     results_dir = os.path.join(current_dir, "ragflow_python", "data", f"data_{timestamp}")
     os.makedirs(results_dir, exist_ok=True)
     
-    with open(f"{results_dir}/base_attacks_goldens_{timestamp}.json", "w") as json_file:
-        json.dump(base_attacks, json_file, indent=4)
+    #with open(f"{results_dir}/base_attacks_goldens_{timestamp}.json", "w") as json_file:
+    #    json.dump(base_attacks, json_file, indent=4)
     
     
     # Start of RedTeamer Paramterization
@@ -176,11 +178,11 @@ async def run_test(generate_attacks=False):
                               base_url='http://localhost', port=9380,
                               test_cases=[],
                               model=model,
-                              model_name='gemma2:2b')
+                              model_name='llama3.1:8b')
     
     timezone = datetime.timezone(datetime.timedelta(hours=8))
     logger.info(f"Testing Attack @ {datetime.datetime.now(tz=timezone)}")
-    timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+
     
     red_teamer = RedTeamer(
         target_purpose=target_purpose,
