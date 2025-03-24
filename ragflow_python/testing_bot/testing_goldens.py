@@ -282,7 +282,7 @@ async def run_test(generate_attacks=False):
     logger.info(f"Uploading to Supabase.............")
     supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
     
-    table_name = 'Attack_Type'
+    table_name = 'Generation_Attacks'
     retrieval_id = generate_unique_id(supabase=supabase, table_name=table_name)
     
     for i, test_case in enumerate(eval_result_json['test_results']):
