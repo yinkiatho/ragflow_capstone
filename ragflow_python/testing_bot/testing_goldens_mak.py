@@ -301,7 +301,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
     logger.info(f"Uploading to Supabase.............")
     supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
     
-    table_name = 'Attack_Type'
+    table_name = 'Generation_attacks'
     retrieval_id = generate_unique_id(supabase=supabase, table_name=table_name)
     
     for i, test_case in enumerate(eval_result_json['test_results']):
@@ -324,17 +324,17 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
         
         # Insert into Supabase
         evaluation_response = supabase.table("Attack_Type").insert({
-            "attack_id": attack_id,
+            "attack_id": int(attack_id),
             "created_at": datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'),
-            "experiment_id": experiment_id,
+            "experiment_id": int(experiment_id),
             "attack_name": attack_name,
             "attacked_answer": attacked_answer,
             "attacked_chunks": attacked_chunks,
-            "attacked_contextual_precision": precision_score,
-            "attacked_contextual_recall": recall_score,
-            "attacked_contextual_relevancy": relevancy_score,
-            "attacked_answer_relevancy": answer_relevancy_score,
-            "attacked_faithfulness": faithfulness_score,
+            "contextual_precision": float(precision_score),
+            "contextual_recall": float(recall_score),
+            "contextual_relevancy": float(relevancy_score),
+            "answer_relevancy": float(answer_relevancy_score),
+            "faithfulness": float(faithfulness_score),
         }).execute()
         
         logger.info(f"✅ Test case {i}' {attack_name}' inserted successfully!\n")
