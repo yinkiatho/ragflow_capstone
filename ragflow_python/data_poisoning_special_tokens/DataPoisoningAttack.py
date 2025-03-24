@@ -107,7 +107,7 @@ class DataPoisoningAttack:
             for ans in session.ask(question, stream=True):
                 print(ans.content[len(cont):], end='', flush=True)
                 cont = ans.content
-                break
+
             break
 
 
