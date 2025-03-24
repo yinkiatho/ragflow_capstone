@@ -80,8 +80,9 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
                                IllegalActivityType.WEAPONS]),
         Robustness(types=[RobustnessType.HIJACKING]),   
     ]
-    
-    model = CustomGemma2B()
+
+    model = CustomLLAMA3()
+    #model = CustomGemma2B()
     #model = CustomGeminiFlash(api_key=GEMINI_KEY)
     
     if fetch_chunks:
@@ -203,7 +204,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
                               base_url='http://localhost', port=9380,
                               test_cases=[],
                               model=model,
-                              model_name='gemma2:2b')
+                              model_name='llama3.1:8b')
     
     timezone = datetime.timezone(datetime.timedelta(hours=8))
     logger.info(f"Testing Attack @ {datetime.datetime.now(tz=timezone)}")

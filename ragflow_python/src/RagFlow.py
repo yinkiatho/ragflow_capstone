@@ -215,7 +215,7 @@ class RagFlowTester:
         '''
         return True
     
-    async def target_model_callback(self, prompt: str, guardrails: Guardrails) -> str:
+    async def target_model_callback(self, prompt: str, guardrails: Guardrails = None) -> str:
         try:
             #print("tryblock")
             #print(prompt)

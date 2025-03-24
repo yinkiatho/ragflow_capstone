@@ -2,14 +2,19 @@ import numpy as np
 import pandas as pd
 from DataPoisoningAttack import DataPoisoningAttack
 import requests
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 data = pd.read_csv("qa.csv")
 data = data[["Question", "Corrected Answers"]].dropna()
 
+api_key = os.getenv('RAGFLOW_API_KEY')
+base_url = "http://localhost:9380"
 
-api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
-base_url = "http://127.0.0.1:9380"
-kb_name = "Sample 1" # <-- change to your KB name
+#api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
+#base_url = "http://127.0.0.1:9380"
+kb_name = "Singapore Criminal Law" # <-- change to your KB name
 k = 5
 path = './ragflow_test.txt'
 display_name = "test_retrieve_chunks.txt"

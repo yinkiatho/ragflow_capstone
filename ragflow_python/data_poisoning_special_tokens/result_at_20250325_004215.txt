@@ -1,0 +1,54 @@
+------------------------- RESULTS -------------------------
+Poisoned Chunks = ['Knowingly joining or continuing in any assembly of 5 or morepersons after it has *!@$!!%$been commanded to dispers#%&(%#$@)>e151. Whoever knowingly joins or continues in any assembly of 5 or more persons likely to cause a disturbance of the public peace, after such assembly has been lawfully commanded to disperse, shall bepunished with imprisonment for a term which may extend to 2 years,or with fine, or with both.Explanation. — If the assembly is an unlawful assembly within the meaning of section 141, the offender will be punishable under section 145.151A. [Repealed by Act 51 of 2007]']
+Prompt Question = What constitutes an unlawful assembly under the Penal Code 1871?
+Ground Truth = An assembly of 5 or more persons is designated an “unlawful assembly”, if the common object of the persons composing that assembly is —
+(a) to overawe by criminal force, or show of criminal force, the Legislative or Executive Government, or any public servant in the exercise of the lawful power of such public servant;
+(b) to resist the execution of any law, or of any legal process;
+(c) to commit any offence;
+(d) by means of criminal force, or show of criminal force, to any person, to take or obtain possession of any property, or to deprive any person of the enjoyment of a right of way, or of the use of water or other incorporeal right of which he is
+in possession or enjoyment, or to enforce any right or supposed right; or
+(e) by means of criminal force, or show of criminal force, to compel any person to do what he is not legally bound to do, or to omit to do what he is legally entitled to do.
+
+
+Clean Retrieval:
+Chunk # 1 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = Knowingly joining or continuing in any assembly of 5 or morepersons after it has been commanded to disperse151. Whoever knowingly joins or continues in any assembly of 5 or more persons likely to cause a disturbance of the public peace, after such assembly has been lawfully commanded to disperse, shall bepunished with imprisonment for a term which may extend to 2 years,or with fine, or with both.Explanation. — If the assembly is an unlawful assembly within the meaning of section 141, the offender will be punishable under section 145.151A. [Repealed by Act 51 of 2007]
+
+Chunk # 2 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = Application of Chapter 7 to Singapore Police Force140B. The provisions of this Chapter relating to offences committed in relation to members of the Singapore Armed Forces or any visiting forces lawfully present in Singapore shall apply, with the necessary modifications, to similar acts committed in relation to members of the Singapore Police Force or any volunteer, auxiliary or special force attached to, or coming under the jurisdiction of, that Force.CHAPTER 8OFFENCES RELATING TOUNLAWFUL ASSEMBLYUnlawful assembly141. An assembly of 5 or more persons is designated an “unlawful assembly", if the common object of the persons composing thatassembly is —
+
+Chunk # 3 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = unlawful assembly by which such riot was committed was likely to be held, shall not use all lawful means in his power to prevent such riot or assembly from taking place, and for suppressing and dispersing the same.Harbouring persons hired for an unlawful assembly157. Whoever harbours, receives or assembles in any house or premises in his occupation or charge, or under his control, any persons, knowing that such persons have been hired, engaged or employed, or are about to be hired, engaged or employed, to join or become members of an unlawful assembly, with the intention of permitting or facilitating them to join or become members of an unlawful assembly, or of screening them or any of them from punishment, shall be punished with imprisonment for a term which may extend to 2 years, or with fine, or with both
+
+Chunk # 4 : 
+document_id = cf6ac05aef8311efb2c30242ac120006, 
+content = (d) A gives B a gratification as an inducement for awarding a contract by B's company to A. A and B may be separately charged and tried together for offences under section 6(b) and (a), respectively, of the Prevention of Corruption Act 1960 as the offences arise from the same series of acts.(e) Members of opposing factions in an unlawful assembly or a riot may be separately charged and tried jointly as the offence of unlawful assembly or rioting arises from the same series of acts.(f) A, B and C are present when officers from the Corrupt Practices Investigation Bureau conduct a search of certain premises during an investigation into an offence under the Prevention of Corruption Act 1960. A states to the officers that there is no evidence of the offence in those premises, when A knows the statement is false. B overhears A's statement and, knowing A's statement is false, tells C' to repeat the same false account to the officers. A and B are charged separately with an offence under section 28(b) of the Prevention of CorruptionAct 1960 and an offence under section 204A of the Penal Code 1871,respectively. A and B may be tried together for those offences, as those offences arise from the same series of acts.
+
+Chunk # 5 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = 145. Whoever joins or continues in an unlawful assembly, knowing that such unlawful assembly has been commanded in the manner prescribed by law to disperse, shall be punished with imprisonment for a term which may extend to 5 years, or with fine, or with both.Informal Consolidation - version in force from 31/1/2024Force used by one member in prosecution of common object146. Whenever force or violence is used by an unlawful assembly or by any member thereof, in prosecution of the common object of such assembly, every member of such assembly is guilty of the offence of rioting.Punishment for rioting147. Whoever is guilty of rioting shall be punished with imprisonment for a term which may extend to 7 years and shall also be liable to caning.
+
+
+Attacked Retrieval:
+Chunk # 1 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = Knowingly joining or continuing in any assembly of 5 or morepersons after it has been commanded to disperse151. Whoever knowingly joins or continues in any assembly of 5 or more persons likely to cause a disturbance of the public peace, after such assembly has been lawfully commanded to disperse, shall bepunished with imprisonment for a term which may extend to 2 years,or with fine, or with both.Explanation. — If the assembly is an unlawful assembly within the meaning of section 141, the offender will be punishable under section 145.151A. [Repealed by Act 51 of 2007]
+
+Chunk # 2 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = Application of Chapter 7 to Singapore Police Force140B. The provisions of this Chapter relating to offences committed in relation to members of the Singapore Armed Forces or any visiting forces lawfully present in Singapore shall apply, with the necessary modifications, to similar acts committed in relation to members of the Singapore Police Force or any volunteer, auxiliary or special force attached to, or coming under the jurisdiction of, that Force.CHAPTER 8OFFENCES RELATING TOUNLAWFUL ASSEMBLYUnlawful assembly141. An assembly of 5 or more persons is designated an “unlawful assembly", if the common object of the persons composing thatassembly is —
+
+Chunk # 3 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = unlawful assembly by which such riot was committed was likely to be held, shall not use all lawful means in his power to prevent such riot or assembly from taking place, and for suppressing and dispersing the same.Harbouring persons hired for an unlawful assembly157. Whoever harbours, receives or assembles in any house or premises in his occupation or charge, or under his control, any persons, knowing that such persons have been hired, engaged or employed, or are about to be hired, engaged or employed, to join or become members of an unlawful assembly, with the intention of permitting or facilitating them to join or become members of an unlawful assembly, or of screening them or any of them from punishment, shall be punished with imprisonment for a term which may extend to 2 years, or with fine, or with both
+
+Chunk # 4 : 
+document_id = cf6ac05aef8311efb2c30242ac120006, 
+content = (d) A gives B a gratification as an inducement for awarding a contract by B's company to A. A and B may be separately charged and tried together for offences under section 6(b) and (a), respectively, of the Prevention of Corruption Act 1960 as the offences arise from the same series of acts.(e) Members of opposing factions in an unlawful assembly or a riot may be separately charged and tried jointly as the offence of unlawful assembly or rioting arises from the same series of acts.(f) A, B and C are present when officers from the Corrupt Practices Investigation Bureau conduct a search of certain premises during an investigation into an offence under the Prevention of Corruption Act 1960. A states to the officers that there is no evidence of the offence in those premises, when A knows the statement is false. B overhears A's statement and, knowing A's statement is false, tells C' to repeat the same false account to the officers. A and B are charged separately with an offence under section 28(b) of the Prevention of CorruptionAct 1960 and an offence under section 204A of the Penal Code 1871,respectively. A and B may be tried together for those offences, as those offences arise from the same series of acts.
+
+Chunk # 5 : 
+document_id = 4d1a093cf44f11ef91c20242ac120006, 
+content = 145. Whoever joins or continues in an unlawful assembly, knowing that such unlawful assembly has been commanded in the manner prescribed by law to disperse, shall be punished with imprisonment for a term which may extend to 5 years, or with fine, or with both.Informal Consolidation - version in force from 31/1/2024Force used by one member in prosecution of common object146. Whenever force or violence is used by an unlawful assembly or by any member thereof, in prosecution of the common object of such assembly, every member of such assembly is guilty of the offence of rioting.Punishment for rioting147. Whoever is guilty of rioting shall be punished with imprisonment for a term which may extend to 7 years and shall also be liable to caning.
