@@ -1,6 +1,11 @@
 from deepeval.evaluate import EvaluationResult, TestResult, MetricData
 import random
 
+import ragflow_python.utils.logger as log
+
+
+logger = log.setup_custom_logger('root')
+
 def evaluation_result_to_json(result: EvaluationResult):
     results_metrics_json = result.model_dump()
     return results_metrics_json
@@ -42,8 +47,17 @@ def load_all_chunks():
 def generate_unique_id(supabase, table_name, end_range=10000):
     """Generate a unique retrieval_id that does not exist in RAGFlow_Response"""
     while True:
-        new_id = random.randint(1, end_range)
-        response = supabase.table(table_name).select("retrieval_id").eq("retrieval_id", new_id).execute()
+        try:
+            new_id = random.randint(1, end_range)
+            response = supabase.table(table_name).select("attack_id").eq("attack_id", new_id).execute()
+            
+            if not response.data:  # If no existing retrieval_id found, it's unique
+                return new_id
         
-        if not response.data:  # If no existing retrieval_id found, it's unique
+        except Exception as e:
+            logger.warning(f"Error generating unique id for {table_name}, generating randomly instead")
+            
+            new_id = random.randint(1, end_range)
             return new_id
+            
+            
