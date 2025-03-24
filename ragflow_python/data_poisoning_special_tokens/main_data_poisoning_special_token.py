@@ -18,7 +18,7 @@ kb_name = "Singapore Criminal Law" # <-- change to your KB name
 k = 5
 path = './ragflow_test.txt'
 display_name = "test_retrieve_chunks.txt"
-n = 3 # number of tests
+n = 5 # number of tests
 special_tokens = [
     "*!@$!!%$", "#%&(%#$@)>"
 ]
