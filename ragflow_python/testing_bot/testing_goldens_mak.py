@@ -251,6 +251,20 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
 
     logger.info(f"Results saved in: {results_dir}")
     
+    
+    # Calculating Attack Success Rate based on Vulnerability Scores
+    total_max_score = 0
+    for vul in vulnerabilities:
+        total_max_score += attacks_per_vul * len(vul.get_types())
+    
+    total_score = (results_breakdown["Average Score"] * attacks_per_vul).sum()
+    total_attacks_succeeded = total_max_score - total_score
+    attack_success_rate = total_attacks_succeeded / total_max_score
+    
+    logger.info(f"ASR via Vulnerability Scores: {attack_success_rate}")
+    
+    
+    
     # Running Gege's RAG Evaluation Metrics
     contextual_precision = ContextualPrecisionMetric(model=model)
     contextual_recall = ContextualRecallMetric(model=model)
@@ -302,15 +316,32 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
     supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
     
     table_name = 'Generation_attacks'
-    retrieval_id = generate_unique_id(supabase=supabase, table_name=table_name)
+    attack_id = generate_unique_id(supabase=supabase, table_name=table_name)
+    
+    main_create_time = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    
+    # Upload to table Attack Type 
+    evaluation_response = supabase.table("Attack_Type").insert({
+       "attack_id": int(attack_id),
+       "created_at": main_create_time,
+       "attack_name": "Generation Attacks Goldens Mak",
+    }).execute()
+    
+    
+    evaluation_response = supabase.table("Attack_Results").insert({
+       "id": int(attack_id),
+       "created_at": main_create_time,
+       "attack_type": "Generation Attacks Goldens Mak",
+       "model_name": model.get_model_name(),
+       "attack_success_rate": attack_success_rate
+    }).execute()
     
     for i, test_case in enumerate(eval_result_json['test_results']):
         
         relevant_llm_test_case = test_cases[i]
         test_case_time = timestamp
         time_of_eval = timestamp
-        attack_id = i
-        experiment_id = retrieval_id
+        experiment_id = i
         
         attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'] + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
         attacked_chunks = relevant_llm_test_case.retrieval_context
@@ -323,7 +354,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
         faithfulness_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Faithfulness")
         
         # Insert into Supabase
-        evaluation_response = supabase.table("Attack_Type").insert({
+        evaluation_response = supabase.table("Generation_Atacks").insert({
             "attack_id": int(attack_id),
             "created_at": datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'),
             "experiment_id": int(experiment_id),
@@ -339,6 +370,9 @@ async def run_test(generate_attacks=False, fetch_chunks=False):
         
         logger.info(f"✅ Test case {i}' {attack_name}' inserted successfully!\n")
         
+    
+    
+    
         
     
     
