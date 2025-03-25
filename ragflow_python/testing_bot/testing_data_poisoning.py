@@ -121,7 +121,7 @@ def process_attack_results(data):
             "retrieval_id": retrieval_id,  # This key now exists in RAGFlow_Response
             "ground_truth": value[1],
             "question": value[0],
-            "model": "llama3.1:8b"
+            "model": "gemma2:2b"
         }).execute()
 
         print(f"✅ Test case '{value[0]}' inserted successfully!\n")

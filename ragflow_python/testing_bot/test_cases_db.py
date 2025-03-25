@@ -1,0 +1,514 @@
+import random
+from concurrent.futures import ThreadPoolExecutor
+from supabase import create_client
+from deepeval.metrics import (
+    ContextualPrecisionMetric,
+    ContextualRecallMetric,
+    ContextualRelevancyMetric,
+    AnswerRelevancyMetric,
+    FaithfulnessMetric
+)
+from deepeval.test_case import LLMTestCase
+
+
+url = "https://bggngaqkkmslamsbebew.supabase.co"
+key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnZ25nYXFra21zbGFtc2JlYmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA0MDgxNzIsImV4cCI6MjA1NTk4NDE3Mn0.B4D-5t0oxa8D6xMSoywufdB7aSmGy1s8bvytH0znows"
+supabase = create_client(url, key)
+
+def generate_unique_id():
+    """Generate a unique retrieval_id that does not exist in RAGFlow_Response"""
+    while True:
+        new_id = random.randint(1, 10000)
+        response = supabase.table("RAGFlow_Response").select("retrieval_id").eq("retrieval_id", new_id).execute()
+        
+        if not response.data:  # If no existing retrieval_id found, it's unique
+            return new_id
+
+def process_test_case(case):
+    """Processes a single test case and inserts data into Supabase"""
+
+    retrieval_id = generate_unique_id()
+
+    # Initialize metrics
+    contextual_precision = ContextualPrecisionMetric()
+    contextual_recall = ContextualRecallMetric()
+    contextual_relevancy = ContextualRelevancyMetric()
+    answer_relevancy = AnswerRelevancyMetric()
+    faithfulness = FaithfulnessMetric()
+
+    # Create test case object
+    test_case = LLMTestCase(
+        input=case["input_question"],
+        actual_output=case["actual_output"],
+        expected_output=case["expected_output"],
+        retrieval_context=case["retrieval_context"]
+    )
+
+    # Measure metrics
+    contextual_precision.measure(test_case)
+    precision_score = contextual_precision.score
+
+    contextual_recall.measure(test_case)
+    recall_score = contextual_recall.score
+
+    contextual_relevancy.measure(test_case)
+    relevancy_score = contextual_relevancy.score
+
+    answer_relevancy.measure(test_case)
+    answer_score = answer_relevancy.score
+
+    faithfulness.measure(test_case)
+    faithfulness_score = faithfulness.score
+
+    # 🔹 Insert into RAGFlow_Response first
+    RAGFlow_response = supabase.table("RAGFlow_Response").insert({
+        "retrieval_id": retrieval_id, 
+        "chunks_retrieved": case["retrieval_context"],
+        "model_answer": case["actual_output"]
+    }).execute()
+
+    # ✅ Ensure retrieval_id exists before inserting into Evaluation_Table
+    confirmation = supabase.table("RAGFlow_Response").select("retrieval_id").eq("retrieval_id", retrieval_id).execute()
+    if not confirmation.data:
+        raise Exception(f"retrieval_id {retrieval_id} was not found in RAGFlow_Response after insertion!")
+
+    # 🔹 Insert into Evaluation_Table
+    evaluation_response = supabase.table("Evaluation_Table").insert({
+        "contextual_precision": precision_score, 
+        "contextual_recall": recall_score,
+        "contextual_relevancy": relevancy_score,
+        "answer_relevancy": answer_score,
+        "faithfulness": faithfulness_score,
+        "retrieval_id": retrieval_id,  # This key now exists in RAGFlow_Response
+        "ground_truth": case["expected_output"],
+        "question": case["input_question"],
+        "model": "llama3.1:8b"
+    }).execute()
+
+    print(f"✅ Test case '{case['input_question']}' inserted successfully!\n")
+
+test_cases = [
+    # Test Case 1
+    {
+        "input_question": "What is the legal age of criminal responsibility in Singapore?",
+        "actual_output": """The legal age of criminal responsibility in Singapore is 16 years old. 
+This means that individuals who are 16 years or older can be held criminally responsible for their actions, while those under 16 are considered minors and may face different consequences.
+Let me know if you have any other questions! """,
+        "expected_output": "Act of a child below 10 years of age 82. Nothing is an offence which is done by a child below 10 years of age",
+        "retrieval_context": ["""(5) In this section, “first-time offender", in relation to an offence,means a person who does not fall within any of the followingdescriptions:(a) a person who had previously been sentenced to a term of
+imprisonment for 2 years or more, and has been convictedin Singapore or elsewhere at least twice since he or shereached 16 years of age for offences punishable with such asentence; or""",
+                            """(9)  The Minister charged with the responsibility for the probation ofoffenders may -(a) appoint any person to be a community service officer for
+348.—(1) Where an offender who is 16 years of age or above isconvicted of an offence, and if the court by or before which he or sheis convicted is satisfied that having regard to the circumstances,including the nature of the offence and the character of the offender, itis expedient to do so, the court may make a short detention orderrequiring the offender to be detained in prison for a period whichmust not exceed 14 days.""",
+                            """448. (2) Where a person 30 years of age or above -(a) is convicted before the General Division of the High Court
+or  a District Court of an offence punishable withimprisonment for 2 years or more, and has beenconvicted in Singapore or elsewhere at least 3 timessince he or she reached 16 years of age for offencespunishable with such a sentence, and was on at least 2 ofthose occasions sentenced to imprisonment or correctivetraining; or"""]
+    },
+    # Test Case 2
+    {
+        "input_question": "What are the penalties for theft under Singapore law?",
+        "actual_output": """Here's a breakdown of the penalties for theft in Singapore as outlined by the Penal Code:
+General Principles:
+Theft is defined broadly: It encompasses various acts like taking property without consent, including movable and immovable items.
+Penalties vary based on value: The severity depends on how much was stolen (amount of money or goods). This can range from a fine to imprisonment for years.
+"Offence punishable under this Code": The Penal Code lists specific offenses that are considered theft, and the penalties will be determined by which section is applicable.
+Penalties:
+Simple Theft (Section 324): This covers cases where a person steals property without force or threat of violence.
+Penalty: Imprisonment for up to 7 years, fine, or both. The amount of the fine will depend on the value stolen and can be as high as $5000 in some instances.
+Theft from a Person (Section 319): This covers cases where theft is committed against another person's property while they are present or under their control, such as stealing money from someone's purse during an altercation.
+Penalty: Imprisonment for up to 7 years, fine, or both. The amount of the fine will depend on the value stolen and can be as high as $5000 in some instances. """,
+        "expected_output": "Punishment for theft 379. Whoever commits theft shall be punished with imprisonment for a term which may extend to 3 years, or with fine, or with both.",
+        "retrieval_context": ["""15 years and shall be liable to caning.
+140B. The provisions of this Chapter relating to offencescommitted in relation to members of the Singapore Armed Forcesor any visiting forces lawfully present in Singapore shall apply, withthe necessary modifications, to similar acts committed in relation tomembers of the Singapore Police Force or any volunteer, auxiliary orspecial force attached to, or coming under the jurisdiction of, thatForce.""",
+                            """(3) An article or instrument is presumed to be carried with lawfulauthority if it is carried by -(a)  any member of the Singapore Armed Forces, the Singapore
+enforcement officer acting in the course of his duty assuch in accordance with the Police Force Act 2004;(c) any visiting force lawfully present in Singapore under the""",
+                            """(3) An article or instrument is presumed to be carried with lawfulauthority if it is carried by -(a)  any member of the Singapore Armed Forces, the Singapore
+Police Force, the Singapore Civil Defence Force or anyauxiliary police force created under any written law;(b) a forensic specialist, civilian police assistant or law"""]
+    },
+    # Test Case 3
+    {
+        "input_question": "Is self-defense a valid legal defense in Singapore?",
+        "actual_output": """Yes, self-defense is generally recognized as a valid legal defense in Singapore.
+Here's how it works:
+The Burden of Proof: The person claiming self-defense has the burden to prove that they acted reasonably and lawfully in defending themselves against an imminent threat of harm. This means demonstrating that:
+They were facing a real, immediate danger;
+Their actions were proportionate to the level of threat posed (i.e., using force only as necessary);
+There was no other way to avoid being harmed or prevent the crime from happening.
+Important Considerations:
+Reasonable Force: The use of reasonable force is crucial in self-defense cases. This means that any action taken must be proportionate and not excessive, considering the level of threat faced.""",
+        "expected_output": "Nothing done in private defence is an offence 96. Nothing is an offence which is done in the exercise of the right of private defence.",
+        "retrieval_context": ["""(2) In this section, “offence” includes any act committed at anyplace out of Singapore which if committed in Singapore would bepunishable under any of the following sections, namely, 302, 304,382, 392,393,394,395, 396, 397,399, 402,435,436, 449,450, 459and 460, and every such act shall for the purposes of this section bedeemed to be punishable as if the accused person had been guilty of itin Singapore.
+(a) A, knowing that B has committed gang-robbery, knowingly conceals B inorder to screen him from legal punishment. Here, as B is liable to imprisonmentfor a term of not less than 5 years and not more than 20 years, A is liable toimprisonment for a term not exceeding 7 years, and is also liable to fine.""",
+                            """((2) In this section, “offence' includes also any act or omission ofwhich a person is alleged to have been guilty out of Singapore whichif he had been guilty ofit in Singapore would have been punishable asan offence and for which he is under any law relating to extradition,or otherwise, liable to be apprehended or detained in custody inSingapore, and every such act or omission shall for the purpose of thissection be deemed to be punishable as if the accused person had beenguilty of it in Singapore.
+217. Whoever, being a public servant, knowingly disobeys anydirection of the law as to the way in which he is to conduct himself assuch public servant, intending thereby to save, or knowing it to belikely that he will thereby save, any person from legal punishment, orsubject him to a lesser punishment than that to which he is liable, orwith intent to save, or knowing that he is likely thereby to save, anyproperty from forfeiture or any charge to which it is liable by law,shall be punished with imprisonment for a term which may extend to2 years, or with fine, or with both""",
+                            """(2) In this section, “offence” includes any act committed at anyplace out of Singapore which if committed in Singapore would bepunishable under any of the following sections, namely, 302, 304,382, 392,393,394,395, 396, 397,399, 402,435,436, 449,450, 459and 460, and every such act shall for the purposes of this section bedeemed to be punishable as if the accused person had been guilty of itin Singapore.
+213. Whoever accepts, or agrees to accept, or attempts to obtain anygratification for himself or any other person, or any restitution ofproperty to himself or any other person, in consideration of hisconcealing an offence, or of his screening any person from legalpunishment for any offence, or of his not proceeding against anyperson for the purpose of bringing him to legal punishment, shall —"""]
+    },
+    # Test Case 4
+    {
+        "input_question": "What is the penalty for individuals found in possession of subversive documents?",
+        "actual_output": """The penalty for possessing subversive documents without lawful excuse is imprisonment for a term not exceeding 10 years.""",
+        "expected_output": "Making and possession of subversive documents 4.—(1) Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.",
+        "retrieval_context": ["""(()A4 finds a valuable ring, not knowing to whom it belongs. A sells itimmediately without attempting to discover the owner. A is guilty of an offenceunder this section.
+(g) A receives money transferred to his bank account from Z's bank account. Adiscovers that Z did not intend to transfer the money to him. A retains the moneyand appropriates it to his own use. A is guilty of an offence under this section.""",
+                            """()A4 finds a valuable ring, not knowing to whom it belongs. A sells itimmediately without attempting to discover the owner. A is guilty of an offenceunder this section.
+404. Whoever dishonestly misappropriates or converts to his ownuse property, knowing that such property was in the possession of adeceased person at the time of that person's decease, and has not sincebeen in the possession of any person legally entitled to suchpossession, shall be punished with imprisonment for a term whichmay extend to 3 years, and shall also be liable to fine; and if theoffender at the time of such person's decease was employed by him asa clerk or servant, the imprisonment may extend to 7 years.""",
+                            """4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+in such circumstances that at no time did he havereasonable cause to believe or suspect that the documentwas a subversive document."""]
+    },
+    # Test Case 5
+    {
+        "input_question": "How long can a person be detained without being brought before a court?",
+        "actual_output": """According to the Criminal Procedure Code, an arrested person must be brought before a Magistrate's Court without delay. However, there are exceptions and specific circumstances that may allow for temporary detention .
+It is important to note: The exact duration of pre-trial detention varies depending on individual cases and legal procedures in Singapore.""",
+        "expected_output": """Person arrested not to be detained more than 48 hours 68.—(1) Unless the court orders otherwise under section 92(3)(a) or 93(3B)(a), no police officer may detain in custody a person who has been arrested without a warrant for a longer period than under all the circumstances of the case is reasonable. [19/2018] (2) The period must not exceed 48 hours exclusive of the time necessary for the journey from the place of arrest to the Magistrate’s Court.""",
+        "retrieval_context": ["""Arrested person to be brought before court without delay
+                              """,
+                            """((5) The person who is brought before a Magistrate's Court undersubsection (4) may —
+(a) be ordered to be detained in custody until the person can betried; or""",
+                            """(3) When security is taken under this section, the person to whomthe warrant is directed must, when required, send the bond to thecourt.
+Arrested person to be brought before court without delay"""]
+    },
+    # Test Case 6
+    {
+        "input_question": "What constitutes criminal trespass in Singapore?",
+        "actual_output": """Whoever commits criminal trespass shall be punished with imprisonment for a term which may extend to 3 months, or with fine which may extend to $1,500, or with both"
+                            Essentially, criminal trespass involves intentionally going onto someone else’s property without permission and doing something that violates their rights (like committing a crime).""",
+        "expected_output": "Whoever enters into or upon property in the possession of another with intent to commit an offence or to intimidate, insult or annoy any person in possession of such property,or having lawfully entered into or upon such property,unlawfully remains there with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence, is said to commitcriminal trespass",
+        "retrieval_context": ["""A person may be a party to a criminal conspiracy in Singaporeto commit an offence outside Singapore, which would constitute anoffence if committed in Singapore. [15/2019]Every public servant who, being a citizen or a permanent residentof Singapore, when acting or purporting to act in the course of hisemployment, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under the law inforce in Singapore, is deemed to have committed that act or omissionin Singapore. and includes an attempt to commit the offence, an abetmentof the offence and a criminal conspiracy to commit theoffence.is entering sufficient to constitute house-breaking.
+                                15/2019]""",
+                            """443. [Repealed by Act 15 of 2019]444. [Repealed by Act 15 of 2019]445. [Repealed by Act 15 of 2019]446. [Repealed by Act 15 of 2019]
+                                Punishment for criminal trespass
+                                447. Whoever commits criminal trespass shall be punished withimprisonment for a term which may extend to 3 months, or with finewhich may extend to $1,500, or with both.
+                                Informal Consolidation - version in force from 31/1/2024
+                                Punishment for house-breaking""",
+                            """448. Whoever commits house-breaking shall be guilty of an offenceand shall be punished with imprisonment for a term which mayextend to 3 years, or with fine, or with both.
+                                [15/2019]
+                                House-breaking in order to commit an offence punishable withdeath"""]
+    },
+    # Test Case 7
+    {
+        "input_question": "What is the punishment for furnishing false information to a public servant?",
+        "actual_output": """The penalty for furnishing false information to a public servant in Singapore can vary depending on several factors, including:
+                            Severity of the False Information: If it's knowingly providing false information that could lead to harm or injustice.
+                            Intent: If you intended to deceive and cause damage.
+                            Here are some general guidelines for punishment under this section:
+                            1. The penalty can range from a fine, up to $5000 (Singapore dollars), to imprisonment of up to six months. This is outlined in Penal Code Section 183(a). 2. In addition, the court may impose additional penalties like fines or community service depending on the circumstances and severity of the offense.""",
+        "expected_output": """A person who, being legally bound to furnish
+                                information on any subject to any public servant, as such,
+                                furnishes, as true, information on the subject which the person
+                                knows or has reason to believe to be false, shall —
+                                (a) in the case of an individual, be punished with
+                                imprisonment for a term which may extend to 6 months,
+                                or with fine which may extend to $5,000, or with both; or
+                                (b) in any other case, be punished with fine which may extend
+                                to $10,000.""",
+        "retrieval_context": [
+            """"(2) If the notice or information required to be given respects thecommission of an offence, or is required for the purpose of preventingthe commission of an offence or in order to the apprehension of an
+                    177.—(l) A person who, being legally bound to furnishinformation on any subject to any public servant, as such,furnishes, as true, information on the subject which the personknows or has reason to believe to be false, shall -(a) in the case of an individual, be punished with""",
+            """182. Whoever gives to any public servant any information which heknows or believes to be false, intending thereby to cause, or knowingit to be likely that he will thereby cause, such public servant to use thelawful power of such public servant to the injury or annoyance of anyperson, or to do or omit anything which such public servant ought notto, or would not, do or omit if the true state of facts respecting whichsuch information is given were known by him, shall be punished withimprisonment for a term which may extend to 2 years, or with fine, orWith both.
+                    llustrations
+                    (a) A informs a superintendent of police that Z, a police officer subordinate tosuch superintendent, has been guilty of neglect of duty or misconduct, knowingsuch information to be false, and knowing it to be likely that the information willcause the superintendent to dismiss Z. A has committed the offence defined inthis section.""",
+            """False statement on oath to public servant or person authorisedto administer an oath
+                    181. Whoever, being legally bound by an oath to state the truth onany subject to any public servant or other person authorised by law toadminister such oaths, makes to such public servant or other person asaforesaid, touching that subject, any statement which is false, andwhich he either knows or believes to be false or does not believe to betrue, shall be punished with imprisonment for a term which mayextend to 3 years, and shall also be liable to fine.
+                    False information, with intent to cause a public servant to usehis lawful power to the injury of another person"""
+        ]
+    }
+    ,
+    # Test Case 8
+    {
+        "input_question": "What constitutes defamation under the Penal Code?",
+        "actual_output": """The answer you are looking for is not found in the knowledge base!
+Explanation: The provided knowledge base focuses on defenses to charges related to specific sections of the Penal Code, particularly those concerning offenses like sexual assault and false evidence. It does not contain information about defamation under the Penal Code . To understand what constitutes defamation under this code, you would need to consult a legal resource or expert specializing in criminal law.""",
+        "expected_output": """Whoever, by words either spoken or intended to be read, or by
+signs, or by visible representations, makes or publishes any
+imputation concerning any person, intending to harm, or knowing
+or having reason to believe that such imputation will harm, the
+reputation of such person, is said, except in the cases hereinafter
+excepted, to defame that person.""",
+        "retrieval_context": ["""(3) It is a defence to a charge for an offence under sections 377BHto 377BK if the act that is alleged to constitute the offence --(a) has a legitimate purpose related to science, medicine,education or art; and
+(b) A is a photo-journalist in a war zone. A takes a photo of a child victim oftorture and submits this together with an article on the plight of such children to anews organisation for publication. The taking and sending of the photo has alegitimate purpose.
+                              """,
+                            """(2) It is a defence to a charge for an offence under section 377BB,377BC, 377BD or 377BE(1) if-(a)  the act that is alleged to constitute the offence was done for
+injury to the person (B) mentioned in section 377BB(1),(2), (3), (4) or (5), 377BC(1) or (2) or 377BE(1) or theperson depicted  in  the intimate image  or  recordingmentioned in section 377BD(1)(b), and with reasonablecause:(i) the  prevention,  detection,investigation   or""",
+                            """(2) It is a defence to a charge for an offence under section 377BB,377BC, 377BD or 377BE(1) if-(a)  the act that is alleged to constitute the offence was done for
+(b) the image or recording (if any) obtained through thecommission of an offence under section 377BB or theintimate image or recording (if any) mentioned insection 377BD(1)(b) or 377BE(5) was not kept for aperiod longer than what was reasonably necessary orrequired for the purposes mentioned in paragraph (a)."""]
+    },
+    # Test Case 9
+    {
+        "input_question": "What are the different types of witness examinations in court?",
+        "actual_output": """Here's a breakdown of common witness examination methods used in court, keeping it concise:
+1. Examination-in-Chief: The prosecution or plaintiff presents their case first by questioning the witness to establish facts and build their narrative.
+Purpose: To introduce evidence and lay groundwork for further cross-examination.
+Example: A police officer testifying about a crime scene, describing what they observed during an investigation.
+2. Cross-Examination: The defense attorney questions the witness to challenge or contradict the prosecution's case presented in their examination-in-chief.
+Purpose: To expose inconsistencies, raise doubts, and potentially discredit witnesses for the opposing side
+Example: A witness testifying about a crime scene being questioned by an attorney on details of what they saw.
+3. Re-Examination (Optional): The defense or prosecution can request to re-examine the same witness after cross-examination if new information arises, allowing them to explore different angles and potentially challenge previous statements.
+""",
+        "expected_output": """(1) The examination of a witness by the party who calls him
+or her is called his or her examination-in-chief.
+(2) The examination of a witness by the adverse party is called his
+or her cross-examination.
+(3) Where a witness has been cross-examined and is then examined
+by the party who called him or her, such examination is called his or
+her re-examination.""",
+        "retrieval_context": ["""(4) The court may in all cases permit a witness to be recalled eitherfor further examination-in-chief or for further cross-examination, andif it does so, the parties have the right of further cross-examinationand re-examination respectively
+142. Witnesses to character may  be cross-examined  andre-examined.""",
+                            """(4) The court may in all cases permit a witness to be recalled eitherfor further examination-in-chief or for further cross-examination, andif it does so, the parties have the right of further cross-examinationand re-examination respectively
+Witnesses to character""",
+                            """(5) Any statement of a witness taken in proceedings under thissection may be given in evidence in any trial under this Code
+297. Whenever, at a committal hearing under Division 2 of Part 10as in force immediately before 17 September 2018, the evidence ofany witness has been taken for the purpose of proving the custody ordisposal of any matter or thing forwarded in the course of the inquiryto any public officer for examination or analysis or report, or ofproving the custody or disposal of any instrument, weapon, matter orthing used in or for the commission of any offence, or of proving theaccuracy of any plan or survey made or photograph taken by thatwitness for the purpose of the case, the General Division of the HighCourt may, if it thinks fit, allow the deposition of that witness, takenand attested by an examining Magistrate in the presence of theaccused to be given in evidence in any trial before the GeneralDivision of the High Court although the deponent is not called as awitness."""]
+    },
+    # Test Case 10
+    {
+        "input_question": "Can a witness refuse to answer a question that might incriminate them?",
+        "actual_output": """Yes, but with some caveats. Here's the breakdown from the knowledge base you provided:
+The Penal Code: Section 179 of the Penal Code outlines consequences for refusing to answer questions when legally obligated to do so by public servants (e.g., police officers). Refusal can lead to punishment, even if it doesn't directly incriminate them.
+"Incriminating": The term "incrimination" is a legal concept that refers to providing information or evidence that could be used against someone in court and potentially result in their conviction for an offense.
+Important Considerations:
+Legal Rights: Witnesses have the right not to self-incriminate, but this doesn't mean they can refuse all questions without consequence.
+Public Interest vs. Individual Right: The legal system balances individual rights with public interest (e.g., ensuring justice is served).""",
+        "expected_output": """A witness is not excused from answering any question as
+to any matter relevant to the matter in issue in any suit, or in any civil
+or criminal proceeding, upon the ground that the answer to such
+question will criminate, or may tend, directly or indirectly, to
+criminate, such witness, or that it will expose, or tend, directly or
+indirectly, to expose, such witness to a penalty or forfeiture of any
+kind, or that it will establish or tend to establish that the witness owes
+a debt or is otherwise subject to a civil suit at the instance of the
+Government or of any other person.
+No answer which a witness is compelled by the court to give
+shall subject him or her to any arrest or prosecution, or be proved
+against him or her in any criminal proceeding, except a prosecution
+for giving false evidence by such answer.""",
+        "retrieval_context": ["""(4) Where the accused gives evidence  in any  criminalproceedings
+(b) except as regards any question, document or thing which inthe opinion of the court is relevant solely or mainly to theaccused's credibility as a witness (not being, in the case ofa question, one asked by virtue of section 56), the accusedis not entitled to refuse to answer a question or produce adocument or thing on the ground that to do so would""",
+                            """(7) Despite any other written law or rule of practice requiringevidence to be corroborated or regulating the manner in whichuncorroborated evidence is to be treated, a statement which isadmissible in evidence by virtue of this section is not capable ofcorroborating evidence given by the maker of the statement.
+150.—-(1) If any question relates to a matter not relevant to the suitor proceeding, except insofar as it affects the credit of the witness byinjuring his or her character, the court is to decide whether or not thewitness is to be compelled to answer it, and may, if it does not think fitto compel him or her to answer the question, warn the witness that heor she is not obliged to answer it.""",
+                            """(3)  No bank may be compelled to produce the books of such bank inany legal proceeding to which such bank is not a party, except asprovided by section 174.
+134.—-(1) A witness is not excused from answering any question asto any matter relevant to the matter in issue in any suit, or in any civilor criminal proceeding, upon the ground that the answer to suchquestion will criminate, or may tend, directly or indirectly, tocriminate, such witness, or that it will expose, or tend, directly orindirectly, to expose, such witness to a penalty or forfeiture of anykind, or that it will establish or tend to establish that the witness owesa debt or is otherwise subject to a civil suit at the instance of theGovernment or of any other person."""]
+    },
+    # Test Case 11
+    {
+        "input_question": "Who has the power to refer any question of law of public interest without the permission of the Court of Appeal?",
+        "actual_output": """The Public Prosecutor has this authority.""",
+        "expected_output": """The Public Prosecutor may refer any question of law of public
+interest without the permission of the Court of Appeal.""",
+        "retrieval_context": ["""(4) In granting permission to refer any question of law of publicinterest under subsection (1), or where the Public Prosecutor refersany question of law of public interest under subsection (2), the Courtof Appeal may reframe the question or questions to reflect therelevant issue of law of public interest, and may make such orders asthe Court of Appeal may see fit for the arrest, custody or release onbail of any party in the case.
+[Act 25 of 2021 wef 01/04/2022]""",
+                            """(2) The Public Prosecutor may refer any question of law of publicinterest without the permission of the Court of Appeal.
+[Act 25 of 2021 wef 01/04/2022]""",
+                            """(4) Section 395(2), (3), (6) to (12) and (14) applies to the case statedunder this section, except that any reference to the relevant court inthose provisions is a reference to the Court of Appeal.
+397.—(1) When a criminal matter has been determined by theGeneral Division of the High Court in the exercise of its appellate orrevisionary jurisdiction, and a party to the proceedings wishes to referany question of law of public interest which has arisen in the matterand the determination of which by the Judge has affected the case,Informal Consolidation - version in force from 14/2/2025
+"""]
+    },
+    # Test Case 12
+    {
+        "input_question": "Under what conditions can a court proceed in the absence of an accused?",
+        "actual_output": """A court may proceed in the absence of an accused person under specific circumstances, as outlined in Section 249(2) and related provisions:  
+When deemed necessary for safety: The Court must be satisfied that proceeding without the accused is crucial to ensure their or others' safety. This often involves a mental health assessment or other factors indicating risk of harm.
+After considering relevant information: The court will consider reports under Section 253(3) before making such an order, ensuring it aligns with public interest and legal requirements.
+Important Note: The Court can only proceed in the absence of the accused if they are deemed unfit to stand trial due to mental or physical incapacity. They must prove their unfitness on a balance of probabilities (meaning more likely than not).
+""",
+        "expected_output": """If the summons or notice was duly served on the
+accused at least 7 days (or such shorter period as the court may consider reasonable in a particular case) before the time appointed in
+the summons or notice for appearing; and the accused was notified, when the summons
+or notice was served on the accused, that the court may hear and determine the complaint in
+the absence of the accused, if the accused fails
+to appear at the time and place mentioned in the
+summons or notice; and no sufficient ground is shown for an adjournment;
+""",
+        "retrieval_context": ["""(3) Proceedings for an offence under this section may not beinstituted otherwise than by or with the consent of the PublicProsecutor.
+(4) Subsection (1) is in addition to, and not in derogation of, theprovisions of any other written law with respect to the publication ofreports and proceedings of any court.
+(4) When the supervising Magistrate is satisfied that the fine fixedunder subsection (2)(b) has been paid, the Magistrate is to convict theaccused of the prescribed offence in the accused's absence and recordthe fine paid as the sentence passed for that offence.
+(3) The court must then hear any plea in mitigation of sentence bythe accused and the prosecution has a right of reply.
+(4) Where the court is satisfied that any matter raised in the plea inmitigation materially affects any legal condition required by law toconstitute the offence charged, the court must reject the plea of guilty.
+                              """,
+                            """(3)  The court can and must make a declaration that the proceedingsin the absence of the accused are void only if the accused proves, on abalance of probabilities, that ——
+(a) the accused was unaware of both of the following untilafter the proceedings in the absence of the accused began:(i) the summons or notice to attend court;(i) the proceedings in the absence of the accused; and""",
+                            """(3)  The court can and must make a declaration that the proceedingsin the absence of the accused are void only if the accused proves, on abalance of probabilities, that ——
+(ii) the proceedings in the absence of the accused."""]
+    },
+    # Test Case 13
+    {
+        "input_question": "What does the Evidence Act 1893 say about the admissibility of an accused’s statements?",
+        "actual_output": """The Evidence Act 1893 lays out specific rules regarding the admissibility of an accused's statements. Here are some key points:
+General Principles: Statements made by a person under investigation can be admissible as evidence, but there are strict guidelines to ensure fairness and reliability. The act emphasizes that these statements should only be admitted if they meet certain criteria for relevance and probative value (meaning their truthfulness is supported).
+Section 32(1)(b): This section allows the admission of a statement made by an accused person, even if it's not directly related to the crime. This can happen when there are other pieces of evidence that support its relevance and credibility.
+Corroboration: The act emphasizes that statements should be corroborated with other forms of evidence (e.g., witness testimony) before being admitted as proof in court proceedings.
+Important Considerations:
+Admissibility under Section 32(1): Statements made by an accused person can also be admissible if they are considered "admissible" based on the specific circumstances and legal context of each case, even without direct corroboration.""",
+        "expected_output": """258.—(1) Subject to subsections (2) and (3), where any person is charged with an offence, any statement made by the person, whether it is oral or in writing, made at any time, whether before or after the person is charged and whether or not in the course of any investigation carried out by any law enforcement agency, is admissible in evidence at the person’s trial; and if that person tenders himself or herself as a witness, any such statement may be used in cross‑examination and for the purpose of impeaching that person’s credit.""",
+        "retrieval_context": ["""(2) The court, in its discretion, may prohibit leading questions frombeing put to a witness who shows a strong interest or bias in favour ofthe cross-examining party.
+C deposes that he or she heard A say to D: “B wrote a letter accusing me oftheft and I will be revenged on him'. The statement is relevant as showing 4'smotive for the assault and evidence may be given of it though no other evidenceis given about the letter.
+                              """,
+                            """56.
+Admissibility of evidence and questions about accused'sdisposition or reputation
+""",
+                            """(4) Where a person called as a witness in any proceedings iscross-examined on a document used by him or her to refresh his or hermemory, that document may be made evidence in those proceedings.
+(5) Where a document or any part of a document is received inevidence by virtue of subsection (4), any statement made in thatdocument or part by the person using the document to refresh his orher memory is by virtue of that subsection admissible as evidence ofany fact stated therein of which direct oral evidence by him or herwould be admissible.
+(2) The witness may also refer to any such writing made by anyother person and read by the witness within the time mentioned insubsection (1), if, when the witness read it, the witness knew it to becorrect.
+(2) The validity of any such objection is to be decided on by thecourt."""]
+    },
+    # Test Case 14
+    {
+        "input_question": "What constitutes assault under Singapore law?",
+        "actual_output": """Assault, as defined by Singaporean law, is an intentional act that causes another person fear of immediate harm.
+Here's a breakdown:
+Elements:
+Intention: The perpetrator must have intended to cause the victim apprehension or fear of imminent physical harm.
+Actus Reus (Action): This can be any action, even if it doesn’t result in actual injury, that creates this fear. Examples include making a threatening gesture with a weapon, yelling threats at someone while holding an object menacingly close to their body, or throwing something at them.
+Types of Assault:
+Physical assault: This involves direct physical contact intended to cause harm (e.g., hitting, kicking).
+Verbal/Psychological assault: These are less obvious but still considered assaults if they create fear and apprehension in the victim (e.g., threats, intimidation)
+Important Considerations: The law considers intent as a crucial element of assault. Even without physical contact or injury, an act that creates reasonable fear of harm can be deemed assault under Singaporean law.
+""",
+        "expected_output": """Whoever makes any gesture or any preparation, intending or knowing it to be likely that such gesture or preparation will cause any person present to apprehend that he who makes that gesture or preparation is about to use criminal force to that person, is said to commit an assault.""",
+        "retrieval_context": ["""4. Every public servant who, being a citizen or a permanent residentof Singapore, when acting or purporting to act in the course of hisemployment, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under the law inforce in Singapore, is deemed to have committed that act or omissionin Singapore.
+"relevant act", in relation to a specified offence, means an act oromission (whether occurring wholly or partly in or outsideSingapore) which is a physical element of the specifiedoffence;"specified offence” means an offence specified in the Schedule""",
+                            """4. Every public servant who, being a citizen or a permanent residentof Singapore, when acting or purporting to act in the course of hisemployment, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under the law inforce in Singapore, is deemed to have committed that act or omissionin Singapore.
+(c) the specified offence involved an intention to make a gainor cause a loss or exposure to a risk of loss or to cause harmto any person in body, mind, reputation or property, andthat gain, loss or harm occurs in Singapore.""",
+                            """15 years and shall be liable to caning.
+140B. The provisions of this Chapter relating to offencescommitted in relation to members of the Singapore Armed Forcesor any visiting forces lawfully present in Singapore shall apply, withthe necessary modifications, to similar acts committed in relation tomembers of the Singapore Police Force or any volunteer, auxiliary orspecial force attached to, or coming under the jurisdiction of, thatForce."""]
+    },
+    # Test Case 15
+    {
+        "input_question": "What is the penalty for illegal strikes and lock-outs under the Criminal Law (Temporary Provisions) Act 1955?",
+        "actual_output": """The penalties for illegal strikes and lock-outs under the Criminal Law (Temporary Provisions) Act 1955 are outlined in Section 7 of that act.
+Here's a breakdown:
+Illegal Strikes & Lock-Outs: A strike or lockout declared, commenced, or continued in contravention of section 6 or any provision of other written law is deemed illegal and subject to penalties .
+Penalties for Illegal Strikes/Lockouts: The act doesn’t specify the exact penalty but it does state that a person found guilty can be imprisoned for up to 10 years, depending on the severity of their actions.
+It's important to note: The specific details and legal interpretations may vary in different cases. It is always best to consult with legal professionals or refer back to official sources like the Criminal Law (Temporary Provisions) Act 1955 for accurate information.""",
+        "expected_output": """Any workman who commences, continues or otherwise acts in furtherance of a strike which is illegal under this Part shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $2,000 or to imprisonment for a term not exceeding 12 months or to both.""",
+        "retrieval_context": ["""8. A lock-out declared in consequence of an illegal strike or a strikedeclared in consequence of an illegal lock-out shall not be deemed tobe illegal.
+Penalty for illegal strikes and lock-outs
+                              """,
+                            """9.
+Penalty for illegal strikes and lock-outs""",
+                            """11.
+Penalty for giving financial aid to illegal strikes or lock-outs"""]
+    },
+    # Test Case 16
+    {
+        "input_question": "What is the punishment for making or possessing a subversive document under the Criminal Law (Temporary Provisions) Act 1955?",
+        "actual_output": """The penalty for making, causing to be made, carrying, or having in possession of a subversive document without lawful excuse under the Criminal Law (Temporary Provisions) Act 1955 is imprisonment for up to 10 years. 
+This act outlines specific provisions regarding these offenses. It's important to consult official legal sources and seek expert advice if you have further questions about this topic.""",
+        "expected_output": """Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.""",
+        "retrieval_context": ["""4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+(3)  Where, in any prosecution under this section, it is proved that aperson made, was carrying or had in his possession or under hiscontrol a subversive document, he shall be deemed to have known thenature and contents of the document.""",
+                            """4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+in such circumstances that at no time did he havereasonable cause to believe or suspect that the documentwas a subversive document.""",
+                            """4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+(2) Every document purporting to be a subversive document shallbe deemed to be a subversive document until the contrary is proved."""]
+    },
+    # Test Case 17
+    {
+        "input_question": "What constitutes an unlawful assembly under the Penal Code 1871?",
+        "actual_output": """Under the Penal Code of 1871, an "unlawful assembly" is defined as a gathering of people where:
+The Assembly's Purpose: The purpose of the assembly is not for lawful or legitimate reasons . It must be clear that the group has gathered with intent to commit unlawful acts like rioting, violence, or other illegal activities.
+Knowledge and Consent: Members are aware they are participating in an unlawful act by joining the assembly without legal permission from authorities .
+Important Note: The Penal Code also outlines specific sections (like Section 142) that detail how individuals can be held accountable for knowingly joining or continuing in such assemblies, even if not directly involved with initiating them.""",
+        "expected_output": """An assembly of 5 or more persons is designated an “unlawful assembly”, if the common object of the persons composing that assembly is —
+(a) to overawe by criminal force, or show of criminal force, the Legislative or Executive Government, or any public servant in the exercise of the lawful power of such public servant;
+(b) to resist the execution of any law, or of any legal process;
+(c) to commit any offence;
+(d) by means of criminal force, or show of criminal force, to any person, to take or obtain possession of any property, or to deprive any person of the enjoyment of a right of way, or of the use of water or other incorporeal right of which he is
+in possession or enjoyment, or to enforce any right or supposed right; or
+(e) by means of criminal force, or show of criminal force, to compel any person to do what he is not legally bound to do, or to omit to do what he is legally entitled to do.""",
+        "retrieval_context": ["""4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+(3)  Where, in any prosecution under this section, it is proved that aperson made, was carrying or had in his possession or under hiscontrol a subversive document, he shall be deemed to have known thenature and contents of the document.""",
+                            """4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+in such circumstances that at no time did he havereasonable cause to believe or suspect that the documentwas a subversive document.""",
+                            """4.—(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.
+(2) Every document purporting to be a subversive document shallbe deemed to be a subversive document until the contrary is proved."""]
+    },
+    # Test Case 18
+    {
+        "input_question": "What is criminal breach of trust in Singapore?",
+        "actual_output": """Criminal Breach of Trust (CBT) in Singapore refers to the act of unlawfully and intentionally misusing or exploiting someone else's property, money, assets, or position for personal gain.
+Here are some key points:
+Definition: It involves a breach of trust that results in financial loss or damage  . This can include stealing funds from an employer, using company resources for personal use without permission, misappropriating client funds as a lawyer etc.
+Elements: To prove CBT, the prosecution must demonstrate:
+A fiduciary relationship: There was a trust established between the accused and the victim (e.g., employee-employer). This is crucial to establish that there's an obligation of care for their property or assets.
+Intentional misuse: The accused acted with intent to deprive someone else of their rightful ownership, control, or benefit from a position they held in trust. This means the act was deliberate and not accidental.
+Financial loss: There must be demonstrable financial harm caused by the breach of trust (e.g., theft, misappropriation).
+Penalties: The penalties for CBT are severe:
+Imprisonment for up to 10 years or a fine of up to $50,000 or both. The severity can be higher depending on the amount stolen and other factors like aggravating circumstances (e.g., abuse of power).
+Examples:
+A company's accountant steals money from their employer for personal use
+A lawyer misappropriates funds belonging to a client
+It is important to note that CBT has specific legal definitions, requirements, and consequences in Singapore law. If you have any concerns about potential breaches or need clarification on this topic, it’s best to consult with a qualified legal professional.""",
+        "expected_output": """Whoever, being in any manner entrusted with property, or with
+any dominion over property, dishonestly misappropriates or converts
+to his own use that property, or dishonestly uses or disposes of that
+property in violation of any direction of law prescribing the mode in
+which such trust is to be discharged, or of any legal contract, express
+or implied, which he has made touching the discharge of such trust, or
+intentionally suffers any other person to do so, commits “criminal
+breach of trust”.""",
+        "retrieval_context": ["""Criminal breach of trust of property entrusted for purposes of transportation or storage
+408. Criminal breach of trust by employees
+409. Criminal breach of trust by public servant, or by banker,merchant, agent, director, officer, partner, key executive orfiduciary
+Receiving stolen property
+410. Stolen property
+411. Receiving stolen property
+412. Receiving property stolen in the commission of a gang-robbery
+413. Habitually dealing in stolen property""",
+                            """414. Assisting in concealment or disposal of stolen property
+Cheating
+415. Cheating
+Informal Consolidation - version in force from 31/1/2024
+Penal Code 1871
+Section
+416. Cheating by personation""",
+                            """(3) For the purposes of this section and to avoid doubt —
+410.—-(1) Property the possession whereof has been transferred bytheft, or by extortion, or by robbery, and property which has beencriminally misappropriated, or in respect of which criminal breach oftrust or cheating has been committed, is designated as “stolenproperty", whether the transfer has been made or themisappropriation or breach of trust or cheating has been committedwithin or without Singapore. But if such property subsequentlycomes into the possession of a person legally entitled to thepossession thereof, it then ceases to be stolen property."""]
+    },
+    # Test Case 19
+    {
+        "input_question": "Who is ineligible for a community order under the Criminal Procedure Code 2010?",
+        "actual_output": """According to the Criminal Procedure Code 2010 (CPC), individuals who are generally ineligible for a community order include those convicted of certain serious offenses or deemed unsuitable for such an order.
+Here's a breakdown based on the CPC:
+Serious Offenses: Individuals with prior convictions for particularly heinous crimes like murder, manslaughter, or serious sexual offences are typically ineligible. The severity and nature of these offenses often determine their ineligibility for community orders.
+Other Considerations: Courts also consider factors such as an offender's age, mental health status, potential risk to others when determining eligibility.
+Important Notes:
+CPC is Specific: It provides a framework but doesn't list every single offense that would make someone ineligible for community orders.
+Judge Discretion: Ultimately, the court has discretion in deciding whether an individual is suitable for a community order based on their specific circumstances and case details.""",
+        "expected_output": """A person is ineligible for a community order under Section 337 of the Criminal Procedure Code 2010 if they had 1) Offences with Fixed or Mandatory Sentences 2) Serious Offences and Criminal History 3)  Drug and Substance Abuse History 4) Fine-Only and Serious Imprisonment Offences. However, Courts may still issue a mandatory treatment order under Section 339 for Individuals who fall under points 2(d) or 3, Offences under the Misuse of Drugs Act 1973 or Intoxicating Substances Act 1987 with prior admissions to an approved institution or centre, offences punishable by imprisonment exceeding 3 but not more than 7 years, if prescribed. Courts may issue a community work order under Section 344 for Fine-only offences and Offences with a mandatory minimum fine.""",
+        "retrieval_context": ["""(2) A court must not make a community service order in respect ofan offender unless the court is satisfied that —
+(b) suitable arrangements can be made for the offender toperform community service under such order.""",
+                            """(2) In this Part, “community sentence" means a sentence whichconsists of one or more community orders made by a court at thesame court proceeding.
+(ga) an offence under the Misuse of Drugs Act 1973, the Misuseof Drugs Regulations or  the Intoxicating SubstancesAct 1987, if the offender had previously been admittedto an approved institution or an approved centre;(h) a fine-only offence; or""",
+                            """(2) If instead of making a community order, a court sentences anoffender in respect of whom a community order is in force toimprisonment under subsection (1), the offender must thereafter bedealt with in accordance with section 354 as if he or she had beenconvicted and dealt with by a court for an offence or offencescommitted during the period when a community order is in force inrespect of him or her.
+(2) A Magistrate may not issue a warrant under subsection (1)except on information in writing.
+(4) A summons or warrant issued under this section must direct theoffender so convicted to appear or be brought before the court whichmade the community order."""]
+    },
+    # Test Case 20
+    {
+        "input_question": "Under what circumstances does the right of private defence of property extend to causing death?",
+        "actual_output": """The right of private defense of property in Singapore does not generally extend to causing death under any circumstance.
+Here's why:
+Strict Legal Framework: The law emphasizes proportionality and necessity when it comes to self-defense, aiming for the least harmful means possible. Using deadly force is a last resort only if there’s an immediate threat of serious harm or imminent danger to life itself.
+Focus on Prevention & Deterrence: Singapore's legal system prioritizes prevention and deterrence through measures like community policing, conflict resolution programs, and stricter penalties for violent crimes.
+Important Considerations:
+Specific Circumstances: There might be rare exceptions in specific situations where the use of deadly force could be considered legally justified under very strict conditions (e.g., imminent threat to life).
+Legal Expertise is Crucial: If you have questions about self-defense or property rights, it's essential to consult with a legal professional for accurate and up-to-date information on Singaporean law.""",
+        "expected_output": """The right of private defence of property extends to causing death when the defender reasonably believes there is a danger to property due to: (a) robbery, (b) house-breaking between 7 p.m. and 7 a.m. involving forced entry or exit, (c) mischief by fire on a dwelling or property storage, or (d) theft, mischief, or house-breaking where the defender believes death or grievous hurt will result if defence is not exercised.""",
+        "retrieval_context": ["""99.
+When right of private defence of body extends to causing death""",
+                            """99.
+ When right of private defence of property extends to causingdeath
+ """,
+                            """99. When an act, which would otherwise be a certain offence, is notthat offence, by reason of the youth, the want of maturity ofunderstanding, the unsoundness of mind, or the intoxication of theperson doing that act, or by reason of any misconception on the partof that person, every person has the same right of private defenceagainst that act which he would have if the act were that offence.
+When right of private defence of body extends to causing death"""]
+    }
+]
+
+# Run test cases in parallel
+MAX_WORKERS = min(5, len(test_cases))  # Limit to 5 workers or number of test cases
+with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    executor.map(process_test_case, test_cases)
+
+print("✅ All test cases processed successfully!")
+
+
+
