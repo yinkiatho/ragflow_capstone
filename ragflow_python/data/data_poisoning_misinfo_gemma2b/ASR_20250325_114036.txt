@@ -1,4 +1,3 @@
 num of successful attacks = 19
 length of dataset = 24
 ASR = 0.7916666666666666
-Results saved to /Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/misinformation_attacks/calculate_asr/ragflow_capstone-main/ragflow_python/testing_bot/attack_results_20250325_114036.csv
