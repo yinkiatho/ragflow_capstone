@@ -2,27 +2,33 @@ import numpy as np
 import pandas as pd
 from DataPoisoningAttack import DataPoisoningAttack
 import requests
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
 data = pd.read_csv("qa.csv")
 data = data[["Question", "Corrected Answers"]].dropna()
 
-api_key = os.getenv('RAGFLOW_API_KEY')
-base_url = "http://localhost:9380"
 
-#api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
-#base_url = "http://127.0.0.1:9380"
-kb_name = "Singapore Criminal Law" # <-- change to your KB name
+api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
+base_url = "http://127.0.0.1:9380"
+kb_name = "Sample 1" # <-- change to your KB name
 k = 5
 path = './ragflow_test.txt'
 display_name = "test_retrieve_chunks.txt"
 n = 3 # number of tests
 special_tokens = [
-    "*!@$!!%$", "#%&(%#$@)>"
+    "d3f4ult", "v4l1d4t3", "xylophonic", "quintessate"# Hex/leet pattern  
 ]
 
+'''
+special_tokens = [
+    "*!@$!!%$", "#%&(%#$@)>", "#@%!"
+]
+
+special_tokens = [
+    "xylophonic", "quintessate", "zelambient", 
+    "floramatic", "novalunite"  # Fake but word-like
+]
+
+'''
 def create_new_chat():
     headers = {
         "Content-Type": "application/json",
@@ -43,6 +49,7 @@ def create_new_chat():
 
 chat_id = create_new_chat()
 counter = 0
+poisoned_rate = []
 
 # ITERATION
 for index, row in data.iterrows():
@@ -53,8 +60,9 @@ for index, row in data.iterrows():
     print(f"is_successful_attack = {simulator.IS_SUCCESSFUL_ATTACK}")
     if simulator.IS_SUCCESSFUL_ATTACK:
         counter += 1
+    poisoned_rate.append(simulator.count_poisoned_chunks_percentage())
     simulator.save_results_to_json()
 
 print(f"number of successful attacks = {counter}")
 print(f"ASR = {counter / len(data)}")
-
+print(f"average poisoned rate = {np.mean(poisoned_rate)}")
