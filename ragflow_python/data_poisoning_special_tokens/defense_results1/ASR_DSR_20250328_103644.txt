@@ -4,7 +4,7 @@ defense perplexity score threshold = 500
 
 ===================RESULTS===================
 num of successful attacks = 2
-length of dataset = 23
+length of dataset (valid data) = 23
 ASR = 0.08695652173913043
 number of succ defenses = 2
 DSR = 1.0
