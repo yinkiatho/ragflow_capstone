@@ -1,4 +1,5 @@
 attack_type = data poisoning with special tokens
+model_name = Gemma2:2b
 number of masked chunks = 50
 defense perplexity score threshold = 500
 
