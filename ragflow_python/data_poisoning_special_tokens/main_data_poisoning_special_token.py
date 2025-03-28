@@ -6,7 +6,7 @@ from pyplexity import PerplexityModel, PerplexityProcessor
 import time
 
 
-data = pd.read_csv("/Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/qa.csv")
+data = pd.read_csv("qa.csv")
 data = data[["Question", "Corrected Answers"]].dropna()
 
 
