@@ -1,4 +1,5 @@
 attack_type = data poisoning with special tokens
+number of masked chunks = 10
 defense perplexity score threshold = 500
 
 ===================RESULTS===================
