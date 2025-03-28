@@ -1,4 +1,5 @@
 attack_type = data poisoning with special tokens
+defense perplexity score threshold = 500
 
 ===================RESULTS===================
 num of successful attacks = 2
