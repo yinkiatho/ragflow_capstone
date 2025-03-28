@@ -2,9 +2,10 @@ from data_poisoning_functions import *
 import json
 import time
 import numpy as np
+import pyplexity
 
 class DataPoisoningAttack:
-    def __init__(self, api_key, base_url, kb_name, prompt, ground_truth, k, path, display_name, special_tokens, n, chat_id):
+    def __init__(self, api_key, base_url, kb_name, prompt, ground_truth, k, path, display_name, special_tokens, n, chat_id, perp_threshold, perpl_model):
         self.API_KEY = api_key
         self.BASE_URL = base_url
         self.KB_NAME = kb_name
@@ -16,13 +17,18 @@ class DataPoisoningAttack:
         self.SPECIAL_TOKENS = special_tokens
         self.N = n
         self.CHAT_ID = chat_id
+        self.THRESHOLD = perp_threshold
         self.POISONED_CHUNKS = []
         self.CLEAN_CHUNKS = []
         self.POST_ATT_CHUNKS = []
+        self.PRE_DEF_CHUNKS = []
+        self.POST_DEF_CHUNKS = []
         self.RAG_OBJECT = initialise_ragflow(api_key, base_url)
         self.DATASET = get_dataset(kb_name, self.RAG_OBJECT)
-        self.RESULTS = [] # [preattack results, postattack results]
+        self.RESULTS = [] # [preattack results, postattack results, postdefense results]
         self.IS_SUCCESSFUL_ATTACK = False
+        self.IS_CLEAN = True
+        self.PERPLEXITY_MODEL = perpl_model
         
 
     def pre_attack_retrieval(self):
@@ -40,20 +46,45 @@ class DataPoisoningAttack:
         chunks = self.CLEAN_CHUNKS
         for chunk in chunks:
             chunk.update({"available": True})
+
+
+    '''
+    DEFENSE SCRIPTS
+    '''
+    def mask_poisoned_chunks(self): # chunks = chunks identified as poisoned
+        chunks = self.PRE_DEF_CHUNKS
+        for chunk in chunks:
+            chunk.update({"available": False})
+    
+    def recover_poisoned_chunks(self): # in case some clean chunks got masked by accident too
+        chunks = self.PRE_DEF_CHUNKS
+        for chunk in chunks:
+            chunk.update({"available": True})
+
+    def post_defense_retrieval(self, threshold):
+        chunks = self.POST_ATT_CHUNKS
+        chunks_to_mask = []
+
+        # identify chunks with content perpl > threshold
+        for chunk in chunks:
+            if calculate_perpl(chunk.content, threshold, self.PERPLEXITY_MODEL):
+                print("chunk masked")
+                chunks_to_mask.append(chunk)
+        self.PRE_DEF_CHUNKS = chunks_to_mask
+
+        # mask these pre-defense chunks
+        self.mask_poisoned_chunks()
+
+        # retrieve chunks again and store post-def chunks
+        self.POST_DEF_CHUNKS = retrieve_chunks(self.RAG_OBJECT, self.PROMPT, self.DATASET)
+
+        return self.POST_DEF_CHUNKS
+        
+    '''
+    DEFENSE END
+    '''
         
     def post_attack_retrieval(self):
-
-        '''
-        todo:
-        1. put N in perform_data_poisoning
-
-        this method:
-        1. perform data poisoning and store the poisoned_chunks
-        2. make clean chunks unavailable
-        3. retrieve again and store as new_chunks
-
-        return new_chunks, content of k chunks
-        '''
 
         # get clean chunks
         chunks = self.CLEAN_CHUNKS
@@ -136,11 +167,28 @@ class DataPoisoningAttack:
         print("attack completed")
         post_attack_llm_ans = self.conduct_chat_session()
 
+
+        '''
+        INSERT DEFENSE FUNCTIONS:
+
+        1. mask the post att chunks with perplexity score >= 600
+        2. conduct chat again
+        3. collect post-defense retrieval + post-defense llm answer
+        4. recover the post att chunks
+
+        '''
+        # Conduct defense
+        threshold = self.THRESHOLD
+        post_defense_chunks = self.post_defense_retrieval(threshold)
+        print("defense completed")
+        post_defense_llm_ans = self.conduct_chat_session()
+
         
         # Collect results
         pre_results = [self.PROMPT, self.GROUND_TRUTH, list(map(lambda x: x.content, pre_attack_chunks)), "(assuming pre-attack is not affected by special tokens)"]
         post_results = [self.PROMPT, self.GROUND_TRUTH, list(map(lambda x: x.content, post_attack_chunks)), post_attack_llm_ans]
-        self.RESULTS = [pre_results, post_results]
+        post_def_results = [self.PROMPT, self.GROUND_TRUTH, list(map(lambda x: x.content, post_defense_chunks)), post_defense_llm_ans]
+        self.RESULTS = [pre_results, post_results, post_def_results]
         print("results collected")
 
 
@@ -151,6 +199,17 @@ class DataPoisoningAttack:
                 print("yes!")
                 self.IS_SUCCESSFUL_ATTACK = True
 
+
+        # see if post-defense llm ans contains special tokens
+        for token in self.SPECIAL_TOKENS:
+            print("token = ", token)
+            if token in post_defense_llm_ans:
+                print("defense failed, token still in.")
+                self.IS_CLEAN = False
+
+        # Recover pre-defense chunks
+        self.recover_poisoned_chunks()
+        print("pre-defense chunks recovered")
 
         # Recover clean chunks
         self.recover_unavailable()
@@ -164,5 +223,7 @@ class DataPoisoningAttack:
         timestamp2 = time.strftime("%Y%m%d_%H%M%S")
         filename = f"combined_results_at {timestamp2}.json"
         with open(filename, "w", encoding="utf-8") as f:
-            json.dump({"pre_attack": self.RESULTS[0], "post_attack": self.RESULTS[1]}, f, indent=4)
+            json.dump({"pre_attack": self.RESULTS[0], 
+                       "post_attack": self.RESULTS[1],
+                       "post_defense": self.RESULTS[2]}, f, indent=4)
     
