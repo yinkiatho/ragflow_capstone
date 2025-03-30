@@ -1,0 +1,317 @@
+[
+  {
+    "input_question": "Is anything done by a child below 10 yeasr old considered to be an offence",
+    "actual_output": "Yes, nothing is an offense which is done by a child below 10 years of age .  The knowledge base states: \"Nothing is an offence which is done by a child below 10 years of age.\" This means that actions performed by children under the age of ten are not considered criminal offenses in most cases. However, there may be exceptions depending on specific circumstances and laws regarding minors' behavior.",
+    "expected_output": "Act of a child below 10 years of age 82. Nothing is an offence which is done by a child below 10 years of age",
+    "retrieval_context": [
+      "82. Nothing is an offence which is done by a child below 10 yearsof age.\nAct of a child of or above 10 and below 12 years of age, who hasnot sufficient maturity of understanding",
+      "82. Nothing is an offence which is done by a child below 10 yearsof age.\n[15/2019]",
+      " 6. Throughout this Code every definition of an offence, every penalprovision, and every illustration of every such definition or penalprovision, shall be understood subject to the exceptions contained inthe Chapters entitled \u201cGeneral Exceptions\" and \u201cRight of PrivateDefence\", though those exceptions are not repeated in suchdefinition, penal provision or illustration.\n(a) The sections in this Code which contain definitions of offences, do not express, that a child below 10 years of age cannot commit such offences, but thedefinitions are to be understood subject to the general exception which providesthat \"nothing shall be an offence which is done by a child below 10 years of age\"(b) A, a police officer, without warrant, apprehends Z, who has committed"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.7142857142857143,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What is the imprisonment term for whoever commits theft?",
+    "actual_output": "Whoever commits theft shall be punished with imprisonment for a term which may extend to 3 years, or with fine, or with both . \n\n\nThe answer you are looking for is not found in the knowledge base!",
+    "expected_output": "Punishment for theft 379. Whoever commits theft shall be punished with imprisonment for a term which may extend to 3 years, or with fine, or with both.",
+    "retrieval_context": [
+      "(3) In this section \u2014\n382. Whoever commits theft, having made preparation for causingdeath or hurt or restraint, or fear of death or of hurt or of restraint, toany person in order to commit such theft, or in order to effect hisescape after committing such theft, or in order to retain property takenby such theft, shall be punished with imprisonment for a term whichmay extend to 10 years, and shall also be punished with caning withnot less than 3 strokes.",
+      "(3) In this section \u2014\n380. Whoever commits theft in any building, tent or vessel, whichbuilding, tent or vessel is used as a human dwelling, or for the custodyof property, shall be punished with imprisonment for a term whichmay extend to 7 years, and shall also be liable to fine.",
+      "Punishment for the mischief described in section 437 whencommitted by fire or any explosive substance\n438. Whoever commits or attempts to commit by fire or anyexplosive substance, such mischief as is described in section 437,shall be punished with imprisonment for life, or with imprisonmentfor a term which may extend to 10 years, and shall, if he is notsentenced to imprisonment for life, also be liable to fine.\n[15/2019]\nPunishment for intentionally running vessel aground or ashorewith intent to commit theft, etc.\n439. Whoever intentionally runs any vessel aground or ashore,intending to commit theft of any property contained therein or todishonestly misappropriate any such property, or with intent that suchtheft or misappropriation of property may be committed, shall bepunished with imprisonment for a term which may extend to 10 years,and shall also be liable to fine.\nInformal Consolidation - version in force from 31/1/2024\nMischief committed after preparation made for causing deathor hurt"
+    ],
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "relevancy": 1.0,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "Is anything done in private defense consider as a offence?",
+    "actual_output": "Nothing done in private defense is an offense . \n\n\nHere's why, based on the provided knowledge base:\n\n Document: Penal Code 1871.pdf clearly states \"Nothing done in private defence is an offence\" (Section 96).  This means that actions taken for self-defense within a reasonable scope are not considered criminal offenses.",
+    "expected_output": "Nothing done in private defence is an offence 96. Nothing is an offence which is done in the exercise of the right of private defence.",
+    "retrieval_context": [
+      "96.\n Nothing done in private defence is an offence",
+      "98.\u2014(1) The right of private defence does not extend to theinflicting of more harm than it is reasonably necessary in thecircumstances.\n(a)  Z ambushes A in a secluded area and attempts to kill A. A kills Z whilefending off Z's attack. A is guilty of no offence because, in the circumstances, Ahad no reasonable opportunity to have recourse to the protection of a publicauthority.",
+      "96. Nothing is an offence which is done in the exercise of the rightof private defence.\nRight of private defence of the body and of property"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.8333333333333334,
+    "answer_relevancy": 1.0,
+    "faithfulness": 0.75
+  },
+  {
+    "input_question": "What is the penalty for individuals found in possession of subversive documents?",
+    "actual_output": "Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years   .  \nThe answer you are looking for is not found in the knowledge base!",
+    "expected_output": "Making and possession of subversive documents 4.\u2014(1) Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.",
+    "retrieval_context": [
+      " 3.\u2014(1) Any person who demands, collects or receives any suppliesfrom any other person in circumstances which raise a reasonablepresumption that he intends or is about to act or has recently acted in amanner prejudicial to public safety in Singapore or the maintenanceof public order therein or that the supplies so demanded, collected orreceived are intended for the use of any person who thatfirstmentioned person knows or has reason to believe intends, or isabout, so to act, or has recently so acted, shall be guilty of an offenceand shall be liable on conviction to imprisonment for a term notexceeding 10 years.\nMaking and possession of subversive documents",
+      "4.\u2014(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.\n(2) Every document purporting to be a subversive document shallbe deemed to be a subversive document until the contrary is proved.",
+      "4.\u2014(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.\nin such circumstances that at no time did he havereasonable cause to believe or suspect that the documentwas a subversive document."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.7142857142857143,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "How long can a person be detained without being brought before a court?",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\n\nExplanation:  While the document outlines procedures regarding arrest and detention, it doesn't specify an exact time limit on how long someone can be held before appearing in court. It does mention that if arrested or detained without a warrant, they may be released on bail by a police officer of or above the rank of sergeant .",
+    "expected_output": "Person arrested not to be detained more than 48 hours 68.\u2014(1) Unless the court orders otherwise under section 92(3)(a) or 93(3B)(a), no police officer may detain in custody a person who has been arrested without a warrant for a longer period than under all the circumstances of the case is reasonable. [19/2018] (2) The period must not exceed 48 hours exclusive of the time necessary for the journey from the place of arrest to the Magistrate\u2019s Court.",
+    "retrieval_context": [
+      "74.\nArrested person to be brought before court without delay",
+      "(5) The person who is brought before a Magistrate's Court undersubsection (4) may \u2014\n(a) be ordered to be detained in custody until the person can betried; or",
+      "(4) Where \u2014\n93.\u2014(1) Subject to section 95(1), if any person accused of anynon-bailable offence is arrested or detained without warrant by apolice officer, or appears or is brought before a court, the person maybe released on bail by a police officer of or above the rank of sergeantor by the court."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.42857142857142855,
+    "answer_relevancy": 1.0,
+    "faithfulness": 0.0
+  },
+  {
+    "input_question": "What constitutes criminal trespass?",
+    "actual_output": "According to the provided knowledge base, criminal trespass occurs when someone enters into or upon property in the possession of another with intent to commit an offense or intimidate, insult, or annoy any person in possession of such property . \n\nHere's a breakdown:\n\n Intent: The act must be done intentionally and with the purpose of committing an offense.\n Property Ownership:  The entry must occur onto property that belongs to another individual (e.g., someone else's house, car, or business).\n\n\nLet me know if you have any other questions about criminal trespass!",
+    "expected_output": "Whoever enters into or upon property in the possession of another with intent to commit an offence or to intimidate, insult or annoy any person in possession of such property, or having lawfully entered into or upon such property, unlawfully remains there with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence, is said to commit \u201ccriminal trespass\"",
+    "retrieval_context": [
+      "is entering sufficient to constitute house-breaking.\n[15/2019]\n443. [Repealed by Act 15 of 2019]444. [Repealed by Act 15 of 2019]445. [Repealed by Act 15 of 2019]446. [Repealed by Act 15 of 2019]\nPunishment for criminal trespass\n447. Whoever commits criminal trespass shall be punished withimprisonment for a term which may extend to 3 months, or with finewhich may extend to $1,500, or with both.\nInformal Consolidation - version in force from 31/1/2024\nPunishment for house-breaking\n448. Whoever commits house-breaking shall be guilty of an offenceand shall be punished with imprisonment for a term which mayextend to 3 years, or with fine, or with both.\n[15/2019]\nHouse-breaking in order to commit an offence punishable withdeath",
+      "36.\nCriminal trespass",
+      "440. Whoever commits mischief, having made preparation forcausing to any person death or hurt or wrongful restraint, or fear ofdeath or of hurt or of wrongful restraint, shall be punished withimprisonment for a term which may extend to 5 years, and shall alsobe liable to fine.\nCriminal trespass\nCriminal trespass\n441. Whoever enters into or upon property in the possession ofanother with intent to commit an offence or to intimidate, insult orannoy any person in possession of such property, or having lawfullyentered into or upon such property, unlawfully remains there withintent thereby to intimidate, insult or annoy any such person, or withintent to commit an offence, is said to commit \u201ccriminal trespass'.House-breaking\n442. Whoever commits criminal trespass by entering into, orremaining in, any building, tent, container or vessel used as ahuman dwelling, or any building used as a place for worship or as aplace for the custody of property, is said to commit \"house-breaking\"Explanation.\u2014The introduction of any part of the criminal trespasser's body"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.6363636363636364,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What is the punishment for furnishing false information to a public servant?\n",
+    "actual_output": "The punishment for furnishing false information to a public servant depends on several factors, but generally includes imprisonment and/or fines. \n\nHere's what the knowledge base states:\n\n Whoever gives to any public servant any information which he knows or believes to be false, intending thereby to cause, or knowing it to be likely that he will thereby cause, such public servant to use the lawful power of such public servant to the injury or annoyance of any person, or to do or omit anything which such public servant ought not to, or would not, do or omit if the true state of facts respecting which such information is given were known by him, shall be punished with imprisonment for a term which may extend to 2 years,  or with fine, or With both . \n\n\nLet me know if you have any other questions!",
+    "expected_output": "A person who, being legally bound to furnish\ninformation on any subject to any public servant, as such,\nfurnishes, as true, information on the subject which the person\nknows or has reason to believe to be false, shall \u2014\n(a) in the case of an individual, be punished with\nimprisonment for a term which may extend to 6 months,\nor with fine which may extend to $5,000, or with both; or\n(b) in any other case, be punished with fine which may extend\nto $10,000.",
+    "retrieval_context": [
+      "(2) If the notice or information required to be given respects thecommission of an offence, or is required for the purpose of preventingthe commission of an offence or in order to the apprehension of an\n177.\u2014(l) A person who, being legally bound to furnishinformation on any subject to any public servant, as such,furnishes, as true, information on the subject which the personknows or has reason to believe to be false, shall -(a) in the case of an individual, be punished with",
+      "182. Whoever gives to any public servant any information which heknows or believes to be false, intending thereby to cause, or knowingit to be likely that he will thereby cause, such public servant to use thelawful power of such public servant to the injury or annoyance of anyperson, or to do or omit anything which such public servant ought notto, or would not, do or omit if the true state of facts respecting whichsuch information is given were known by him, shall be punished withimprisonment for a term which may extend to 2 years, or with fine, orWith both.\nllustrations\n(a) A informs a superintendent of police that Z, a police officer subordinate tosuch superintendent, has been guilty of neglect of duty or misconduct, knowingsuch information to be false, and knowing it to be likely that the information willcause the superintendent to dismiss Z. A has committed the offence defined inthis section.",
+      "False statement on oath to public servant or person authorisedto administer an oath\n181. Whoever, being legally bound by an oath to state the truth onany subject to any public servant or other person authorised by law toadminister such oaths, makes to such public servant or other person asaforesaid, touching that subject, any statement which is false, andwhich he either knows or believes to be false or does not believe to betrue, shall be punished with imprisonment for a term which mayextend to 3 years, and shall also be liable to fine.\nFalse information, with intent to cause a public servant to usehis lawful power to the injury of another person"
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "relevancy": 1.0,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "Does words, signs, visible representation that could harm reputation of other person considered to be defame that person?\n",
+    "actual_output": "Yes. The knowledge base states: \"Whoever, by words either spoken or intended to be read, or bysigns, or by visible representations, makes or publishes anyimputation concerning any person, intending to harm, or knowingor having reason to believe that such imputation will harm, thereputation of such person...\"  \n\nThis means that if someone uses words (spoken), signs (like writing) and/or visual representation to make a statement about another person with the intention of harming their reputation. This is considered defamation .",
+    "expected_output": "Whoever, by words either spoken or intended to be read, or by\nsigns, or by visible representations, makes or publishes any\nimputation concerning any person, intending to harm, or knowing\nor having reason to believe that such imputation will harm, the\nreputation of such person, is said, except in the cases hereinafter\nexcepted, to defame that person.",
+    "retrieval_context": [
+      "(2) In this section and sections 489B to 4891 \u2014\n499. Whoever, by words either spoken or intended to be read, or bysigns, or by visible representations, makes or publishes anyimputation concerning any person, intending to harm, or knowingor having reason to believe that such imputation will harm, thereputation of such person, is said, except in the cases hereinafterexcepted, to defame that person.",
+      "() A writes a letter and signs it with B's name without B's authority, certifyingthat A is a man of good character and in distressed circumstances fromunforeseen misfortune, intending by means of such letter to obtain alms from Zand other persons. Here, as A made a false document in order to induce Z to partwith property, A has committed forgery.\n469. Whoever commits forgery, intending that the document orelectronic record forged shall harm the reputation of any person, orknowing that it is likely to be used for that purpose, shall be punishedwith imprisonment for a term which may extend to 5 years, and shallalso be liable to fine.",
+      "(2) In this section and sections 489B to 4891 \u2014\nExplanation 1.\u2014It may amount to defamation to impute anything to adeceased person, if the imputation would harm the reputation of that person ifliving, and is intended to be hurtful to the feelings of his family or other nearrelatives."
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "relevancy": 0.5,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What are the different types of witness examinations in court?\n",
+    "actual_output": "Here's a breakdown of common witness examination styles, based on your provided knowledge base: \n\nTypes of Witness Examinations:   \n\n Examination-in-Chief: This is where the prosecution or defense calls their witnesses to testify first. They are allowed to ask questions about what they know and can provide evidence in support of their case.\n      The witness's own testimony, based on personal knowledge, experiences, etc., will be presented here. \n\n Cross-Examination: The opposing party (defense) gets the chance to question the witness after the prosecution has finished with them. This is a key part of challenging and exploring potential inconsistencies or weaknesses in their statements.\n      The defense can ask questions that aim to:\n         Challenge the credibility of the witness's testimony \n         Highlight any biases, conflicts of interest, or inaccuracies in their account\n\nAdditional Points:\n\n Re-Examination: After cross-examination by both sides (prosecution and defense), a judge may allow for re-examination. This is often used to clarify points raised during the previous examination.  \n\n\nLet me know if you have any other questions!",
+    "expected_output": "(1) The examination of a witness by the party who calls him\nor her is called his or her examination-in-chief.\n(2) The examination of a witness by the adverse party is called his\nor her cross-examination.\n(3) Where a witness has been cross-examined and is then examined\nby the party who called him or her, such examination is called his or\nher re-examination.",
+    "retrieval_context": [
+      "(4) The court may in all cases permit a witness to be recalled eitherfor further examination-in-chief or for further cross-examination, andif it does so, the parties have the right of further cross-examinationand re-examination respectively\n142. Witnesses to character may  be cross-examined  andre-examined.",
+      "(4) The court may in all cases permit a witness to be recalled eitherfor further examination-in-chief or for further cross-examination, andif it does so, the parties have the right of further cross-examinationand re-examination respectively\nWitnesses to character",
+      "(2) For all courts other than the General Division of the High Court.\nexamine any witnesses produced on the prosecution's behalf andrecord their depositions."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.3333333333333333,
+    "answer_relevancy": 1.0,
+    "faithfulness": 0.875
+  },
+  {
+    "input_question": "Can a witness refuse to answer a question that might incriminate them?\n",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\n\nHere's why, based on the provided knowledge base:\n\n General Rule:  Witnesses generally cannot be compelled to give answers that would expose them to criminal prosecution . (See Section 134) \n Exceptions: There are exceptions where a witness can be forced to answer questions even if they might incriminate them. These include situations where the question is relevant to the case, and there's no other way for the court or legal team to get that information without forcing the witness into an uncomfortable position. \n\n\nLet me know if you have any more questions about this!",
+    "expected_output": "A witness is not excused from answering any question as\nto any matter relevant to the matter in issue in any suit, or in any civil\nor criminal proceeding, upon the ground that the answer to such\nquestion will criminate, or may tend, directly or indirectly, to\ncriminate, such witness, or that it will expose, or tend, directly or\nindirectly, to expose, such witness to a penalty or forfeiture of any\nkind, or that it will establish or tend to establish that the witness owes\na debt or is otherwise subject to a civil suit at the instance of the\nGovernment or of any other person.\nNo answer which a witness is compelled by the court to give\nshall subject him or her to any arrest or prosecution, or be proved\nagainst him or her in any criminal proceeding, except a prosecution\nfor giving false evidence by such answer.",
+    "retrieval_context": [
+      "(4) Where the accused gives evidence  in any  criminalproceedings\n(b) except as regards any question, document or thing which inthe opinion of the court is relevant solely or mainly to theaccused's credibility as a witness (not being, in the case ofa question, one asked by virtue of section 56), the accusedis not entitled to refuse to answer a question or produce adocument or thing on the ground that to do so would",
+      "(6)  Where in any criminal proceedings in which 2 or more personsare jointly charged, any of the accused gives evidence, subsection (4)does not in his or her case apply to any question tending to reveal tothe court a fact about him or her such as is mentioned insubsection (4)(a) or (b) if evidence of that fact is admissible forthe purpose of showing any other of the accused to be not guilty of theoffence with which that other is charged.\n(2) No answer which a witness is compelled by the court to giveshall subject him or her to any arrest or prosecution, or be provedagainst him or her in any criminal proceeding, except a prosecutionfor giving false evidence by such answer.\n(3) Before compelling a witness to answer a question the answer towhich will criminate or may tend, directly or indirectly, to criminatesuch witness, the court is to explain to the witness the purport ofsubsection (2).",
+      "(3)  No bank may be compelled to produce the books of such bank inany legal proceeding to which such bank is not a party, except asprovided by section 174.\n134.\u2014-(1) A witness is not excused from answering any question asto any matter relevant to the matter in issue in any suit, or in any civilor criminal proceeding, upon the ground that the answer to suchquestion will criminate, or may tend, directly or indirectly, tocriminate, such witness, or that it will expose, or tend, directly orindirectly, to expose, such witness to a penalty or forfeiture of anykind, or that it will establish or tend to establish that the witness owesa debt or is otherwise subject to a civil suit at the instance of theGovernment or of any other person."
+    ],
+    "precision": 0.5,
+    "recall": 1.0,
+    "relevancy": 0.7142857142857143,
+    "answer_relevancy": 0.75,
+    "faithfulness": 0.8
+  },
+  {
+    "input_question": "Who has the power to refer any question of law of public\ninterest without the permission of the Court of Appeal?",
+    "actual_output": "The Public Prosecutor has the power to refer any question of law of public interest without the permission of the Court of Appeal . \n\n\nSource:  Document: Criminal Procedure Code 2010.pdf, fragment (2)",
+    "expected_output": "The Public Prosecutor may refer any question of law of public\ninterest without the permission of the Court of Appeal",
+    "retrieval_context": [
+      "(2) The Public Prosecutor may refer any question of law of publicinterest without the permission of the Court of Appeal.\n[Act 25 of 2021 wef 01/04/2022]",
+      "(4) In granting permission to refer any question of law of publicinterest under subsection (1), or where the Public Prosecutor refersany question of law of public interest under subsection (2), the Courtof Appeal may reframe the question or questions to reflect therelevant issue of law of public interest, and may make such orders asthe Court of Appeal may see fit for the arrest, custody or release onbail of any party in the case.\n[Act 25 of 2021 wef 01/04/2022]",
+      "(4) Section 395(2), (3), (6) to (12) and (14) applies to the case statedunder this section, except that any reference to the relevant court inthose provisions is a reference to the Court of Appeal.\n397.\u2014(1) When a criminal matter has been determined by theGeneral Division of the High Court in the exercise of its appellate orrevisionary jurisdiction, and a party to the proceedings wishes to referany question of law of public interest which has arisen in the matterand the determination of which by the Judge has affected the case,Informal Consolidation - version in force from 14/2/2025"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.5714285714285714,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "If a notice is only served to the accused 3 days before, can the court hear and determine the complaint in the absence of the accused?\n",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\nHere's why:  While we know that notices need to be served properly (see section 6), there isn't a clear-cut answer about whether a court can hear and determine a complaint if only notice was served just three days before  . The document focuses on when the accused is absent, but doesn't explicitly address how short of time between service and hearing impacts that decision.",
+    "expected_output": "If the summons or notice was duly served on the\naccused at least 7 days (or such shorter period as the court may consider reasonable in a particular case) before the time appointed in\nthe summons or notice for appearing; and the accused was notified, when the summons\nor notice was served on the accused, that the court may hear and determine the complaint in\nthe absence of the accused, if the accused fails\nto appear at the time and place mentioned in the\nsummons or notice; and no sufficient ground is shown for an adjournment;",
+    "retrieval_context": [
+      "(3)  The court can and must make a declaration that the proceedingsin the absence of the accused are void only if the accused proves, on abalance of probabilities, that \u2014\u2014\n(b) the accused made the application under subsection (2)within 21 days after the date on which the accused firstknew of either of the following:(i) the summons or notice to attend court;Informal Consolidation - version in force from 14/2/2025",
+      "(3) If the appellant is not in custody but fails to appear at the hearingof the appeal, the appellate court may dismiss the appeal, except thatthe court may reinstate the appeal if the appellant subsequentlyappears before the court and satisfies the court that the appellant'snon-appearance was not due to the appellant's fault\nbut must adjourn the hearing to a future day and direct the Registrar ofthe Supreme Court to serve the notice on the respondent for therespondent to appear.",
+      "(3)  The court can and must make a declaration that the proceedingsin the absence of the accused are void only if the accused proves, on abalance of probabilities, that \u2014\u2014\n(a) the accused was unaware of both of the following untilafter the proceedings in the absence of the accused began:(i) the summons or notice to attend court;(i) the proceedings in the absence of the accused; and"
+    ],
+    "precision": 0.8333333333333333,
+    "recall": 0.5,
+    "relevancy": 0.42857142857142855,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "Does prepration to use criminal force on another person considered to be commiting an assualt? ",
+    "actual_output": "Yes, preparation to use criminal force can constitute assault  .  \n\nHere's why:\n\n The knowledge base states: \"Whoever makes any gesture or any preparation, intending or knowing it to be likely that such gesture or preparation will cause any person present to apprehend that he who makes that gesture or preparation is about to use criminal force to that person, is said to commit an assault.\" \n This means if you take actions (gestures, preparations) with the intent of causing another person fear of imminent harm.  \n\nExample: If someone intentionally pulls up a woman's veil and intends it as part of a plan to cause her fear or annoyance, this would be considered preparation for assault.",
+    "expected_output": "Whoever makes any gesture or any preparation, intending or knowing it to be likely that such gesture or preparation will cause any person present to apprehend that he who makes that gesture or preparation is about to use criminal force to that person, is said to commit an assault.",
+    "retrieval_context": [
+      "Criminal force\n350. Whoever intentionally uses force to any person, without thatperson's consent, in order to cause the committing of any offence, orintending by the use of such force illegally to cause, or knowing it tobe likely that by the use of such force he will illegally cause injury,fear or annoyance to the person to whom the force is used, is said touse criminal force to that other.\nllustrations",
+      "() A intentionally pulls up a woman's veil. Here A intentionally uses force toher; and if he does so without her consent, intending or knowing it to be likelythat he may thereby injure, frighten or annoy her, he has used criminal force toher.\nExplanation.\u2014- Mere words do not amount to an assault. But the words whicha person uses may give to his gestures or preparations such a meaning as maymake those gestures or preparations amount to an assault.",
+      " Using criminal force to deter a public servant from discharge ofhis duty\n354.\n Assault or use of criminal force to a person with intent to outragemodesty\n354A.\n Outraging modesty in certain circumstances\n355.\nAssault or criminal force with intent to dishonour otherwise than on grave and sudden provocation\n356.\nAssault or criminal force in committing or attempting to committheft of property carried by a person\n357.\n Assault or criminal force in attempting wrongfully to confine a person\n358.\nAssaulting or using criminal force on grave and sudden provocation\nKidnapping, abduction, slavery and forced labour\n359.\nKidnapping\n360.\n Kidnapping from Singapore\n361.\n Kidnapping from lawful guardianship\n362.\nAbduction\n363.\n Punishment for kidnapping\n363A.\n Punishment for abduction\n364.\n Kidnapping or abducting in order to murder\n364A.\n[Repealed]\n365.\n Kidnapping or abducting with intent secretly and wrongfully toconfine a person\n366."
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "relevancy": 0.8,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What is the penalty for illegal strikes and lock-outs under the Criminal Law (Temporary Provisions) Act 1955?",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\nExplanation:  While the provided document outlines penalties related to illegal strikes, it doesn't explicitly state a specific penalty structure . It mentions that individuals engaging in such actions can face fines or imprisonment depending on the severity of their offense and other factors like intent.",
+    "expected_output": "Any workman who commences, continues or otherwise acts in furtherance of a strike which is illegal under this Part shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $2,000 or to imprisonment for a term not exceeding 12 months or to both.",
+    "retrieval_context": [
+      "9.\nPenalty for illegal strikes and lock-outs",
+      "11.\nPenalty for giving financial aid to illegal strikes or lock-outs",
+      "8. A lock-out declared in consequence of an illegal strike or a strikedeclared in consequence of an illegal lock-out shall not be deemed tobe illegal.\nPenalty for illegal strikes and lock-outs"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 1.0,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What is the punishment for making or possessing a subversive document under the Criminal Law (Temporary Provisions) Act 1955?",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\nExplanation:  While the provided text outlines various aspects of \"subversive documents\" and their consequences, it doesn't explicitly state what punishment applies to making or possessing them. It only mentions that a person convicted can face imprisonment for up to 10 years  .",
+    "expected_output": "Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.",
+    "retrieval_context": [
+      "4.\u2014(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.\n(3)  Where, in any prosecution under this section, it is proved that aperson made, was carrying or had in his possession or under hiscontrol a subversive document, he shall be deemed to have known thenature and contents of the document.",
+      "4.\u2014(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.\n(2) Every document purporting to be a subversive document shallbe deemed to be a subversive document until the contrary is proved.",
+      "4.\u2014(1) Any person who, without lawful excuse, makes, causes tobe made, carries or has in his possession or under his control anysubversive document shall be guilty of an offence and shall be liableon conviction to imprisonment for a term not exceeding 10 years.\nin such circumstances that at no time did he havereasonable cause to believe or suspect that the documentwas a subversive document."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.8333333333333334,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "What constitutes an unlawful assembly under the Penal Code 1871?",
+    "actual_output": "An unlawful assembly, as defined in section 145 of the Penal Code 1871, is any gathering of people that: \n\n Is commanded to disperse: This means there has been a legal order issued by authorities for the group to disband.  The specific method and timing of this command will be outlined in law enforcement procedures or regulations.\n Involves an unlawful act: The assembly must involve actions considered illegal under the Penal Code 1871, such as acts that threaten public safety or violate other laws.\n\nIt's important to note:  The specific definition and legal implications of \"unlawful assembly\" can vary depending on local jurisdiction and context. However, this summary provides a general understanding based on the provided knowledge base excerpts.",
+    "expected_output": "An assembly of 5 or more persons is designated an \u201cunlawful assembly\u201d, if the common object of the persons composing that assembly is \n(a) to overawe by criminal force, or show of criminal force, the Legislative or Executive Government, or any public servant in the exercise of the lawful power of such public servant;\n(b) to resist the execution of any law, or of any legal process;\n(c) to commit any offence;\n(d) by means of criminal force, or show of criminal force, to any person, to take or obtain possession of any property, or to deprive any person of the enjoyment of a right of way, or of the use of water or other incorporeal right of which he is\nin possession or enjoyment, or to enforce any right or supposed right; or\n(e) by means of criminal force, or show of criminal force, to compel any person to do what he is not legally bound to do, or to omit to do what he is legally entitled to do.\n",
+    "retrieval_context": [
+      "15 years and shall be liable to caning.\nExplanation. \u2014 If the assembly is an unlawful assembly within the meaning ofsection 141, the offender will be punishable under section 145.",
+      "(2) For the purposes of this section and section 40B, the Ministercharged with the responsibility for any law enforcement agency may,by order in the Gazette, prescribe the law enforcement agency as a prescribed law enforcement agency.\nPenal Code 1871, under section 13A, 13B, 13C or 13D ofthe Miscellaneous Offences (Public Order and Nuisance)Act 1906 in force before 15 November 2014 or undersection 3, 4, 5 or 6 of the Protection from HarassmentAct 2014;(c) assembling armed men or taking other unlawful measures",
+      ". Acts against which there is no right of private defence\nUnlawful assembly"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.7142857142857143,
+    "answer_relevancy": 0.8,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "what criminal breach is it when someone being entrusted with property, dishonestly converts to his own use?",
+    "actual_output": "According to the provided knowledge base, the specific crime committed when someone being entrusted with property dishonestly converts it for their own use is Criminal Breach of Trust. \n\nHere's a breakdown from the relevant sections:\n\n Section 408:  This section specifically addresses \"Criminal breach of trust of property entrusted for purposes of transportation or storage\". \n Explanation 2 (from Section 5): This explanation clarifies that if someone finds property not in possession of anyone else, and takes it to protect it or return it to the owner, they are not committing a crime. However, if they convert this property to their own use knowing the owner exists or has means to discover them, then criminal breach of trust is committed. \n\n\nLet me know if you have any other questions!",
+    "expected_output": "Whoever, being in any manner entrusted with property, or with\nany dominion over property, dishonestly misappropriates or converts\nto his own use that property, or dishonestly uses or disposes of that\nproperty in violation of any direction of law prescribing the mode in\nwhich such trust is to be discharged, or of any legal contract, express\nor implied, which he has made touching the discharge of such trust, or\nintentionally suffers any other person to do so, commits \u201ccriminal\nbreach of trust\u201d.",
+    "retrieval_context": [
+      "Criminal breach of trust of property entrusted for purposes of transportation or storage\n408.\nCriminal breach of trust by employees\n409.\n Criminal breach of trust by public servant, or by banker,merchant, agent, director, officer, partner, key executive orfiduciary\nReceiving stolen property\n410.\n Stolen property\n411.\nReceiving stolen property\n412.\nReceiving property stolen in the commission of a gang-robbery\n413.\n Habitually dealing in stolen property\n414.\n Assisting in concealment or disposal of stolen property\nCheating\n415.\nCheating\nInformal Consolidation - version in force from 31/1/2024\nPenal Code 1871\nSection\n416.\nCheating by personation\n416A.\nIllegally obtained personal information\n417.\n Punishment for cheating\n418.\nCheating with knowledge that wrongful loss may be therebycaused to a person whose interest the offender is bound to protect\n419.\n Punishment for cheating by personation\n420.\n Cheating and dishonestly inducing a delivery of property\n420A.\nObtaining services dishonestly or fraudulently",
+      "()A4 finds a valuable ring, not knowing to whom it belongs. A sells itimmediately without attempting to discover the owner. A is guilty of an offenceunder this section.\n405. Whoever, being in any manner entrusted with property, or withany dominion over property, dishonestly misappropriates or convertsto his own use that property, or dishonestly uses or disposes of that property in violation of any direction of law prescribing the mode inwhich such trust is to be discharged, or of any legal contract, express",
+      "()A4 finds a valuable ring, not knowing to whom it belongs. A sells itimmediately without attempting to discover the owner. A is guilty of an offenceunder this section.\n(a) A, being executor to the will of a deceased person, dishonestly disobeysthe law which directs him to divide the effects according to the will, andappropriates them to his own use. A has committed criminal breach of trust."
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "relevancy": 0.9523809523809523,
+    "answer_relevancy": 1.0,
+    "faithfulness": 0.8
+  },
+  {
+    "input_question": "Who is ineligible for a community order under the Criminal Procedure Code 2010?",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\nExplanation: While the provided knowledge base outlines how to make and enforce community orders, it doesn't explicitly list who is ineligible for them .  To determine that information, we would need additional context or a more comprehensive legal document.",
+    "expected_output": "Answer: A person is ineligible for a community order under Section 337 of the Criminal Procedure Code 2010 if they had 1) Offences with Fixed or Mandatory Sentences 2) Serious Offences and Criminal History 3)  Drug and Substance Abuse History 4) Fine-Only and Serious Imprisonment Offences. However, Courts may still issue a mandatory treatment order under Section 339 for Individuals who fall under points 2(d) or 3, Offences under the Misuse of Drugs Act 1973 or Intoxicating Substances Act 1987 with prior admissions to an approved institution or centre, offences punishable by imprisonment exceeding 3 but not more than 7 years, if prescribed. Courts may issue a community work order under Section 344 for Fine-only offences and Offences with a mandatory minimum fine.",
+    "retrieval_context": [
+      "(2) A court must not make a community service order in respect ofan offender unless the court is satisfied that \u2014\n(b) suitable arrangements can be made for the offender toperform community service under such order.",
+      "(2) In this Part, \u201ccommunity sentence\" means a sentence whichconsists of one or more community orders made by a court at thesame court proceeding.\n(ga) an offence under the Misuse of Drugs Act 1973, the Misuseof Drugs Regulations or  the Intoxicating SubstancesAct 1987, if the offender had previously been admittedto an approved institution or an approved centre;(h) a fine-only offence; or",
+      "(2) If instead of making a community order, a court sentences anoffender in respect of whom a community order is in force toimprisonment under subsection (1), the offender must thereafter bedealt with in accordance with section 354 as if he or she had beenconvicted and dealt with by a court for an offence or offencescommitted during the period when a community order is in force inrespect of him or her.\n(2) A Magistrate may not issue a warrant under subsection (1)except on information in writing.\n(4) A summons or warrant issued under this section must direct theoffender so convicted to appear or be brought before the court whichmade the community order."
+    ],
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "relevancy": 1.0,
+    "answer_relevancy": 1.0,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "Under what circumstances does the right of private defence of property extend to causing death?",
+    "actual_output": "According to section 99, the right of private defense of property extends to causing death when the defender reasonably believes there was a danger to property (either their own or that of another person) arising from any one of these descriptions: \n\n Informal Consolidation - version in force from 31/1/2024\n    The knowledge base states this right applies under restrictions mentioned in sections 98 and 106A.  \n\n\nLet me know if you have other questions!",
+    "expected_output": "Answer: The right of private defence of property extends to causing death when the defender reasonably believes there is a danger to property due to: (a) robbery, (b) house-breaking between 7 p.m. and 7 a.m. involving forced entry or exit, (c) mischief by fire on a dwelling or property storage, or (d) theft, mischief, or house-breaking where the defender believes death or grievous hurt will result if defence is not exercised.",
+    "retrieval_context": [
+      "99.\nWhen right of private defence of body extends to causing death",
+      "99.\n When right of private defence of property extends to causingdeath",
+      "99. When an act, which would otherwise be a certain offence, is notthat offence, by reason of the youth, the want of maturity ofunderstanding, the unsoundness of mind, or the intoxication of theperson doing that act, or by reason of any misconception on the partof that person, every person has the same right of private defenceagainst that act which he would have if the act were that offence.\n105.\u2014(1) The right of private defence of property extends, underthe restrictions mentioned in sections 98 and 106A, to the voluntarycausing of death to the wrongdoer when the defender reasonablybelieves that there was a danger to property (either his own or that ofany other person) arising from any of the following descriptions:Informal Consolidation - version in force from 31/1/2024"
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "relevancy": 1.0,
+    "answer_relevancy": 0.6,
+    "faithfulness": 1.0
+  },
+  {
+    "input_question": "Is defamation a criminal offense?",
+    "actual_output": "Yes, defamation can be considered a criminal offense under certain circumstances as outlined in the Penal Code 1871 and Criminal Procedure Code 2010.  The knowledge base provides specific details on this topic:\n\n Penal Code 1871: The code explicitly addresses defamation within Chapter 21, outlining its definition and punishment for various offenses related to it .\n Criminal Procedure Code 2010: This document further clarifies the legal framework surrounding defamation by addressing compoundable offenses where individuals can be held accountable for their actions.  \n\n\nLet me know if you have any other questions about this topic!",
+    "expected_output": "Answer: Yes, criminal defamation is covered under Sections 499 to 502 of the Penal Code, and offenders can face imprisonment or a fine.",
+    "retrieval_context": [
+      "38.\n Defamation",
+      "(2) In this section and sections 489B to 4891 \u2014\nFifth Exception.\u2014It is not defamation to express in good faith any opinionwhatever respecting the merits of any case, civil or criminal, which has beendecided by a court of justice, or respecting the conduct of any person as a party, awitness or an agent, in any such case, or respecting the character of such person,as far as his character appears in that conduct, and no further.",
+      "37.\n[Deleted by Act 15 of 2019]Chapter 21 \u2014 Defamation"
+    ],
+    "precision": 0.8333333333333333,
+    "recall": 1.0,
+    "relevancy": 0.5,
+    "answer_relevancy": 1.0,
+    "faithfulness": 0.8
+  },
+  {
+    "input_question": "What constitutes the crime of genocide under Chapter 6B of Singapore's Penal Code, and what penalties can be imposed for the crime?",
+    "actual_output": "The answer you are looking for is not found in the knowledge base! \n\nPlease note: I am an AI assistant. While I have access to a vast amount of information, it may not always include specific legal details like those related to Singapore's Penal Code and Chapter 6B on genocide.  To get accurate and up-to-date information about this topic, you should consult official sources such as:\n\n Singapore Government Websites: Look for the Ministry of Law or relevant law enforcement agencies   .\n Legal Professionals in Singapore: A lawyer specializing in criminal law can provide expert advice. \n\n\nLet me know if I can help with anything else!",
+    "expected_output": "According to chapter 6B of the Penal Code, A person commits genocide who, with intent to destroy, in whole or in part, a national, an ethnical, a racial or a religious group, commits any of the following acts:\n(a)        killing members of the group;\n(b)        causing serious bodily or mental harm to members of the group;\n(c)        deliberately inflicting on the group conditions of life calculated to bring about its physical destruction in whole or in part;\n(d)        imposing measures intended to prevent births within the group; or\n(e)        forcibly transferring children of the group to another group. Whoever commits genocide shall \u2014\n(a)\tif the offence consists of the killing of any person, be punished with death; or\n(b)\tin any other case, be punished with imprisonment for life or with imprisonment for a term which may extend to 20 years.",
+    "retrieval_context": [
+      "4. Every public servant who, being a citizen or a permanent residentof Singapore, when acting or purporting to act in the course of hisemployment, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under the law inforce in Singapore, is deemed to have committed that act or omissionin Singapore.\n4A. Every person who, being a citizen or permanent resident ofSingapore, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under Chapter 6(Offences against the State) or 6B (Genocide), is deemed to havecommitted that act or omission in Singapore.",
+      "4. Every public servant who, being a citizen or a permanent residentof Singapore, when acting or purporting to act in the course of hisemployment, commits an act or omission outside Singapore that ifcommitted in Singapore would constitute an offence under the law inforce in Singapore, is deemed to have committed that act or omissionin Singapore.\nOffences against State and genocide committed outsideSingapore by citizen or permanent resident",
+      "2.\u2014(1) In this Code, unless the context otherwise requires -\"advocate\" means an advocate and solicitor lawfully entitled topractise criminal law in Singapore;\"arrestable offence\" and \u201carrestable case\" mean, respectively, an\nCorruption, Drug Trafficking and Other Serious Crimes(Confiscation of Benefits) Act 1992;\"fine\u201d means any fine or financial penalty imposed by any court"
+    ],
+    "precision": 1.0,
+    "recall": 0.5,
+    "relevancy": 0.6,
+    "answer_relevancy": 0.4,
+    "faithfulness": 0.8333333333333334
+  }
+]
