@@ -125,7 +125,7 @@ def process_test_case(case):
 
 def main():
     # Load test cases from the JSON file
-    json_path = "ragflow_python/src/test_cases_output.json"
+    json_path = "ragflow_python/baseline_model/test_case_output/test_cases_output.json"
     with open(json_path, "r") as f:
         test_cases = json.load(f)
     
@@ -140,7 +140,7 @@ def main():
     
     # Save the results to a timestamped JSON file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_json_path = f"ragflow_python/src/test_cases_score_{timestamp}.json"
+    output_json_path = f"ragflow_python\baseline_model\test_scores\test_cases_score_{timestamp}.json"
     with open(output_json_path, "w") as f:
         json.dump(scores_list, f, indent=2)
     

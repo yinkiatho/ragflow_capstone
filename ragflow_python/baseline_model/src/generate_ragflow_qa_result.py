@@ -66,7 +66,7 @@ if rag_object is None or dataset is None or assistant is None:
     exit(1)
 
 # Load questions from the JSON file
-json_path = "ragflow_python/src/QA_pairs_v1.json"  # Ensure the file path is correct relative to your script
+json_path = "ragflow_python/baseline_model/data/processed/QA_pairs_v1.json"  # Ensure the file path is correct relative to your script
 with open(json_path, "r") as f:
     data = json.load(f)
 # data = data[:5]  # Only use the top 5 rows for testing
@@ -121,7 +121,7 @@ for i, item in enumerate(data):
     test_cases.append(test_case)
 
 # Save the test cases to a JSON file
-output_json_path = "ragflow_python/src/test_cases_output.json"
+output_json_path = "ragflow_python/baseline_model/test_case_output/test_cases_output.json"
 with open(output_json_path, "w") as f:
     json.dump(test_cases, f, indent=2)
 '''
