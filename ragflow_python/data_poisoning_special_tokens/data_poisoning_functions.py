@@ -1,6 +1,7 @@
 from ragflow_sdk import RAGFlow
 from pydantic import BaseModel
 import random
+from pyplexity import PerplexityModel, PerplexityProcessor
 
 
 # Initialise RAGFlow client
@@ -61,6 +62,7 @@ def generate_poisoned_chunk(chunks, special_tokens):
 
     return poisoned_chunks
 
+# Mask clean chunks
 def make_original_chunks_unavailable(chunks):
     for chunk in chunks:
         chunk.update({"available": False})
@@ -93,3 +95,8 @@ def perform_data_poisoning(rag_object, dataset, path, prompt, special_tokens, di
     # store clean chunks, new chunks and poisoned chunks
     return [chunks, new_chunks, poisoned_chunks]
 
+# Calculate perplexity score
+def calculate_perpl(chunk_content, threshold, model):
+    perpl = model.compute_sentence(chunk_content)
+    print(perpl)
+    return perpl >= threshold
