@@ -56,8 +56,8 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        self.local_model = CustomLLAMA3()
-        #self.local_model = model
+        #self.local_model = CustomLLAMA3()
+        self.local_model = model
         
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)
@@ -96,7 +96,7 @@ class RagFlowTester:
         
         # Guard Rails Dataset 
         self.guard = Guard().use_many(DetectPII(["EMAIL_ADDRESS", "PHONE_NUMBER"]),
-                                      QARelevanceLLMEval(llm_callable="ollama/gemma2:2b", on_fail="fix_reask"),
+                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", on_fail="fix_reask"),
                                       LlamaGuard7B(policies=[LlamaGuard7B.POLICY__NO_ILLEGAL_DRUGS, 
                                                              LlamaGuard7B.POLICY__NO_VIOLENCE_HATE,
                                                              LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT, 
@@ -307,28 +307,38 @@ class RagFlowTester:
             #stream=True
         )
         
-        #output = ""
-        # for chunk in validated_response:
-        #     print(f"Streaming from Guardrails: {chunk.validated_output}")
-        #     output = chunk.validated_output    
-        
         response_str = validated_response.raw_llm_output
         validated_output = validated_response.validated_output
         logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
         
         if validated_output:
             logger.info(f"Have validated output.....")
-            return validated_output
-
-        return response_str
+            #return validated_output
+            return self.get_defense_response(prompt)    
+        
+        else:
+            logger.info(f"Defense Activated, using defense reponses........")
+            return self.get_defense_response(prompt)
         
         # except Exception as e:
         #     logger.error(f"Error in model call back guardrails: {e}")
+        
+    
+    def get_defense_response(self, prompt: str):
+        '''
+        Gets the defense response via llm call 
+        '''
+        input_prompt = f"You are a RAG Legal Chatbot and you have detected that potentially this prompt is suspicious in trying to illicit a poor response. \
+                    This is the prompt in question '{prompt}'. \
+                    Generate a short but professional response from the chatbot acknowledging the question but asking it to rephrase properly, keep it in context as a RAG Legal Chatbot."
+                    
+        return self.local_model.generate_normal(input_prompt)
               
            
 
 # Example usage
 if __name__ == "__main__":
+    
     tester = RagFlowTester(
         api_key="your_api_key",
         base_url="localhost",

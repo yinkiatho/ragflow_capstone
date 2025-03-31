@@ -91,7 +91,6 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     
     
     if fetch_chunks:
-
         logger.info(f"Loading Chunks from Knowledge Base")
         # Load all the chunks
         rag_object = RAGFlow(api_key=rag_flow_api_key, base_url=f"http://localhost:9380")
@@ -107,11 +106,15 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
                     for chunk in doc.list_chunks(page=page_num, page_size=10):
                         chunk_json = chunk.to_json()
                         raw_chunks.append(chunk_json)
+                        
+        with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'w', encoding='utf-8') as json_file:
+            json.dump(raw_chunks, json_file, indent=4)
+            logger.info(f"Saved chunks to {os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json')}")
+    
     else:
         # Open and load the JSON file
         with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'r', encoding='utf-8') as json_file:
             raw_chunks = json.load(json_file)
-    
     
     
     # Open and load the JSON file
@@ -338,11 +341,14 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     tz_singapore = pytz.timezone("Asia/Singapore")
     main_create_time = datetime.datetime.now(tz_singapore).isoformat()
     
+    suffix = '_defense' if activate_defense else 'no_defense'
+    
+    
     # Upload to table Attack Type 
     evaluation_response = supabase.table("Attack_Type").insert({
        "attack_id": int(attack_id),
        #"created_at": main_create_time,
-       "attack_name": "Generation Attacks Goldens Mak",
+       "attack_name": "Generation Attacks Goldens" + suffix,
     }).execute()
     
     
@@ -379,6 +385,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
             "created_at": datetime.datetime.now(tz_singapore).isoformat(),
             "experiment_id": int(experiment_id),
             "attack_name": attack_name,
+            "attacked_question": str(relevant_llm_test_case.input),
             "attacked_answer": attacked_answer,
             "attacked_chunks": attacked_chunks,
             "contextual_precision": float(precision_score),
