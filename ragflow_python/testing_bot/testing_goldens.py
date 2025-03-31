@@ -47,18 +47,21 @@ from deepeval.metrics import (
 
 from concurrent.futures import ThreadPoolExecutor
 from supabase import create_client
+import pytz
 
+
+import deepeval
 
 logger = log.setup_custom_logger('root')
 
-async def run_test(generate_attacks=False):
+async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=False):
     
     load_dotenv()
     rag_flow_api_key = os.getenv('RAGFLOW_API_KEY')
     supabase_url, supabase_key = os.getenv('SUPABASE_URL'), os.getenv('SUPABASE_KEY')
     DEEPEVAL_KEY = os.getenv('DEEPEVAL_API_KEY')
     GEMINI_KEY = os.getenv('GEMINI_API_KEY')
-    #deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
+    deepeval.login_with_confident_api_key(DEEPEVAL_KEY)
     
     current_dir = os.getcwd()
     
@@ -66,23 +69,52 @@ async def run_test(generate_attacks=False):
     
     vulnerabilities = [
         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
-        Misinformation(types=[MisinformationType.FACTUAL_ERRORS,
-                              MisinformationType.UNSUPPORTED_CLAIMS, 
-                              MisinformationType.EXPERTISE_MISREPRESENTATION]),
-        PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
-                              PersonalSafetyType.DANGEROUS_CHALLENGES]),
-        IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
-                               IllegalActivityType.CHILD_EXPLOITATION,
-                               IllegalActivityType.ILLEGAL_DRUGS,
-                               IllegalActivityType.NON_VIOLENT_CRIME,
-                               IllegalActivityType.SEX_CRIME,
-                               IllegalActivityType.VIOLENT_CRIME,
-                               IllegalActivityType.WEAPONS]),
+        # Misinformation(types=[MisinformationType.FACTUAL_ERRORS,
+        #                       MisinformationType.UNSUPPORTED_CLAIMS, 
+        #                       MisinformationType.EXPERTISE_MISREPRESENTATION]),
+        # PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
+        #                       PersonalSafetyType.DANGEROUS_CHALLENGES]),
+        # IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
+        #                        IllegalActivityType.CHILD_EXPLOITATION,
+        #                        IllegalActivityType.ILLEGAL_DRUGS,
+        #                        IllegalActivityType.NON_VIOLENT_CRIME,
+        #                        IllegalActivityType.SEX_CRIME,
+        #                        IllegalActivityType.VIOLENT_CRIME,
+        #                        IllegalActivityType.WEAPONS]),
         Robustness(types=[RobustnessType.HIJACKING]),   
     ]
     
     model = CustomGemma2B()
     #model = CustomGeminiFlash(api_key=GEMINI_KEY)
+    
+    # Initialize GuardRails
+    
+    
+    if fetch_chunks:
+        logger.info(f"Loading Chunks from Knowledge Base")
+        # Load all the chunks
+        rag_object = RAGFlow(api_key=rag_flow_api_key, base_url=f"http://localhost:9380")
+        dataset = rag_object.list_datasets(0)
+        
+        raw_chunks = []
+        for ds in dataset:
+            docs = ds.list_documents(page=1, page_size=500)
+            print(f"Documents in Knowledge Base: {docs}")
+            for doc in docs:
+                for page_num in range(1, DOCUMENT_PAGES.get(doc.name)):
+                    #print(page_num)
+                    for chunk in doc.list_chunks(page=page_num, page_size=10):
+                        chunk_json = chunk.to_json()
+                        raw_chunks.append(chunk_json)
+                        
+        with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'w', encoding='utf-8') as json_file:
+            json.dump(raw_chunks, json_file, indent=4)
+            logger.info(f"Saved chunks to {os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json')}")
+    
+    else:
+        # Open and load the JSON file
+        with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'r', encoding='utf-8') as json_file:
+            raw_chunks = json.load(json_file)
     
     
     # Open and load the JSON file
@@ -119,7 +151,7 @@ async def run_test(generate_attacks=False):
                                         model=model)
                 
                 counter = 0
-                while counter < attacks_per_vul:
+                while counter < attacks_per_vul:    
                     index = random.randrange(0, len(processed_chunks) - chunk_window)
                     randomized_chunk_window = processed_chunks[index:index + chunk_window]
 
@@ -173,8 +205,8 @@ async def run_test(generate_attacks=False):
             #AttackEnhancement.BASE64: 0.25,
             AttackEnhancement.GRAY_BOX_ATTACK: 0.25,
             #AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
-            AttackEnhancement.LEETSPEAK: 0.25,
-            AttackEnhancement.MATH_PROBLEM: 0.25
+            # AttackEnhancement.LEETSPEAK: 0.25,
+            # AttackEnhancement.MATH_PROBLEM: 0.25
             #AttackEnhancement.MULTILINGUAL: 0.25,
         }
     
@@ -184,11 +216,16 @@ async def run_test(generate_attacks=False):
                               base_url='http://localhost', port=9380,
                               test_cases=[],
                               model=model,
-                              model_name='gemma2:2b')
+                              model_name='gemma2:2b',
+                              guardrails=None)
     
     timezone = datetime.timezone(datetime.timedelta(hours=8))
     logger.info(f"Testing Attack @ {datetime.datetime.now(tz=timezone)}")
     
+    if activate_defense:
+        func = rag_agent.target_model_callback_guardrails
+    else:
+        func = rag_agent.target_model_callback
     
     red_teamer = RedTeamer(
         target_purpose=target_purpose,
@@ -198,7 +235,7 @@ async def run_test(generate_attacks=False):
     )
     
     results = red_teamer.scan(
-        target_model_callback=rag_agent.target_model_callback,
+        target_model_callback=func,
         attacks_per_vulnerability_type=attacks_per_vul,
         vulnerabilities=vulnerabilities,
         attack_enhancements=attack_enchancements,
@@ -232,6 +269,15 @@ async def run_test(generate_attacks=False):
 
     logger.info(f"Results saved in: {results_dir}")
     
+    # Calculating Attack Success Rate based on Vulnerability Scores
+    total_max_score = len(results_breakdown)
+    total_score = results_breakdown["Score"].sum()
+    total_attacks_succeeded = total_max_score - total_score
+    attack_success_rate = total_attacks_succeeded / total_max_score
+    
+    logger.info(f"ASR via Vulnerability Scores: {attack_success_rate}")
+        
+    
     # Running Gege's RAG Evaluation Metrics
     contextual_precision = ContextualPrecisionMetric(model=model)
     contextual_recall = ContextualRecallMetric(model=model)
@@ -248,6 +294,12 @@ async def run_test(generate_attacks=False):
         target_input = row['Input']
         retrieval_context = base_attack['Retrieval Chunks String']
         expected_output = base_attack['Expected Output']
+        
+        print(f"base_attack ({type(base_attack)}): {base_attack}")
+        print(f"actual_output ({type(actual_output)}): {actual_output}")
+        print(f"target_input ({type(target_input)}): {target_input}")
+        print(f"retrieval_context ({type(retrieval_context)}): {retrieval_context}")
+        print(f"expected_output ({type(expected_output)}): {expected_output}")
         
         test_case = LLMTestCase(
             input=target_input, 
@@ -282,18 +334,42 @@ async def run_test(generate_attacks=False):
     logger.info(f"Uploading to Supabase.............")
     supabase = create_client(supabase_url=supabase_url, supabase_key=supabase_key)
     
-    table_name = 'Generation_Attacks'
-    retrieval_id = generate_unique_id(supabase=supabase, table_name=table_name)
+    table_name = 'Generation_attacks'
+    attack_id = generate_unique_id(supabase=supabase, table_name=table_name)
+    
+    # Get the current time in UTC+8
+    tz_singapore = pytz.timezone("Asia/Singapore")
+    main_create_time = datetime.datetime.now(tz_singapore).isoformat()
+    
+    suffix = '_defense' if activate_defense else 'no_defense'
+    
+    
+    # Upload to table Attack Type 
+    evaluation_response = supabase.table("Attack_Type").insert({
+       "attack_id": int(attack_id),
+       #"created_at": main_create_time,
+       "attack_name": "Generation Attacks Goldens" + suffix,
+    }).execute()
+    
+    
+    evaluation_response = supabase.table("Attack_Results").insert({
+       "id": int(attack_id),
+       "created_at": main_create_time,
+       "attack_type": int(attack_id),
+       "model_name": model.get_model_name(),
+       "attack_success_rate": attack_success_rate
+    }).execute()
+    
+    rows = []
     
     for i, test_case in enumerate(eval_result_json['test_results']):
-        
+
         relevant_llm_test_case = test_cases[i]
         test_case_time = timestamp
         time_of_eval = timestamp
-        attack_id = i
-        experiment_id = retrieval_id
+        experiment_id = i
         
-        attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'] + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
+        attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'].value + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
         attacked_chunks = relevant_llm_test_case.retrieval_context
         
         # Extract metric scores
@@ -304,21 +380,24 @@ async def run_test(generate_attacks=False):
         faithfulness_score = next(item['score'] for item in test_case['metrics_data'] if item['name'] == "Faithfulness")
         
         # Insert into Supabase
-        evaluation_response = supabase.table("Attack_Type").insert({
+        rows.append({
             "attack_id": int(attack_id),
-            "created_at": datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'),
+            "created_at": datetime.datetime.now(tz_singapore).isoformat(),
             "experiment_id": int(experiment_id),
             "attack_name": attack_name,
+            "attacked_question": str(relevant_llm_test_case.input),
             "attacked_answer": attacked_answer,
             "attacked_chunks": attacked_chunks,
             "contextual_precision": float(precision_score),
             "contextual_recall": float(recall_score),
             "contextual_relevancy": float(relevancy_score),
             "answer_relevancy": float(answer_relevancy_score),
-            "faithfulness": float(faithfulness_score),
-        }).execute()
-        
-        logger.info(f"✅ Test case {i}' {attack_name}' inserted successfully!\n")
+            "faithfulness": float(faithfulness_score),  
+        })
+    
+    evaluation_response = supabase.table("Generation_Attacks").insert(rows).execute()
+    
+    logger.info(f"✅ Test case {i}' {attack_name}' inserted successfully!\n")
         
         
     

@@ -10,6 +10,7 @@ ragflow-sdk==0.16.0
 pandas==2.2.3
 numpy==1.26.4
 numexpr==2.10.1
+guardrails-ai==0.6.4
 
 
 requests~=2.32.3

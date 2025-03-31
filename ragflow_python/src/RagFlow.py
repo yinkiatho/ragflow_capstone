@@ -23,9 +23,15 @@ from ragflow_python.src.CustomLLama import CustomLLAMA3
 from ragflow_python.src.CustomGemma2_2b import CustomGemma2B
 from deepeval.models import DeepEvalBaseLLM
 from deepeval.guardrails import Guardrails
+from guardrails.hub import DetectPII, QARelevanceLLMEval
+from guardrails import Guard, OnFailAction
+from guardrails.hub import LlamaGuard7B
+
+from guardrails import Guard
 
 
 logger = log.setup_custom_logger('root')
+
 
 class RagFlowTester: 
     
@@ -36,7 +42,8 @@ class RagFlowTester:
                        port: int = 80,
                        test_cases: list = [],
                        model_name: str = 'llama3.1:8b',
-                       model: DeepEvalBaseLLM = None):
+                       model: DeepEvalBaseLLM = None,
+                       guardrails: Guardrails = None):
         
         self.api_key = API_KEY
         self.base_url = base_url
@@ -49,8 +56,8 @@ class RagFlowTester:
         print(f"Base URL: {base_url}:{port}")
         print(f"Directory: {os.getcwd()}")
         
-        self.local_model = CustomLLAMA3()
-        #self.local_model = model
+        #self.local_model = CustomLLAMA3()
+        self.local_model = model
         
         self.contextual_precision = ContextualPrecisionMetric(model=self.local_model)
         self.contextual_recall = ContextualRecallMetric(model=self.local_model)
@@ -88,6 +95,15 @@ class RagFlowTester:
         self.dataset_ids = None
         
         # Guard Rails Dataset 
+        self.guard = Guard().use_many(DetectPII(["EMAIL_ADDRESS", "PHONE_NUMBER"]),
+                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", on_fail="fix_reask"),
+                                      LlamaGuard7B(policies=[LlamaGuard7B.POLICY__NO_ILLEGAL_DRUGS, 
+                                                             LlamaGuard7B.POLICY__NO_VIOLENCE_HATE,
+                                                             LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT, 
+                                                             LlamaGuard7B.POLICY__NO_CRIMINAL_PLANNING,
+                                                             LlamaGuard7B.POLICY__NO_GUNS_AND_ILLEGAL_WEAPONS, 
+                                                             LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], on_fail=OnFailAction.FIX_REASK))
+        
         self.df_defense = []
         
         
@@ -215,7 +231,7 @@ class RagFlowTester:
         '''
         return True
     
-    async def target_model_callback(self, prompt: str, guardrails: Guardrails = None) -> str:
+    async def target_model_callback(self, prompt: str) -> str:
         try:
             #print("tryblock")
             #print(prompt)
@@ -230,42 +246,98 @@ class RagFlowTester:
                 self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
-            if guardrails:
-                guard_result = guardrails.guard_input(input=prompt)
-                isBreached = guard_result.breached
-                
-                print(f"Guard Data")
-                print(guard_result.guard_data)
-                
             rag_response = self.session.ask(question=prompt, stream=True)
             #print(rag_response)
             
             response_content = ""  
-            # for message in rag_response:  # Iterate over the generator
-            #     response_content += message.content  # Extract content
-            
             for ans in rag_response:
                 #print(ans.content[len(cont):], end='', flush=True)
                 response_content = ans.content
 
            # print(response_content)
             logger.info(f"Prompt: {prompt}, Response: {response_content}")
-            
-            if guardrails:
-                guard_result_o = guardrails.guard_output(input=prompt, output=response_content)
-                isBreached = guard_result_o.breached
-                
-                print(f"Guard Data Output")
-                print(guard_result.guard_data)
-                
             return response_content
         
         except Exception as e:
-            logger.error(f"Error at Target Model Callback: {e}")        
+            logger.error(f"Error at Target Model Callback: {e}")
+            
+
+    def target_model_callback_g(self, *, dataset_ids=None, session=None, llm=None, prompt=None, **kwargs) -> str:
+        """Async generator that yields responses for Guardrails compatibility."""
+        
+        testing_time = int(time.time() * 1000)
+        messages = kwargs.pop("messages", [])
+
+        if not messages:
+            raise ValueError("Messages list is empty.")
+
+        if self.dataset_ids is None:
+            datasets = self.rag_object.list_datasets()
+            self.dataset_ids = [dataset.id for dataset in datasets]
+
+        if self.session is None:
+            self.session = self.rag_object.create_chat(
+                f"Chat Assistant @ {testing_time}",
+                dataset_ids=self.dataset_ids,
+                llm=self.llm,
+                prompt=self.prompt
+            ).create_session()
+
+        prompt = messages[-1]["content"]  # Extract the latest user message
+        rag_response = self.session.ask(question=prompt, stream=True)
+
+        res = ''
+        for ans in rag_response:
+            res = ans.content  # Yield content instead of returning a single string
+        return res
+        
+    
+    async def target_model_callback_guardrails(self, prompt: str) -> str:
+        '''
+        Wrapper around the target_model_callback to implement the guardrails
+        '''
+
+        messages = [{"role": "user", "content": prompt}]
+        
+        validated_response = self.guard(
+            self.target_model_callback_g,
+            messages=messages,
+            prompt=prompt,  # Pass as a keyword argument
+            metadata={"original_prompt": prompt},
+            #stream=True
+        )
+        
+        response_str = validated_response.raw_llm_output
+        validated_output = validated_response.validated_output
+        logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
+        
+        if validated_output:
+            logger.info(f"Have validated output.....")
+            return validated_output
+        
+        else:
+            logger.info(f"Defense Activated, using defense reponses........")
+            return self.get_defense_response(prompt)
+        
+        # except Exception as e:
+        #     logger.error(f"Error in model call back guardrails: {e}")
+        
+    
+    def get_defense_response(self, prompt: str):
+        '''
+        Gets the defense response via llm call 
+        '''
+        input_prompt = f"You are a RAG Legal Chatbot and you have detected that potentially this prompt is suspicious in trying to illicit a poor response. \
+                    This is the prompt in question '{prompt}'. \
+                    Generate a short but professional response from the chatbot acknowledging the question but asking it to rephrase properly, keep it in context as a RAG Legal Chatbot."
+                    
+        return self.local_model.generate_normal(input_prompt)
+              
            
 
 # Example usage
 if __name__ == "__main__":
+    
     tester = RagFlowTester(
         api_key="your_api_key",
         base_url="localhost",

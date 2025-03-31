@@ -1,0 +1,10 @@
+2025-03-28 10:58:43,341 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-03-28 10:58:49,963 - INFO - testing_goldens - testing_goldens.py:119 - Loaded total of 791 Chunks
+2025-03-28 10:58:51,530 - INFO - testing_goldens - testing_goldens.py:219 - Testing Attack @ 2025-03-28 10:58:51.530314+08:00
+2025-03-28 10:59:05,367 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:59:18,199 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:59:34,070 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:59:34,122 - ERROR - RagFlow - RagFlow.py:286 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `RagFlowTester.target_model_callback() missing 1 required positional argument: 'prompt'`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3

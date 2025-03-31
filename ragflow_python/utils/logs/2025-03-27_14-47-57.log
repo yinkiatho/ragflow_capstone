@@ -1,0 +1,131 @@
+2025-03-27 14:48:02,258 - INFO - testing_goldens - testing_goldens.py:142 - Loaded total of 791 Chunks
+2025-03-27 14:48:04,686 - INFO - testing_goldens - testing_goldens.py:242 - Testing Attack @ 2025-03-27 14:48:04.686303+08:00
+2025-03-27 14:48:25,335 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:48:38,642 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:48:53,718 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:49:13,652 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:49:27,341 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:49:42,490 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:50:22,478 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:50:43,010 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:51:05,971 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:51:39,521 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:51:57,650 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:52:18,478 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:52:47,836 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:53:04,386 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:53:22,987 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:53:54,791 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:54:12,693 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:54:32,404 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:54:49,330 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:55:01,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:55:15,643 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:55:33,511 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:55:46,212 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:56:01,508 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:56:18,020 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:56:30,156 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:56:43,919 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:57:00,725 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:57:13,040 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:57:27,499 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:57:43,049 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:57:56,580 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:58:12,901 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:58:26,067 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:58:39,348 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:58:55,314 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:59:17,789 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:59:31,415 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 14:59:45,723 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:00:05,119 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:00:16,521 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:00:30,155 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:00:58,617 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:01:13,690 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:01:30,834 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:02:00,448 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:02:16,300 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:02:34,466 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:02:49,232 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:03:02,015 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:03:16,962 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:03:32,485 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:03:43,388 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:03:56,016 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:04:11,386 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:04:22,531 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:04:35,066 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:04:50,445 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:05:01,412 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:05:13,950 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:05:31,036 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:05:42,059 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:05:54,952 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:06:10,637 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:06:21,760 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:06:34,381 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:06:45,426 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:06:56,833 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:07:10,545 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:07:21,441 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:07:32,818 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:07:46,027 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-27 15:07:53,254 - ERROR - base_events - base_events.py:1785 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=AttributeError("'str' object has no attribute 'get'")>
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 277, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\src\RagFlow.py", line 236, in target_model_callback
+    guard_result = self.guardrails.guard_input(input=prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\guardrails\guardrails.py", line 53, in guard_input
+    response = api.send_request(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\confident\api.py", line 103, in send_request
+    raise Exception(res.json().get("error", res.text))
+                    ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-03-27 15:07:53,259 - ERROR - base_events - base_events.py:1785 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=AttributeError("'str' object has no attribute 'get'")>
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 277, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\src\RagFlow.py", line 236, in target_model_callback
+    guard_result = self.guardrails.guard_input(input=prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\guardrails\guardrails.py", line 53, in guard_input
+    response = api.send_request(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\confident\api.py", line 103, in send_request
+    raise Exception(res.json().get("error", res.text))
+                    ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-03-27 15:07:53,261 - ERROR - base_events - base_events.py:1785 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=AttributeError("'str' object has no attribute 'get'")>
+Traceback (most recent call last):
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 277, in __step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\src\RagFlow.py", line 236, in target_model_callback
+    guard_result = self.guardrails.guard_input(input=prompt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\guardrails\guardrails.py", line 53, in guard_input
+    response = api.send_request(
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yinki\AppData\Local\Programs\Python\Python311\Lib\site-packages\deepeval\confident\api.py", line 103, in send_request
+    raise Exception(res.json().get("error", res.text))
+                    ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
