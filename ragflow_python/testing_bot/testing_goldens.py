@@ -151,7 +151,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
                                         model=model)
                 
                 counter = 0
-                while counter < attacks_per_vul:
+                while counter < attacks_per_vul:    
                     index = random.randrange(0, len(processed_chunks) - chunk_window)
                     randomized_chunk_window = processed_chunks[index:index + chunk_window]
 

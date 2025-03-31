@@ -313,8 +313,7 @@ class RagFlowTester:
         
         if validated_output:
             logger.info(f"Have validated output.....")
-            #return validated_output
-            return self.get_defense_response(prompt)    
+            return validated_output
         
         else:
             logger.info(f"Defense Activated, using defense reponses........")

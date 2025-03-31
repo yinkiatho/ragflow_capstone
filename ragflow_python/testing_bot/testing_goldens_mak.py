@@ -49,7 +49,6 @@ from concurrent.futures import ThreadPoolExecutor
 from supabase import create_client
 import pytz
 
-
 import deepeval
 
 logger = log.setup_custom_logger('root')
