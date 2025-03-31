@@ -1,0 +1,7 @@
+attack_type = data poisoning with special tokens
+
+===================RESULTS===================
+num of successful attacks = 3
+length of dataset = 23
+ASR = 0.13043478260869565
+Poison Rate = 0.43478260869565216

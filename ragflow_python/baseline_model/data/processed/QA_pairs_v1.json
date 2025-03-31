@@ -1,0 +1,128 @@
+[
+  {
+    "question":"Is anything done by a child below 10 yeasr old considered to be an offence",
+    "expected answer":"Act of a child below 10 years of age 82. Nothing is an offence which is done by a child below 10 years of age",
+    "annual valid check":"True, under Penal Code 1871, section 82: \"Nothing is an offence which is done by a child below 10 years\n of age.\"",
+    "checked by":"jj"
+  },
+  {
+    "question":"What is the imprisonment term for whoever commits theft?",
+    "expected answer":"Punishment for theft 379. Whoever commits theft shall be punished with imprisonment for a term which may extend to 3 years, or with fine, or with both.",
+    "annual valid check":"True, this could be also found in Penal Code 1871, section 379: \"379. Whoever commits theft shall be punished with imprisonment\n for a term which may extend to 3 years, or with fine, or with both.\"",
+    "checked by":"jj"
+  },
+  {
+    "question":"Is anything done in private defense consider as a offence?",
+    "expected answer":"Nothing done in private defence is an offence 96. Nothing is an offence which is done in the exercise of the right of private defence.",
+    "annual valid check":"True, this could be also found in Penal Code 1871, section 96: \"Nothing is an offence which is done in the exercise of the right\n of private defence.\"",
+    "checked by":"jj"
+  },
+  {
+    "question":"What is the penalty for individuals found in possession of subversive documents?",
+    "expected answer":"Making and possession of subversive documents 4.\u2014(1) Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.",
+    "annual valid check":true,
+    "checked by":"jj"
+  },
+  {
+    "question":"How long can a person be detained without being brought before a court?",
+    "expected answer":"Person arrested not to be detained more than 48 hours 68.\u2014(1) Unless the court orders otherwise under section 92(3)(a) or 93(3B)(a), no police officer may detain in custody a person who has been arrested without a warrant for a longer period than under all the circumstances of the case is reasonable. [19\/2018] (2) The period must not exceed 48 hours exclusive of the time necessary for the journey from the place of arrest to the Magistrate\u2019s Court.",
+    "annual valid check":true,
+    "checked by":"jj"
+  },
+  {
+    "question":"What constitutes criminal trespass?",
+    "expected answer":"Whoever enters into or upon property in the possession of another with intent to commit an offence or to intimidate, insult or annoy any person in possession of such property, or having lawfully entered into or upon such property, unlawfully remains there with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence, is said to commit \u201ccriminal trespass\"",
+    "annual valid check":"It should be Section 441 instead, specifically being \"Whoever enters into or upon property in the possession of another with intent to commit an offence or to intimidate, insult or annoy any person in possession of such property, or having lawfully entered into or upon such property, unlawfully remains there with intent thereby to intimidate, insult or annoy any such person, or with intent to commit an offence, is said to commit \u201ccriminal trespass\u201d\"",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"What is the punishment for furnishing false information to a public servant?\n",
+    "expected answer":"A person who, being legally bound to furnish\ninformation on any subject to any public servant, as such,\nfurnishes, as true, information on the subject which the person\nknows or has reason to believe to be false, shall \u2014\n(a) in the case of an individual, be punished with\nimprisonment for a term which may extend to 6 months,\nor with fine which may extend to $5,000, or with both; or\n(b) in any other case, be punished with fine which may extend\nto $10,000.",
+    "annual valid check":"Penal Code Page 106, term 177",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"Does words, signs, visible representation that could harm reputation of other person considered to be defame that person?\n",
+    "expected answer":"Whoever, by words either spoken or intended to be read, or by\nsigns, or by visible representations, makes or publishes any\nimputation concerning any person, intending to harm, or knowing\nor having reason to believe that such imputation will harm, the\nreputation of such person, is said, except in the cases hereinafter\nexcepted, to defame that person.",
+    "annual valid check":"Penal Code Page 282, term 499",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"What are the different types of witness examinations in court?\n",
+    "expected answer":"(1) The examination of a witness by the party who calls him\nor her is called his or her examination-in-chief.\n(2) The examination of a witness by the adverse party is called his\nor her cross-examination.\n(3) Where a witness has been cross-examined and is then examined\nby the party who called him or her, such examination is called his or\nher re-examination.",
+    "annual valid check":"Evidence Act, page 95, term 139",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"Can a witness refuse to answer a question that might incriminate them?\n",
+    "expected answer":"A witness is not excused from answering any question as\nto any matter relevant to the matter in issue in any suit, or in any civil\nor criminal proceeding, upon the ground that the answer to such\nquestion will criminate, or may tend, directly or indirectly, to\ncriminate, such witness, or that it will expose, or tend, directly or\nindirectly, to expose, such witness to a penalty or forfeiture of any\nkind, or that it will establish or tend to establish that the witness owes\na debt or is otherwise subject to a civil suit at the instance of the\nGovernment or of any other person.\nNo answer which a witness is compelled by the court to give\nshall subject him or her to any arrest or prosecution, or be proved\nagainst him or her in any criminal proceeding, except a prosecution\nfor giving false evidence by such answer.",
+    "annual valid check":"Evidence Act, page 92, term 134 (1)(2)",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"Who has the power to refer any question of law of public\ninterest without the permission of the Court of Appeal?",
+    "expected answer":"The Public Prosecutor may refer any question of law of public\ninterest without the permission of the Court of Appeal",
+    "annual valid check":"Criminal Procedure Code, page 391 (2)",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"If a notice is only served to the accused 3 days before, can the court hear and determine the complaint in the absence of the accused?\n",
+    "expected answer":"If the summons or notice was duly served on the\naccused at least 7 days (or such shorter period as the court may consider reasonable in a particular case) before the time appointed in\nthe summons or notice for appearing; and the accused was notified, when the summons\nor notice was served on the accused, that the court may hear and determine the complaint in\nthe absence of the accused, if the accused fails\nto appear at the time and place mentioned in the\nsummons or notice; and no sufficient ground is shown for an adjournment;",
+    "annual valid check":"Criminal Procedure Code, page 159 and 160, term 156",
+    "checked by":"Huanqing"
+  },
+  {
+    "question":"Does prepration to use criminal force on another person considered to be commiting an assualt? ",
+    "expected answer":"Whoever makes any gesture or any preparation, intending or knowing it to be likely that such gesture or preparation will cause any person present to apprehend that he who makes that gesture or preparation is about to use criminal force to that person, is said to commit an assault.",
+    "annual valid check":"Panel Code, Section 351, Page 184",
+    "checked by":"Gege"
+  },
+  {
+    "question":"What is the penalty for illegal strikes and lock-outs under the Criminal Law (Temporary Provisions) Act 1955?",
+    "expected answer":"Any workman who commences, continues or otherwise acts in furtherance of a strike which is illegal under this Part shall be guilty of an offence and shall be liable on conviction to a fine not exceeding $2,000 or to imprisonment for a term not exceeding 12 months or to both.",
+    "annual valid check":"Criminal Law (Temporary Provisions) Act 1955, Page 11",
+    "checked by":"Gege"
+  },
+  {
+    "question":"What is the punishment for making or possessing a subversive document under the Criminal Law (Temporary Provisions) Act 1955?",
+    "expected answer":"Any person who, without lawful excuse, makes, causes to be made, carries or has in his possession or under his control any subversive document shall be guilty of an offence and shall be liable on conviction to imprisonment for a term not exceeding 10 years.",
+    "annual valid check":"Criminal Law (Temporary Provisions) Act 1955, Page 7",
+    "checked by":"Gege"
+  },
+  {
+    "question":"What constitutes an unlawful assembly under the Penal Code 1871?",
+    "expected answer":"An assembly of 5 or more persons is designated an \u201cunlawful assembly\u201d, if the common object of the persons composing that assembly is \n(a) to overawe by criminal force, or show of criminal force, the Legislative or Executive Government, or any public servant in the exercise of the lawful power of such public servant;\n(b) to resist the execution of any law, or of any legal process;\n(c) to commit any offence;\n(d) by means of criminal force, or show of criminal force, to any person, to take or obtain possession of any property, or to deprive any person of the enjoyment of a right of way, or of the use of water or other incorporeal right of which he is\nin possession or enjoyment, or to enforce any right or supposed right; or\n(e) by means of criminal force, or show of criminal force, to compel any person to do what he is not legally bound to do, or to omit to do what he is legally entitled to do.\n",
+    "annual valid check":"Panel Code, Section 141, Page 93",
+    "checked by":"Gege"
+  },
+  {
+    "question":"what criminal breach is it when someone being entrusted with property, dishonestly converts to his own use?",
+    "expected answer":"Whoever, being in any manner entrusted with property, or with\nany dominion over property, dishonestly misappropriates or converts\nto his own use that property, or dishonestly uses or disposes of that\nproperty in violation of any direction of law prescribing the mode in\nwhich such trust is to be discharged, or of any legal contract, express\nor implied, which he has made touching the discharge of such trust, or\nintentionally suffers any other person to do so, commits \u201ccriminal\nbreach of trust\u201d.",
+    "annual valid check":"True. This is a shortened version of the Penal Code 405.",
+    "checked by":"yk"
+  },
+  {
+    "question":"Who is ineligible for a community order under the Criminal Procedure Code 2010?",
+    "expected answer":"Answer: A person is ineligible for a community order under Section 337 of the Criminal Procedure Code 2010 if they had 1) Offences with Fixed or Mandatory Sentences 2) Serious Offences and Criminal History 3)  Drug and Substance Abuse History 4) Fine-Only and Serious Imprisonment Offences. However, Courts may still issue a mandatory treatment order under Section 339 for Individuals who fall under points 2(d) or 3, Offences under the Misuse of Drugs Act 1973 or Intoxicating Substances Act 1987 with prior admissions to an approved institution or centre, offences punishable by imprisonment exceeding 3 but not more than 7 years, if prescribed. Courts may issue a community work order under Section 344 for Fine-only offences and Offences with a mandatory minimum fine.",
+    "annual valid check":"This is mentioned in Community Orders section in the Crimminal Procedure Code. ",
+    "checked by":"yk"
+  },
+  {
+    "question":"Under what circumstances does the right of private defence of property extend to causing death?",
+    "expected answer":"Answer: The right of private defence of property extends to causing death when the defender reasonably believes there is a danger to property due to: (a) robbery, (b) house-breaking between 7 p.m. and 7 a.m. involving forced entry or exit, (c) mischief by fire on a dwelling or property storage, or (d) theft, mischief, or house-breaking where the defender believes death or grievous hurt will result if defence is not exercised.",
+    "annual valid check":"Mentioned in Section 105 of the Penal Code",
+    "checked by":"yk"
+  },
+  {
+    "question":"Is defamation a criminal offense?",
+    "expected answer":"Answer: Yes, criminal defamation is covered under Sections 499 to 502 of the Penal Code, and offenders can face imprisonment or a fine.",
+    "annual valid check":"looks like its just section 499 of the penal code 1871? also feel like this question might be too broad, should be asking for more details",
+    "checked by":"mak"
+  },
+  {
+    "question":"What constitutes the crime of genocide under Chapter 6B of Singapore's Penal Code, and what penalties can be imposed for the crime?",
+    "expected answer":"According to chapter 6B of the Penal Code, A person commits genocide who, with intent to destroy, in whole or in part, a national, an ethnical, a racial or a religious group, commits any of the following acts:\n(a)        killing members of the group;\n(b)        causing serious bodily or mental harm to members of the group;\n(c)        deliberately inflicting on the group conditions of life calculated to bring about its physical destruction in whole or in part;\n(d)        imposing measures intended to prevent births within the group; or\n(e)        forcibly transferring children of the group to another group. Whoever commits genocide shall \u2014\n(a)\tif the offence consists of the killing of any person, be punished with death; or\n(b)\tin any other case, be punished with imprisonment for life or with imprisonment for a term which may extend to 20 years.",
+    "annual valid check":null,
+    "checked by":"mak"
+  }
+]
