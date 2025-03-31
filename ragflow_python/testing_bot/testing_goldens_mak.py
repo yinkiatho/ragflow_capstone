@@ -338,11 +338,13 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     tz_singapore = pytz.timezone("Asia/Singapore")
     main_create_time = datetime.datetime.now(tz_singapore).isoformat()
     
+    suffix = '_defense' if activate_defense else 'no_defense'
+    
     # Upload to table Attack Type 
     evaluation_response = supabase.table("Attack_Type").insert({
        "attack_id": int(attack_id),
        #"created_at": main_create_time,
-       "attack_name": "Generation Attacks Goldens Mak",
+       "attack_name": "Generation Attacks Goldens Mak" + suffix,
     }).execute()
     
     
