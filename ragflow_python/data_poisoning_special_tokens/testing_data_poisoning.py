@@ -29,6 +29,7 @@ You can also create a separate table on supabase to upload the data, then ignore
 defense_results1 = results with a defense that only mask top 10 chunks w perplexity >= 500
 defense_results2 = results with a defense that mask top 50 chunks w perplexity >= 500
 defense_results3 = results with a defense that mask top 50 chunks w perplexity >= 500, but with new qa_pairs created by jj
+maybe can consider separating them when uploading
 '''
 
 # Parameters
