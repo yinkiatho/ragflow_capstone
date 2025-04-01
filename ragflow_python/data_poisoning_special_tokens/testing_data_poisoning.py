@@ -22,7 +22,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+'''
 
+Remember to ignore the 'pre_attack' in each JSON file because I did not run chat for pre_attack to save time and CPU. You can start with 'post_attack' and 'post_defense'.
+
+'''
 # Parameters
 json_data = []
 directory = "../data/data_poisoning"
