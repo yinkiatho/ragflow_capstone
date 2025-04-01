@@ -8,7 +8,7 @@ import numpy as np
 
 # Parameters
 json_data = []
-directory = "/Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/data_poisoning_misinfo_gemma2b" # rmb to run the main_data_poisoning.py again to collect the updated JSON results
+directory = "../data/data_poisoning_misinfo_gemma2b" # JSON results 
 
 # Load pre-trained Sentence-BERT model
 model = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
