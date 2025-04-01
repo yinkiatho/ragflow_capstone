@@ -25,7 +25,12 @@ load_dotenv()
 '''
 Hi mak! Remember to ignore the 'pre_attack' in each JSON file because I did not run chat for pre_attack to save time and CPU. You can start with 'post_attack' and 'post_defense'.
 You can also create a separate table on supabase to upload the data, then ignore the experiment_id and all that
+
+defense_results1 = results with a defense that only mask top 10 chunks w perplexity >= 500
+defense_results2 = results with a defense that mask top 50 chunks w perplexity >= 500
+defense_results3 = results with a defense that mask top 50 chunks w perplexity >= 500, but with new qa_pairs created by jj
 '''
+
 # Parameters
 json_data = []
 directory = "../data/data_poisoning"
