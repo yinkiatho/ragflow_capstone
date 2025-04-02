@@ -1,0 +1,13 @@
+2025-03-28 10:53:57,410 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-03-28 10:54:04,361 - INFO - testing_goldens - testing_goldens.py:119 - Loaded total of 791 Chunks
+2025-03-28 10:54:05,943 - INFO - testing_goldens - testing_goldens.py:219 - Testing Attack @ 2025-03-28 10:54:05.943577+08:00
+2025-03-28 10:54:52,445 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:55:04,738 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:55:19,793 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:55:30,994 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:55:43,498 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:55:58,403 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:56:10,175 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:56:22,886 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:56:37,262 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 10:56:37,288 - ERROR - RagFlow - RagFlow.py:285 - Error in model call back guardrails: Custom LLM callables must accept **kwargs!

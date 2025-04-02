@@ -1,0 +1,10 @@
+2025-03-28 11:01:38,781 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-03-28 11:01:45,311 - INFO - testing_goldens - testing_goldens.py:119 - Loaded total of 791 Chunks
+2025-03-28 11:01:46,959 - INFO - testing_goldens - testing_goldens.py:219 - Testing Attack @ 2025-03-28 11:01:46.959397+08:00
+2025-03-28 11:02:01,111 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:02:14,437 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:02:30,473 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:02:42,556 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:02:55,014 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:03:10,122 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-28 11:03:10,129 - ERROR - RagFlow - RagFlow.py:277 - Error in model call back guardrails: You must provide messages. Alternatively, you can provide messages in the Schema constructor.

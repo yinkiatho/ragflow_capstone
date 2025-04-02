@@ -33,9 +33,15 @@ class CustomGemma2B(DeepEvalBaseLLM):
             raise ValueError(f"Failed to parse JSON response: {response.message.content}")
         
         return schema(**response_data) 
+    
+    
+    def generate_normal(self, prompt: str):
+        response = self.client.chat(model=self.model_name,
+                                    messages=[{"role": "user", "content": prompt}])
+        
+        return response["message"]["content"]
        
         
-
     async def a_generate(self, prompt: str, schema: BaseModel) -> BaseModel:
         """Async wrapper for generate()."""
         return self.generate(prompt, schema)

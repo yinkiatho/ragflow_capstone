@@ -36,12 +36,19 @@ class CustomLLAMA3(DeepEvalBaseLLM):
         
         return schema(**response_data) 
        
-        
-
     async def a_generate(self, prompt: str, schema: BaseModel) -> BaseModel:
         """Async wrapper for generate()."""
         print("generating prompt")
         return self.generate(prompt, schema)
+    
+    
+    def generate_normal(self, prompt: str):
+        response = self.client.chat(model=self.model_name,
+                                    messages=[{"role": "user", "content": prompt}])
+        
+        return response["message"]["content"]
+        
+        
 
     def get_model_name(self):
         """Return the model name."""

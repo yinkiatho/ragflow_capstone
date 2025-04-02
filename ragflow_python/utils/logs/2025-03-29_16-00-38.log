@@ -1,0 +1,19 @@
+2025-03-29 16:00:55,896 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-03-29 16:01:06,611 - INFO - testing_goldens - testing_goldens.py:120 - Loaded total of 791 Chunks
+2025-03-29 16:01:09,084 - INFO - testing_goldens - testing_goldens.py:220 - Testing Attack @ 2025-03-29 16:01:09.084133+08:00
+2025-03-29 16:01:58,897 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-29 16:02:23,784 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-29 16:02:51,001 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-29 16:05:45,528 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= gemma2:2b; provider = ollama
+2025-03-29 16:06:03,668 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-03-29 16:06:03,717 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-03-29 16:06:03,727 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-03-29 16:06:03,731 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-03-29 16:06:03,880 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-03-29 16:06:03,886 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-03-29 16:06:03,984 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-03-29 16:06:03,990 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-03-29 16:06:04,085 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-03-29 16:06:04,186 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-03-29 16:06:34,379 - ERROR - validator_base - validator_base.py:382 - 504

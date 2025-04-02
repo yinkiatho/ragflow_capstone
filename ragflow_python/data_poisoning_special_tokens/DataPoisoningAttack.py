@@ -63,7 +63,8 @@ class DataPoisoningAttack:
 
     def post_defense_retrieval(self, threshold):
         #chunks = self.POST_ATT_CHUNKS
-        chunks = retrieve_chunks(self.RAG_OBJECT, self.PROMPT, self.DATASET, 50)
+        # chunks = retrieve_chunks(self.RAG_OBJECT, self.PROMPT, self.DATASET, 50)
+        chunks = retrieve_chunks(self.RAG_OBJECT, self.PROMPT, self.DATASET, self.K)
         chunks_to_mask = []
 
         # identify chunks with content perpl > threshold
