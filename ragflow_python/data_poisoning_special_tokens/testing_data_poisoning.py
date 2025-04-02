@@ -104,7 +104,7 @@ def process_attack_results(data):
                 retrieval_context=pd_value[2]
             )
     
-    # Measure metrics for post attack
+    # Measure metrics for post defense
     contextual_precision.measure(pd_test_case)
     precision_score = contextual_precision.score
 
