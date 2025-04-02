@@ -1,3 +1,0 @@
-num of successful attacks = 19
-length of dataset = 24
-ASR = 0.7916666666666666
