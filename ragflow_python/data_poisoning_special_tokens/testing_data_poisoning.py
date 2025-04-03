@@ -26,11 +26,11 @@ load_dotenv()
 # Parameters
 json_data = []
 
-# change directory to defense_result1, defense_result2, defense_result3
-directory = "./defense_results3"
-num_of_chunks_to_mask = 50 # defense_result1 num_of_chunks_to_mask = 10
+# change directory to defense_results_10_new_qa
+directory = "./defense_results_50_new_qa"
+num_of_chunks_to_mask = 50 # defense_results_10_new_qa num_of_chunks_to_mask = 10
 perplexity_threshold = 500
-is_new_qa_pair =  True # only True for defense_result3
+is_new_qa_pair =  True # True for both cases
 
 
 url = "https://bggngaqkkmslamsbebew.supabase.co"
