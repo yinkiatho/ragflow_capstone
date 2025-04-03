@@ -2,4 +2,3 @@ num of successful attacks = 11
 length of dataset = 21
 ASR = 0.5238095238095238
 Post-attack poison rate = 0.21428571428571433
-Results saved to /Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/data_poisoning_misinfo_gemma2b/new_data/attack_results_20250403_214516.csv
