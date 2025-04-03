@@ -49,7 +49,7 @@ class DataPoisoningAttack:
             # Generate timestamp
             timestamp = time.strftime("%Y%m%d_%H%M%S")
             filename = f"result_at_{timestamp}.txt"
-            dir = "/Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/data_poisoning_misinfo_gemma2b/old_qa_pairs" 
+            dir = "../data_new_qa_pairs" 
             file_path = os.path.join(dir, filename)
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
@@ -126,7 +126,7 @@ class DataPoisoningAttack:
     def save_results_to_json(self):
         timestamp2 = time.strftime("%Y%m%d_%H%M%S")
         filename = f"combined_results_at {timestamp2}.json"
-        dir = "/Users/Olivia/Desktop/NUS/SoC/Y3S2/BT4103_Capstone/api-testing/data_poisoning_misinfo_gemma2b/old_qa_pairs" # change to new directory to store the new data
+        dir = "../data_new_qa_pairs" # change to new directory to store the new data
         file_path = os.path.join(dir, filename)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, "w", encoding="utf-8") as f:
