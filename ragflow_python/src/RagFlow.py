@@ -243,7 +243,8 @@ class RagFlowTester:
                     dataset_ids.append(dataset.id)
                 self.dataset_ids = dataset_ids
             if self.session is None:
-                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
+                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", 
+                                                            dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
             rag_response = self.session.ask(question=prompt, stream=True)
@@ -255,7 +256,7 @@ class RagFlowTester:
                 response_content = ans.content
 
            # print(response_content)
-            logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            #logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
         except Exception as e:
@@ -309,7 +310,7 @@ class RagFlowTester:
         
         response_str = validated_response.raw_llm_output
         validated_output = validated_response.validated_output
-        logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
+        #logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
         
         if validated_output:
             logger.info(f"Have validated output.....")

@@ -67,6 +67,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     
+    #print(len(SYNTHETIC_GOLDEN_ATTACKS))
     vulnerabilities = [
         #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
         # Misinformation(types=[MisinformationType.FACTUAL_ERRORS,
@@ -89,6 +90,8 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     
     # Initialize GuardRails
     
+    total_vuls = sum([len(i.get_types()) for i in vulnerabilities])
+    
     
     if fetch_chunks:
         logger.info(f"Loading Chunks from Knowledge Base")
@@ -106,6 +109,15 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
                     for chunk in doc.list_chunks(page=page_num, page_size=10):
                         chunk_json = chunk.to_json()
                         raw_chunks.append(chunk_json)
+        # ds = dataset[1]
+        # docs = ds.list_documents(page=1, page_size=500)
+        # print(f"Documents in Knowledge Base: {docs}")
+        # for doc in docs:
+        #     for page_num in range(1, DOCUMENT_PAGES.get(doc.name)):
+        #         #print(page_num)
+        #         for chunk in doc.list_chunks(page=page_num, page_size=10):
+        #             chunk_json = chunk.to_json()
+        #             raw_chunks.append(chunk_json)
                         
         with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'w', encoding='utf-8') as json_file:
             json.dump(raw_chunks, json_file, indent=4)
@@ -120,7 +132,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     # Open and load the JSON file
     with open(os.path.join(current_dir, 'ragflow_python', 'data', 'chunks_data.json'), 'r', encoding='utf-8') as json_file:
         raw_chunks = json.load(json_file)
-        logger.info(f"Loaded total of {len(raw_chunks)} Chunks")
+        logger.info(f"Loaded total of {len(raw_chunks)} Ch  unks")
     
     
     # Preprocess Chunks
@@ -131,6 +143,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     attacks_per_vul = 1
     base_attacks = []
     
+    total_attacks = attacks_per_vul * total_vuls
     chunk_window = 1
     
     # Generate all the base attacks
@@ -186,6 +199,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     else:
         # Feed base attacks into Synthesizer to enhance
         base_attacks = SYNTHETIC_GOLDEN_ATTACKS
+        print(f"Length of Synthetic Attacks: {len(base_attacks)}")
         
     
     # Make a results folder data/data_{timestamp}
@@ -205,8 +219,8 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
             #AttackEnhancement.BASE64: 0.25,
             AttackEnhancement.GRAY_BOX_ATTACK: 0.25,
             #AttackEnhancement.JAILBREAK_CRESCENDO: 0.25,
-            # AttackEnhancement.LEETSPEAK: 0.25,
-            # AttackEnhancement.MATH_PROBLEM: 0.25
+            AttackEnhancement.LEETSPEAK: 0.25,
+            AttackEnhancement.MATH_PROBLEM: 0.25
             #AttackEnhancement.MULTILINGUAL: 0.25,
         }
     
@@ -315,7 +329,8 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
                                     contextual_recall, 
                                     contextual_relevancy,
                                     answer_relevancy, 
-                                    faithfulness])
+                                    faithfulness],
+                           run_async=False)
     
     
     eval_result_json = evaluation_result_to_json(eval_result)

@@ -30,7 +30,7 @@ class CustomGemma2B(DeepEvalBaseLLM):
         try:
             response_data = json.loads(response.message.content)  # Convert string to dict
         except json.JSONDecodeError:
-            raise ValueError(f"Failed to parse JSON response: {response.message.content}")
+            raise ValueError(f"Failed to parse JSON response: Prompt: {prompt}, Content: {response.message.content}")
         
         return schema(**response_data) 
     
