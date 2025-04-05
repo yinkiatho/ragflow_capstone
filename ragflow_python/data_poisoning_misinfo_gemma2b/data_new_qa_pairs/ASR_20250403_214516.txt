@@ -1,0 +1,4 @@
+num of successful attacks = 11
+length of dataset = 21
+ASR = 0.5238095238095238
+Post-attack poison rate = 0.21428571428571433
