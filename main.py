@@ -34,7 +34,7 @@ def main():
         print("Signal handlers are not supported on Windows, use CTRL+C to stop.")
 
     try:
-        loop.run_until_complete(run_test(generate_attacks=True, 
+        loop.run_until_complete(run_test(generate_attacks=False, 
                                          fetch_chunks=False, 
                                          activate_defense=True))
     except KeyboardInterrupt:

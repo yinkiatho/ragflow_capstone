@@ -69,19 +69,19 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     
     #print(len(SYNTHETIC_GOLDEN_ATTACKS))
     vulnerabilities = [
-        #Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
+        # Bias(types=[BiasType.GENDER, BiasType.POLITICS]),
         # Misinformation(types=[MisinformationType.FACTUAL_ERRORS,
-        #                       MisinformationType.UNSUPPORTED_CLAIMS, 
-        #                       MisinformationType.EXPERTISE_MISREPRESENTATION]),
-        # PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
-        #                       PersonalSafetyType.DANGEROUS_CHALLENGES]),
+        #                        MisinformationType.UNSUPPORTED_CLAIMS, 
+        #                        MisinformationType.EXPERTISE_MISREPRESENTATION]),
+        #  PersonalSafety(types=[PersonalSafetyType.UNSAFE_PRACTICES,
+        #                        PersonalSafetyType.DANGEROUS_CHALLENGES]),
         # IllegalActivity(types=[IllegalActivityType.CYBERCRIME,
-        #                        IllegalActivityType.CHILD_EXPLOITATION,
-        #                        IllegalActivityType.ILLEGAL_DRUGS,
-        #                        IllegalActivityType.NON_VIOLENT_CRIME,
-        #                        IllegalActivityType.SEX_CRIME,
-        #                        IllegalActivityType.VIOLENT_CRIME,
-        #                        IllegalActivityType.WEAPONS]),
+        #                         IllegalActivityType.CHILD_EXPLOITATION,
+        #                         IllegalActivityType.ILLEGAL_DRUGS,
+        #                         IllegalActivityType.NON_VIOLENT_CRIME,
+        #                         IllegalActivityType.SEX_CRIME,
+        #                         IllegalActivityType.VIOLENT_CRIME,
+        #                         IllegalActivityType.WEAPONS]),
         Robustness(types=[RobustnessType.HIJACKING]),   
     ]
     
@@ -198,7 +198,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
         
     else:
         # Feed base attacks into Synthesizer to enhance
-        base_attacks = SYNTHETIC_GOLDEN_ATTACKS
+        base_attacks = SYNTHETIC_GOLDEN_ATTACKS[-total_attacks:]
         print(f"Length of Synthetic Attacks: {len(base_attacks)}")
         
     

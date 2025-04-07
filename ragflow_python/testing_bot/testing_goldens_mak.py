@@ -249,7 +249,7 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
     
     attack_results = {
         'vulnerabilities': [v.get_values() for v in vulnerabilities],
-        'attack_enhancements': {k.name: value for k, value in attack_enchancements.items()},
+        'attack_enhancements': {k.name: value for k, value in attack_enhancements.items()},
         'attacks_per_v': attacks_per_vul, 
         # 'Red Team Result': results.to_dict(),
         # 'Red Team Result Breakdown': red_teamer.vulnerability_scores_breakdown.to_dict()
