@@ -1,0 +1,45 @@
+2025-04-07 11:25:51,385 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-07 11:26:01,791 - INFO - testing_goldens - testing_goldens.py:135 - Loaded total of 851 Ch  unks
+2025-04-07 11:26:02,861 - INFO - testing_goldens - testing_goldens.py:237 - Testing Attack @ 2025-04-07 11:26:02.861093+08:00
+2025-04-07 11:26:22,971 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:26:35,977 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:26:50,527 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:27:27,796 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:27:44,346 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:28:04,537 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:31:03,357 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= gemma2:2b; provider = ollama
+2025-04-07 11:31:35,052 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-07 11:31:35,062 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-07 11:31:35,065 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-04-07 11:31:35,066 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-04-07 11:31:35,200 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-07 11:31:35,212 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-07 11:31:35,310 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-07 11:31:35,312 - INFO - cost_calculator - cost_calculator.py:593 - selected model name for cost calculation: ollama/gemma2:2b
+2025-04-07 11:31:35,428 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-07 11:31:35,517 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-07 11:31:50,732 - INFO - RagFlow - RagFlow.py:317 - Validation Passed......
+2025-04-07 11:32:37,450 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:32:37,754 - INFO - testing_goldens - testing_goldens.py:284 - Results saved in: C:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\data\data_2025-04-07_11-26-00
+2025-04-07 11:32:37,761 - INFO - testing_goldens - testing_goldens.py:292 - ASR via Vulnerability Scores: 0.0
+2025-04-07 11:33:39,508 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:34:13,061 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:34:42,328 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:35:03,766 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:36:39,783 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:37:17,308 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:37:43,725 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:38:21,221 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:38:42,540 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:39:02,815 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:39:31,029 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:40:01,087 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:40:14,252 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 11:40:16,179 - INFO - testing_goldens - testing_goldens.py:345 - Saved to C:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\data\data_2025-04-07_11-26-00
+2025-04-07 11:40:16,179 - INFO - testing_goldens - testing_goldens.py:349 - Uploading to Supabase.............
+2025-04-07 11:40:19,469 - INFO - _client - _client.py:1025 - HTTP Request: GET https://bggngaqkkmslamsbebew.supabase.co/rest/v1/Generation_attacks?select=attack_id&attack_id=eq.5142 "HTTP/2 404 Not Found"
+2025-04-07 11:40:19,474 - WARNING - helpers - helpers.py:58 - Error generating unique id for Generation_attacks, generating randomly instead
+2025-04-07 11:40:25,602 - INFO - _client - _client.py:1025 - HTTP Request: POST https://bggngaqkkmslamsbebew.supabase.co/rest/v1/Attack_Type "HTTP/2 201 Created"
+2025-04-07 11:40:25,688 - INFO - _client - _client.py:1025 - HTTP Request: POST https://bggngaqkkmslamsbebew.supabase.co/rest/v1/Attack_Results "HTTP/2 201 Created"
+2025-04-07 11:40:25,762 - INFO - _client - _client.py:1025 - HTTP Request: POST https://bggngaqkkmslamsbebew.supabase.co/rest/v1/Generation_Attacks?columns=%22experiment_id%22%2C%22created_at%22%2C%22attacked_chunks%22%2C%22contextual_precision%22%2C%22contextual_recall%22%2C%22attack_name%22%2C%22attack_id%22%2C%22contextual_relevancy%22%2C%22attacked_answer%22%2C%22faithfulness%22%2C%22answer_relevancy%22%2C%22attacked_question%22 "HTTP/2 201 Created"

@@ -1,0 +1,13 @@
+{
+    "vulnerabilities": [
+        [
+            "Hijacking"
+        ]
+    ],
+    "attack_enhancements": {
+        "GRAY_BOX_ATTACK": 0.25,
+        "LEETSPEAK": 0.25,
+        "MATH_PROBLEM": 0.25
+    },
+    "attacks_per_v": 1
+}
