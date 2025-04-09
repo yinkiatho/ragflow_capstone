@@ -2,6 +2,7 @@ import json
 import time
 import multiprocessing as mp
 from datetime import datetime
+
 from deepeval.metrics import (
     ContextualPrecisionMetric,
     ContextualRecallMetric,
@@ -10,57 +11,87 @@ from deepeval.metrics import (
     FaithfulnessMetric
 )
 from deepeval.test_case import LLMTestCase
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
-def worker(metric_cls, test_case, queue):
-    """
-    Worker function that instantiates the metric (with async_mode=False),
-    calls metric.measure(test_case), and puts the resulting metric.score into a queue.
-    """
+from metrics_template.custom_contextual_precision import CustomContextualPrecisionPrompt
+from metrics_template.custom_contextual_recall import CustomContextualRecallPrompt
+from metrics_template.custom_contextual_relevancy import CustomVerdictsTemplate
+from metrics_template.custom_answer_relevancy import CustomAnswerRelevancyTemplate
+from metrics_template.custom_faithfulness import CustomFaithfulnessTemplate
+
+# -------------------------------------
+# Factory Functions for Custom Metrics
+# -------------------------------------
+def custom_precision_metric():
+    return ContextualPrecisionMetric(
+        evaluation_template=CustomContextualPrecisionPrompt,
+        async_mode=False
+    )
+
+def custom_recall_metric():
+    return ContextualRecallMetric(
+        evaluation_template=CustomContextualRecallPrompt,
+        async_mode=False
+    )
+
+def custom_relevancy_metric():
+    return ContextualRelevancyMetric(
+        evaluation_template=CustomVerdictsTemplate,
+        async_mode=False
+    )
+
+def custom_answer_relevancy_metric():
+    return AnswerRelevancyMetric(
+        evaluation_template=CustomAnswerRelevancyTemplate,
+        async_mode=False
+    )
+
+def custom_faithfulness_metric():
+    return FaithfulnessMetric(
+        evaluation_template=CustomFaithfulnessTemplate,
+        async_mode=False
+    )
+
+# -------------------------------------
+# Multiprocessing Worker and Metric Runner
+# -------------------------------------
+def worker(metric_cls_or_factory, test_case, queue):
     try:
-        # Instantiate a fresh metric object in the worker process
-        metric = metric_cls(async_mode=False)
+        metric = metric_cls_or_factory() if callable(metric_cls_or_factory) else metric_cls_or_factory(async_mode=False)
         metric.measure(test_case)
         queue.put(metric.score)
     except Exception as e:
         queue.put(e)
 
-def measure_metric(metric_cls, test_case, timeout=180, retries=3):
-    """
-    Runs the blocking metric.measure(test_case) in a separate process with a timeout.
-    Retries up to 'retries' times if it times out or if an exception is raised.
-    Returns metric.score if successful, otherwise None.
-    """
+def measure_metric(metric_cls_or_factory, test_case, timeout=180, retries=3):
     for attempt in range(1, retries + 1):
         result_queue = mp.Queue()
-        process = mp.Process(target=worker, args=(metric_cls, test_case, result_queue))
+        process = mp.Process(target=worker, args=(metric_cls_or_factory, test_case, result_queue))
         process.start()
         process.join(timeout)
         if process.is_alive():
             process.terminate()
             process.join()
-            print(f"Attempt {attempt} for {metric_cls.__name__} timed out after {timeout} seconds.")
+            print(f"⚠️ Attempt {attempt} for {getattr(metric_cls_or_factory, '__name__', str(metric_cls_or_factory))} timed out after {timeout} seconds.")
         else:
             try:
                 result = result_queue.get_nowait()
                 if isinstance(result, Exception):
-                    print(f"Attempt {attempt} for {metric_cls.__name__} raised exception: {result}")
+                    print(f"❌ Attempt {attempt} raised exception: {result}")
                 else:
                     return result
             except Exception as e:
-                print(f"Attempt {attempt} for {metric_cls.__name__} failed to get result: {e}")
+                print(f"❌ Attempt {attempt} failed to retrieve result: {e}")
     return None
 
+# -------------------------------------
+# Test Case Processing
+# -------------------------------------
 def process_test_case(case):
-    """
-    Processes a single test case synchronously:
-      - Creates the appropriate LLMTestCase objects,
-      - Calls each metric's measure() method (via measure_metric) sequentially,
-      - Prints the time taken for each metric.
-    Returns a dictionary containing the test case information and metric scores.
-    """
     start_time = time.time()
-    
-    # Create LLMTestCase objects for each metric's requirements
+
     test_case_answer = LLMTestCase(
         input=case["input_question"],
         actual_output=case["actual_output"]
@@ -81,36 +112,22 @@ def process_test_case(case):
         actual_output=case["actual_output"],
         retrieval_context=case["retrieval_context"]
     )
-    
-    # Measure each metric sequentially and print timing information
-    start_metric = time.time()
-    precision_score = measure_metric(ContextualPrecisionMetric, test_case_contextual)
-    precision_time = time.time() - start_metric
-    print(f"✅ Precision score measured in {precision_time:.2f} seconds.")
-    
-    start_metric = time.time()
-    recall_score = measure_metric(ContextualRecallMetric, test_case_contextual)
-    recall_time = time.time() - start_metric
-    print(f"✅ Recall score measured in {recall_time:.2f} seconds.")
-    
-    start_metric = time.time()
-    relevancy_score = measure_metric(ContextualRelevancyMetric, test_case_relevancy)
-    relevancy_time = time.time() - start_metric
-    print(f"✅ Contextual relevancy score measured in {relevancy_time:.2f} seconds.")
-    
-    start_metric = time.time()
-    answer_score = measure_metric(AnswerRelevancyMetric, test_case_answer)
-    answer_time = time.time() - start_metric
-    print(f"✅ Answer relevancy score measured in {answer_time:.2f} seconds.")
-    
-    start_metric = time.time()
-    faithfulness_score = measure_metric(FaithfulnessMetric, test_case_faithfulness)
-    faithfulness_time = time.time() - start_metric
-    print(f"✅ Faithfulness score measured in {faithfulness_time:.2f} seconds.")
-    
-    total_time = time.time() - start_time
-    print(f"✅ Test case '{case['input_question']}' completed in {total_time:.2f} seconds.")
-    
+
+    precision_score = measure_metric(custom_precision_metric, test_case_contextual)
+    print(f"✅ Precision measured in {time.time() - start_time:.2f}s")
+
+    recall_score = measure_metric(custom_recall_metric, test_case_contextual)
+    print(f"✅ Recall measured in {time.time() - start_time:.2f}s")
+
+    relevancy_score = measure_metric(custom_relevancy_metric, test_case_relevancy)
+    print(f"✅ Contextual relevancy measured in {time.time() - start_time:.2f}s")
+
+    answer_score = measure_metric(custom_answer_relevancy_metric, test_case_answer)
+    print(f"✅ Answer relevancy measured in {time.time() - start_time:.2f}s")
+
+    faithfulness_score = measure_metric(custom_faithfulness_metric, test_case_faithfulness)
+    print(f"✅ Faithfulness measured in {time.time() - start_time:.2f}s")
+
     return {
         "input_question": case["input_question"],
         "actual_output": case["actual_output"],
@@ -123,29 +140,28 @@ def process_test_case(case):
         "faithfulness": faithfulness_score
     }
 
+# -------------------------------------
+# Main Runner
+# -------------------------------------
 def main():
-    # Load test cases from the JSON file
-    json_path = "ragflow_python/baseline_model/test_case_output/test_cases_score_20250401_203536.json"
+    json_path = "ragflow_python/baseline_model/test_case_output/test_cases_output_new.json"
     with open(json_path, "r") as f:
         test_cases = json.load(f)
-    
+
     scores_list = []
     total_cases = len(test_cases)
-    
+
     for idx, case in enumerate(test_cases, start=1):
         scores = process_test_case(case)
         scores_list.append(scores)
         current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"Current time: {current_time_str} | Processed test case {idx} out of {total_cases}")
-    
-    # Save the results to a timestamped JSON file
+        print(f"🕒 {current_time_str} | Processed test case {idx}/{total_cases}")
+
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_json_path = f"ragflow_python/baseline_model/test_scores/test_cases_score_{timestamp}.json"
-    
-    with open(output_json_path, "w") as f:
+    output_path = f"ragflow_python/baseline_model/test_scores/test_cases_score_{timestamp}.json"
+    with open(output_path, "w") as f:
         json.dump(scores_list, f, indent=2)
-    
-    print("✅ All test cases processed successfully and scores saved to", output_json_path)
+    print("✅ All test cases evaluated and saved to", output_path)
 
 if __name__ == "__main__":
     main()
