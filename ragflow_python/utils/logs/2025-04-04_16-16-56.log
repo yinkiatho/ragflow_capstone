@@ -1,0 +1,79 @@
+2025-04-04 16:17:00,088 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-04 16:17:01,653 - INFO - testing_goldens - testing_goldens.py:94 - Loading Chunks from Knowledge Base
+2025-04-04 16:19:00,877 - INFO - testing_goldens - testing_goldens.py:112 - Saved chunks to C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\data\chunks_data.json
+2025-04-04 16:19:00,940 - INFO - testing_goldens - testing_goldens.py:123 - Loaded total of 17893 Chunks
+2025-04-04 16:19:07,436 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:08,561 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:09,232 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:10,271 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:11,132 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:11,717 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:12,359 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:13,051 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:13,473 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:13,933 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:14,628 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:14,786 - INFO - analyzer_engine - analyzer_engine.py:62 - nlp_engine not provided, creating default.
+2025-04-04 16:19:15,828 - INFO - nlp_engine_provider - nlp_engine_provider.py:101 - Created NLP engine: spacy. Loaded models: ['en']
+2025-04-04 16:19:15,828 - INFO - analyzer_engine - analyzer_engine.py:77 - registry not provided, creating default.
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsBankRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsLicenseRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsItinRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsPassportRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsSsnRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: NhsRecognizer
+2025-04-04 16:19:15,833 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UkNinoRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SgFinRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAbnRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAcnRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuTfnRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuMedicareRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPanRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InAadhaarRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVehicleRegistrationRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPassportRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNifRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNieRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItDriverLicenseRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItFiscalCodeRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItVatCodeRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItIdentityCardRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItPassportRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PlPeselRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CryptoRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: DateRecognizer
+2025-04-04 16:19:15,834 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EmailRecognizer
+2025-04-04 16:19:15,835 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IbanRecognizer
+2025-04-04 16:19:15,835 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IpRecognizer
+2025-04-04 16:19:15,836 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: MedicalLicenseRecognizer
+2025-04-04 16:19:15,836 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PhoneRecognizer
+2025-04-04 16:19:15,836 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UrlRecognizer
+2025-04-04 16:19:15,837 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVoterRecognizer
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: es, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: pl, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNifRecognizer supported languages: es, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNieRecognizer supported languages: es, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItDriverLicenseRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItFiscalCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItVatCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItIdentityCardRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItPassportRecognizer supported languages: it, registry supported languages: en
+2025-04-04 16:19:15,837 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - PlPeselRecognizer supported languages: pl, registry supported languages: en
+2025-04-04 16:19:15,837 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SpacyRecognizer
+2025-04-04 16:19:15,838 - INFO - testing_goldens - testing_goldens.py:223 - Testing Attack @ 2025-04-04 16:19:15.838246+08:00
+2025-04-04 16:19:16,710 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:16,930 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:17,261 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:17,914 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:18,158 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:18,425 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:19,088 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:19,333 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:19,651 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-04 16:19:19,676 - ERROR - RagFlow - RagFlow.py:262 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-04 16:19:19,690 - ERROR - RagFlow - RagFlow.py:262 - Error at Target Model Callback: Datasets use different embedding models."

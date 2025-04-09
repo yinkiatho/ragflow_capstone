@@ -1,0 +1,8 @@
+2025-04-08 14:48:32,793 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-08 14:48:34,201 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-08 14:48:34,361 - INFO - testing_goldens_mak - testing_goldens_mak.py:227 - Testing Attack @ 2025-04-08 14:48:34.361731+08:00
+2025-04-08 14:48:46,825 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001551A0712B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:48:46,826 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........

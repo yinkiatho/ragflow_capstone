@@ -1,0 +1,784 @@
+2025-04-05 12:25:34,116 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-05 12:25:35,501 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-05 12:25:45,408 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:46,882 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:47,786 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:49,724 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:50,999 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:52,019 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:53,081 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:55,428 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:56,433 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:57,126 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:25:58,394 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:00,195 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:01,688 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:02,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:04,234 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:05,308 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:07,449 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:08,951 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:09,901 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:12,633 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:13,655 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:15,522 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:16,578 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:17,468 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:19,869 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:20,819 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:22,947 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:23,957 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:24,769 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:26,665 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:27,829 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:29,548 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:30,834 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:31,879 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:32,567 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:34,353 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:35,589 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:36,614 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:40,082 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:41,195 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:42,780 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:44,225 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:45,068 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:45,732 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:46,592 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:47,762 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:48,736 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:50,762 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:51,928 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:53,418 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:54,472 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:55,329 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:56,563 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:57,403 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:58,821 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:26:59,751 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:00,680 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:01,304 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:02,631 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:03,550 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:05,156 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:06,202 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:07,743 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:08,693 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:09,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:10,736 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:11,916 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:12,821 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:14,003 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:14,639 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:15,625 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:17,010 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:18,616 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:19,766 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:21,026 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:22,864 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:23,851 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:24,750 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:26,797 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:27,869 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:28,800 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:30,671 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:31,992 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:33,720 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:34,995 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:36,217 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:37,267 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:39,104 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:40,424 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:41,366 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:43,593 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:44,963 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:46,349 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:47,716 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:48,658 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:49,607 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:51,392 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:52,342 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:53,172 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:54,990 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:56,268 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:58,167 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:27:59,377 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:01,483 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:02,538 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:03,445 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:05,627 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:06,766 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:08,647 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:09,644 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:10,293 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:11,020 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:12,518 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:13,284 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:15,335 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:16,314 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:17,733 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:18,544 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:19,371 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:20,991 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:21,204 - INFO - analyzer_engine - analyzer_engine.py:62 - nlp_engine not provided, creating default.
+2025-04-05 12:28:22,095 - INFO - nlp_engine_provider - nlp_engine_provider.py:101 - Created NLP engine: spacy. Loaded models: ['en']
+2025-04-05 12:28:22,095 - INFO - analyzer_engine - analyzer_engine.py:77 - registry not provided, creating default.
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsBankRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsLicenseRecognizer
+2025-04-05 12:28:22,100 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsItinRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsPassportRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsSsnRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: NhsRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UkNinoRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SgFinRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAbnRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAcnRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuTfnRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuMedicareRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPanRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InAadhaarRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVehicleRegistrationRecognizer
+2025-04-05 12:28:22,101 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPassportRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNifRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNieRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItDriverLicenseRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItFiscalCodeRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItVatCodeRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItIdentityCardRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItPassportRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PlPeselRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CryptoRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: DateRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EmailRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IbanRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IpRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: MedicalLicenseRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PhoneRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UrlRecognizer
+2025-04-05 12:28:22,102 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVoterRecognizer
+2025-04-05 12:28:22,102 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:28:22,102 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,102 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: pl, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNifRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNieRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItDriverLicenseRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItFiscalCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItVatCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItIdentityCardRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItPassportRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:28:22,103 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - PlPeselRecognizer supported languages: pl, registry supported languages: en
+2025-04-05 12:28:22,103 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SpacyRecognizer
+2025-04-05 12:28:22,103 - INFO - testing_goldens_mak - testing_goldens_mak.py:222 - Testing Attack @ 2025-04-05 12:28:22.103300+08:00
+2025-04-05 12:28:22,656 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:23,025 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:23,435 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:24,104 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:24,468 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:24,853 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:25,467 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:25,828 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:26,238 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:26,852 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:27,257 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:27,667 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:28,138 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:28,498 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:28,907 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:32,855 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:33,351 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:33,982 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:37,981 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:38,478 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:39,136 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:43,101 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:43,596 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:44,233 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:48,197 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:48,716 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:49,352 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:53,076 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:53,551 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:54,122 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:55,458 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:55,880 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:56,319 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:57,142 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:57,506 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:57,925 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:58,571 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:58,978 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:28:59,390 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:00,430 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:00,808 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:01,232 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:01,938 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:02,356 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:02,757 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:06,457 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:06,923 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:07,478 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:11,071 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:11,501 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:12,046 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:15,687 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:16,150 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:16,693 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:18,481 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:18,869 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:19,311 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:23,203 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:23,676 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:24,309 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:25,361 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:25,726 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:26,150 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:27,217 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:27,631 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:28,058 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:28,888 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:29,252 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:29,671 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:30,184 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:30,576 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:30,989 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:32,185 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:32,601 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:33,046 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:33,914 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:34,325 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:34,740 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:35,419 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:35,782 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:36,186 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:36,972 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:37,394 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:37,805 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:38,724 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:39,089 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:39,507 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:40,167 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:40,544 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:40,947 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:44,802 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:45,286 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:45,908 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:49,708 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:50,184 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:50,754 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:54,882 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:55,377 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:56,014 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:59,458 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:29:59,879 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:00,422 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:04,834 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:05,365 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:05,966 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:09,332 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:09,763 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:10,283 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:15,241 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:15,851 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:16,467 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:20,183 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:20,660 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:21,217 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:25,382 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:25,878 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:26,515 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:30,092 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:30,537 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:31,083 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:32,006 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:32,416 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:32,846 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:33,605 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:33,969 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:34,384 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:35,068 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:35,443 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:35,855 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:36,760 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:37,184 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:37,600 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:38,199 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:38,605 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:39,018 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:43,421 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:43,952 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:30:44,557 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:32:23,016 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=PromptCallableException("The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A950C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function\nthat accepts a prompt string, **kwargs, and returns a string.\n If you're using a custom LLM callable, please see docs\n here: https://go.guardrailsai.com/B1igEy3")>
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F39A950C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A950C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 32, in __call__
+    result = self._invoke_llm(
+             ^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\llm_providers.py", line 485, in _invoke_llm
+    llm_response = self.llm_api(*args, **kwargs)  # type: ignore
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 275, in target_model_callback_g
+    datasets = self.rag_object.list_datasets(name="nomic")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(ragflow_sdk.ragflow.RAGFlow.list_datasets) at 0x1f35d279f80>", line 138, in list_datasets
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 82, in list_datasets
+    res = self.get("/datasets",
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 38, in get
+    res = requests.get(url=self.api_url + path, params=params, headers=self.authorization_header,json=json)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A950C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 250, in step
+    llm_response = self.call(messages, api, output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 308, in trace_call_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 297, in trace_call_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 430, in call
+    llm_response = api_fn(messages=messages_source(messages))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 36, in __call__
+    raise PromptCallableException(
+guardrails.classes.llm.prompt_callable.PromptCallableException: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A950C80>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-05 12:32:23,021 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=PromptCallableException("The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8F9EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function\nthat accepts a prompt string, **kwargs, and returns a string.\n If you're using a custom LLM callable, please see docs\n here: https://go.guardrailsai.com/B1igEy3")>
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F39A8F9EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8F9EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 32, in __call__
+    result = self._invoke_llm(
+             ^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\llm_providers.py", line 485, in _invoke_llm
+    llm_response = self.llm_api(*args, **kwargs)  # type: ignore
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 275, in target_model_callback_g
+    datasets = self.rag_object.list_datasets(name="nomic")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(ragflow_sdk.ragflow.RAGFlow.list_datasets) at 0x1f35d279f80>", line 138, in list_datasets
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 82, in list_datasets
+    res = self.get("/datasets",
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 38, in get
+    res = requests.get(url=self.api_url + path, params=params, headers=self.authorization_header,json=json)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8F9EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 250, in step
+    llm_response = self.call(messages, api, output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 308, in trace_call_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 297, in trace_call_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 430, in call
+    llm_response = api_fn(messages=messages_source(messages))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 36, in __call__
+    raise PromptCallableException(
+guardrails.classes.llm.prompt_callable.PromptCallableException: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8F9EB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-05 12:32:23,022 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=PromptCallableException("The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8CED20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function\nthat accepts a prompt string, **kwargs, and returns a string.\n If you're using a custom LLM callable, please see docs\n here: https://go.guardrailsai.com/B1igEy3")>
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 497, in _make_request
+    conn.request(
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1091, in _send_output
+    self.send(msg)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\http\client.py", line 1035, in send
+    self.connect()
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001F39A8CED20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8CED20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 32, in __call__
+    result = self._invoke_llm(
+             ^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\llm_providers.py", line 485, in _invoke_llm
+    llm_response = self.llm_api(*args, **kwargs)  # type: ignore
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 275, in target_model_callback_g
+    datasets = self.rag_object.list_datasets(name="nomic")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(ragflow_sdk.ragflow.RAGFlow.list_datasets) at 0x1f35d279f80>", line 138, in list_datasets
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 82, in list_datasets
+    res = self.get("/datasets",
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ragflow_sdk\ragflow.py", line 38, in get
+    res = requests.get(url=self.api_url + path, params=params, headers=self.authorization_header,json=json)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8CED20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 250, in step
+    llm_response = self.call(messages, api, output)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 308, in trace_call_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 297, in trace_call_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 430, in call
+    llm_response = api_fn(messages=messages_source(messages))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\classes\llm\prompt_callable.py", line 36, in __call__
+    raise PromptCallableException(
+guardrails.classes.llm.prompt_callable.PromptCallableException: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True&name=nomic (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F39A8CED20>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3

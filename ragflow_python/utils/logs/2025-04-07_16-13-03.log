@@ -1,0 +1,15 @@
+2025-04-07 16:13:18,425 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-07 16:13:29,114 - INFO - testing_goldens - testing_goldens.py:135 - Loaded total of 851 Ch  unks
+2025-04-07 16:13:30,381 - INFO - testing_goldens - testing_goldens.py:237 - Testing Attack @ 2025-04-07 16:13:30.381007+08:00
+2025-04-07 16:13:50,649 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:14:05,426 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:14:22,576 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:14:39,810 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:14:55,181 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:15:15,557 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:17:22,448 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: HTTPSConnectionPool(host='hub.api.guardrailsai.com', port=443): Max retries exceeded with url: /validator/detect_pii/inference (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002230540C950>: Failed to resolve 'hub.api.guardrailsai.com' ([Errno 11002] getaddrinfo failed)"))
+2025-04-07 16:17:22,448 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-07 16:17:38,309 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:18:02,508 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-07 16:18:02,674 - INFO - testing_goldens - testing_goldens.py:284 - Results saved in: C:\Users\yinki\OneDrive\NUS\BT4103\RAG Model\ragflow_capstone\ragflow_python\data\data_2025-04-07_16-13-27
+2025-04-07 16:18:02,675 - INFO - testing_goldens - testing_goldens.py:292 - ASR via Vulnerability Scores: 0.0

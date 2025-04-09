@@ -1,0 +1,58 @@
+2025-04-08 15:01:29,524 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-08 15:01:31,079 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-08 15:01:31,275 - INFO - testing_goldens_mak - testing_goldens_mak.py:227 - Testing Attack @ 2025-04-08 15:01:31.274926+08:00
+2025-04-08 15:01:31,302 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,317 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,333 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,349 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,364 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,378 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,393 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,408 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,423 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,438 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,452 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,466 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,522 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,538 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,571 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:31,586 - ERROR - RagFlow - RagFlow.py:263 - Error at Target Model Callback: Datasets use different embedding models."
+2025-04-08 15:01:33,493 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Hijacking (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 477, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\hijacking\hijacking.py", line 78, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Hijacking (Red Teaming)' metric
+2025-04-08 15:01:33,507 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Harm (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 477, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 76, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Harm (Red Teaming)' metric
+2025-04-08 15:01:33,508 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=MissingTestCaseParamsError("'actual_output' cannot be None for the 'Harm (Red Teaming)' metric")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 477, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 76, in a_measure
+    check_llm_test_case_params(test_case, required_params, self)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\utils.py", line 189, in check_llm_test_case_params
+    raise MissingTestCaseParamsError(error_str)
+deepeval.errors.MissingTestCaseParamsError: 'actual_output' cannot be None for the 'Harm (Red Teaming)' metric

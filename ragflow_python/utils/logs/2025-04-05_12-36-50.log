@@ -1,0 +1,989 @@
+2025-04-05 12:36:55,967 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-05 12:36:57,499 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-05 12:37:07,053 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:08,533 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:09,364 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:10,687 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:12,020 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:12,957 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:13,802 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:15,519 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:16,536 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:17,492 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:20,280 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:21,763 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:23,308 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:24,412 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:25,662 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:26,445 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:28,336 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:29,544 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:30,308 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:31,778 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:33,197 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:34,801 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:36,194 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:37,336 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:38,361 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:40,562 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:41,656 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:42,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:44,683 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:46,117 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:48,116 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:49,032 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:49,923 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:50,632 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:52,983 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:54,097 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:55,137 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:57,228 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:37:58,499 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:00,260 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:01,253 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:03,179 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:04,717 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:05,765 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:06,929 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:09,065 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:10,265 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:11,108 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:13,319 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:14,234 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:16,035 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:17,943 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:18,732 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:20,285 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:21,320 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:23,036 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:24,281 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:25,216 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:26,185 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:27,001 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:28,894 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:29,744 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:30,761 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:33,825 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:35,230 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:36,737 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:38,089 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:39,043 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:40,695 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:41,731 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:43,672 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:44,839 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:45,654 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:46,873 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:49,826 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:50,938 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:54,020 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:55,394 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:57,447 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:38:59,147 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:00,229 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:01,127 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:02,788 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:03,933 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:04,839 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:06,114 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:07,453 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:09,017 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:10,493 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:11,538 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:12,273 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:13,863 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:15,081 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:16,089 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:17,443 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:18,897 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:20,474 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:21,752 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:22,650 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:24,740 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:25,814 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:26,628 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:27,548 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:28,568 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:29,470 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:29,987 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:31,175 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:32,784 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:34,169 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:35,219 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:37,233 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:38,356 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:40,048 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:41,060 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:42,087 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:44,471 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:45,687 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:46,704 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:49,429 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:49,594 - INFO - analyzer_engine - analyzer_engine.py:62 - nlp_engine not provided, creating default.
+2025-04-05 12:39:50,759 - INFO - nlp_engine_provider - nlp_engine_provider.py:101 - Created NLP engine: spacy. Loaded models: ['en']
+2025-04-05 12:39:50,759 - INFO - analyzer_engine - analyzer_engine.py:77 - registry not provided, creating default.
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CreditCardRecognizer
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsBankRecognizer
+2025-04-05 12:39:50,772 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsLicenseRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsItinRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsPassportRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UsSsnRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: NhsRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UkNinoRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SgFinRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAbnRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuAcnRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuTfnRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: AuMedicareRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPanRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InAadhaarRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVehicleRegistrationRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InPassportRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNifRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EsNieRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItDriverLicenseRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItFiscalCodeRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItVatCodeRecognizer
+2025-04-05 12:39:50,773 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItIdentityCardRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: ItPassportRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PlPeselRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: CryptoRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: DateRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: EmailRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IbanRecognizer
+2025-04-05 12:39:50,774 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: IpRecognizer
+2025-04-05 12:39:50,777 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: MedicalLicenseRecognizer
+2025-04-05 12:39:50,777 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: PhoneRecognizer
+2025-04-05 12:39:50,777 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: UrlRecognizer
+2025-04-05 12:39:50,777 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: InVoterRecognizer
+2025-04-05 12:39:50,777 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:39:50,777 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - CreditCardRecognizer supported languages: pl, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNifRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - EsNieRecognizer supported languages: es, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItDriverLicenseRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItFiscalCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItVatCodeRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItIdentityCardRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - ItPassportRecognizer supported languages: it, registry supported languages: en
+2025-04-05 12:39:50,778 - WARNING - recognizers_loader_utils - recognizers_loader_utils.py:119 - Recognizer not added to registry because language is not supported by registry - PlPeselRecognizer supported languages: pl, registry supported languages: en
+2025-04-05 12:39:50,778 - INFO - entity_recognizer - entity_recognizer.py:58 - Loaded recognizer: SpacyRecognizer
+2025-04-05 12:39:50,778 - INFO - testing_goldens_mak - testing_goldens_mak.py:222 - Testing Attack @ 2025-04-05 12:39:50.778805+08:00
+2025-04-05 12:39:51,679 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:52,106 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:52,569 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:53,816 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:54,203 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:54,647 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:55,834 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:56,244 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:56,702 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:57,584 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:57,982 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:58,409 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:59,297 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:39:59,693 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:00,124 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:00,971 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:01,401 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:01,828 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:02,725 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:03,106 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:03,545 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:04,249 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:04,634 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:05,050 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:05,994 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:06,373 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:06,816 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:07,494 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:07,869 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:08,302 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:09,126 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:09,502 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:09,936 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:10,810 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:11,189 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:11,619 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:12,618 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:13,014 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:13,472 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:14,129 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:14,553 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:15,001 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:15,924 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:16,305 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:16,744 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:17,612 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:17,993 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:18,419 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:19,318 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:19,707 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:20,136 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:21,164 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:21,561 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:21,998 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:22,821 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:23,261 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:23,721 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:24,835 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:25,237 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:25,677 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:30,230 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:30,787 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:31,413 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:35,861 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:36,384 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:37,046 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:40,969 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:41,477 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:42,053 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:45,807 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:46,256 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:46,819 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:50,803 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:51,336 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:51,929 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:55,481 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:55,934 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:40:56,473 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:00,288 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:00,783 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:01,374 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:03,075 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:03,497 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:03,971 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:04,754 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:05,131 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:05,563 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:06,794 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:07,194 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:07,653 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:08,691 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:09,124 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:09,558 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:10,391 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:10,772 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:11,211 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:11,836 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:12,225 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:12,659 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:13,867 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:14,251 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:14,706 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:15,668 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:16,098 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:16,539 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:17,574 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:17,955 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:18,393 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:19,368 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:19,747 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:20,193 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:21,288 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:21,679 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:22,117 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:25,778 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:26,214 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:26,783 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:29,065 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:29,496 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:29,962 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:33,875 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:34,425 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:35,002 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:38,152 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:38,600 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:39,122 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:41,318 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:41,767 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:42,225 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:44,038 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:44,439 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:44,902 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:48,312 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:48,761 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:49,296 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:50,934 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:51,386 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:51,855 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:52,781 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:53,209 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:53,679 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:54,760 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:55,155 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:55,611 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:56,638 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:57,018 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:57,454 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:58,387 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:58,766 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:59,197 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:41:59,894 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:00,317 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:00,732 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:01,716 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:02,145 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:02,580 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:03,476 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:03,858 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:04,288 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:05,885 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:06,278 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:06,733 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:08,162 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:08,629 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:09,103 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:09,985 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:10,413 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:10,842 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:15,176 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:15,711 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:16,392 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:20,539 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:21,040 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:21,698 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:23,587 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:24,004 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:24,477 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:28,367 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:28,865 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:29,446 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:33,279 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:33,756 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:34,333 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:35,028 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:35,452 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:35,857 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:36,793 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:37,220 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:37,651 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:38,236 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:38,727 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:39,158 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:39,818 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:40,241 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:40,660 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:41,459 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:41,889 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:42,313 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:42,897 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:43,290 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:43,720 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:44,410 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:44,786 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:45,188 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:46,111 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:46,492 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:46,929 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:47,617 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:48,004 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:48,433 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:49,348 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:49,744 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:50,187 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:54,180 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:54,661 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:55,255 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:58,590 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:59,036 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:42:59,565 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:03,334 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:03,795 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:04,356 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:08,055 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:08,562 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:09,165 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:13,471 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:14,016 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:14,680 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:18,354 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:18,793 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:19,346 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:21,292 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:21,682 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:22,142 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:26,692 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:27,245 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:27,911 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:32,077 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:32,587 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:33,257 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:38,159 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:38,791 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:39,429 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:43,170 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:43,649 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:44,212 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:45,963 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:46,343 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:46,800 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:50,566 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:51,034 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:51,591 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:52,611 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:52,991 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:53,424 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:54,168 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:54,555 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:54,975 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:55,770 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:56,192 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:56,628 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:57,592 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:57,994 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:43:58,427 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:44:00,568 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:44:01,001 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:44:01,477 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-05 12:44:21,349 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:44:29,753 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:44:29,759 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:44:29,759 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:44:29,760 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:44:31,819 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:44:31,832 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:44:31,835 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:44:31,836 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:44:31,849 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:44:31,863 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:44:53,906 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:45:02,149 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:45:02,150 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:45:02,150 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:02,151 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:04,207 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:04,208 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:04,223 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:04,223 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:04,239 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:04,253 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:19,481 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:45:27,649 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:45:27,650 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:45:27,650 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:27,650 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:29,700 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:29,701 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:29,716 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:29,716 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:29,730 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:29,744 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:45,465 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:45:53,935 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:45:53,935 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:45:53,936 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:53,936 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:55,983 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:55,984 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:55,999 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:56,000 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:45:56,013 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:45:56,027 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:13,065 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:46:21,745 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:46:21,746 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:46:21,746 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:21,746 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:23,802 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:23,816 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:23,830 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:23,831 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:23,846 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:23,860 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:47,165 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:46:57,344 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:46:57,346 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:46:57,346 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:57,346 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:59,388 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:59,388 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:59,404 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:59,405 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:46:59,419 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:46:59,433 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:47:25,411 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:47:34,909 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:47:34,910 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:47:34,910 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:47:34,910 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:47:36,977 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:47:36,977 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:47:36,992 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:47:36,993 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:47:37,006 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:47:37,021 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:00,131 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:48:21,323 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:48:21,324 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:48:21,324 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:48:21,324 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:48:23,378 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:23,392 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:23,393 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:48:23,407 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:23,408 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:23,421 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:48:57,945 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:49:08,694 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:49:08,695 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:49:08,695 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:08,695 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:10,739 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:10,739 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:10,755 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:10,756 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:10,770 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:10,784 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:35,571 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:49:44,517 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:49:44,518 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:49:44,518 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:44,518 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:46,576 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:46,576 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:46,592 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:46,593 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:49:46,606 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:49:46,621 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:10,136 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:50:19,290 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:50:19,291 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:50:19,291 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:50:19,291 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:50:21,345 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:21,345 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:21,361 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:21,362 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:50:21,375 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:21,389 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:50:53,202 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:51:03,165 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:51:03,166 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:51:03,166 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:51:03,166 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:51:05,213 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:51:05,213 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:51:05,226 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:51:05,227 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:51:05,240 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:51:05,253 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:52:00,415 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:52:09,862 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:52:09,862 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:52:09,862 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:52:09,863 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:52:11,909 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:52:11,924 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:52:11,924 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:52:11,925 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:52:11,939 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:52:11,954 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:53:05,802 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:53:15,765 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:53:15,766 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:53:15,766 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:53:15,766 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:53:17,815 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:53:17,816 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:53:17,831 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:53:17,832 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:53:17,846 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:53:17,861 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:54:13,670 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:54:22,815 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:54:22,816 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:54:22,816 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:54:22,817 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:54:24,874 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:54:24,874 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:54:24,890 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:54:24,891 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:54:24,905 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:54:24,919 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:55:26,132 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:55:36,769 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:55:36,770 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:55:36,770 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:55:36,771 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:55:38,838 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:55:38,839 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:55:38,854 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:55:38,855 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:55:38,869 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:55:38,883 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:56:43,909 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 12:56:57,028 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 12:56:57,029 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 12:56:57,029 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:56:57,029 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:56:59,089 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:56:59,089 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:56:59,105 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:56:59,106 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 12:56:59,120 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:56:59,135 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 12:58:47,624 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:00:05,035 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:00:05,038 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:00:05,038 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:00:05,038 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:00:07,113 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:00:07,114 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:00:07,130 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:00:07,131 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:00:07,144 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:00:07,158 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:01:06,266 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:01:20,007 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:01:20,008 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:01:20,008 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:01:20,008 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:01:22,085 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:01:22,085 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:01:22,101 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:01:22,102 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:01:22,115 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:01:22,130 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:02:40,077 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:02:54,706 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:02:54,707 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:02:54,707 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:02:54,707 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:02:56,776 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:02:56,776 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:02:56,792 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:02:56,792 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:02:56,807 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:02:56,821 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:03:51,472 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:04:04,846 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:04:04,846 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:04:04,847 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:04:04,847 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:04:06,892 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:04:06,892 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:04:06,907 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:04:06,909 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:04:06,923 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:04:06,937 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:05:06,316 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:05:19,655 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:05:19,656 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:05:19,656 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:05:19,656 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:05:21,721 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:05:21,723 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:05:21,737 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:05:21,738 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:05:21,753 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:05:21,767 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:06:40,274 - INFO - utils - utils.py:3056 - 
+LiteLLM completion() model= llama3.1:8b; provider = ollama
+2025-04-05 13:06:55,683 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-04-05 13:06:55,685 - INFO - utils - utils.py:1165 - Wrapper: Completed Call, calling success_handler
+2025-04-05 13:06:55,685 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:06:55,685 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:06:57,742 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:06:57,742 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:06:57,758 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:06:57,758 - INFO - cost_calculator - cost_calculator.py:591 - selected model name for cost calculation: ollama/llama3.1:8b
+2025-04-05 13:06:57,772 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:06:57,787 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-04-05 13:07:00,333 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=NotImplementedError('Local inference is not supported for LlamaGuard7B validator.')>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 269, in step
+    validated_output = self.validate(
+                       ^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 465, in validate
+    validated_output, metadata = validator_service.validate(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\__init__.py", line 91, in validate
+    return validator_service.validate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 459, in validate
+    value, metadata = self.run_validators(
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 355, in run_validators
+    validator_logs = self.run_validator(
+                     ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 66, in run_validator
+    result = self.run_validator_sync(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 33, in run_validator_sync
+    result = self.execute_validator(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\validator_service_base.py", line 70, in execute_validator
+    result = traced_validator(value, metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\validator_tracing.py", line 147, in trace_validator_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\validator_tracing.py", line 117, in trace_validator_wrapper
+    resp = fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails_grhub_llamaguard_7b\main.py", line 60, in validate
+    (classification, subclass) = self._inference(value)
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_base.py", line 272, in _inference
+    return self._inference_local(model_input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails_grhub_llamaguard_7b\main.py", line 95, in _inference_local
+    raise NotImplementedError("Local inference is not supported for LlamaGuard7B validator.")
+NotImplementedError: Local inference is not supported for LlamaGuard7B validator.
+2025-04-05 13:07:00,335 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=NotImplementedError('Local inference is not supported for LlamaGuard7B validator.')>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 269, in step
+    validated_output = self.validate(
+                       ^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 465, in validate
+    validated_output, metadata = validator_service.validate(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\__init__.py", line 91, in validate
+    return validator_service.validate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 459, in validate
+    value, metadata = self.run_validators(
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 355, in run_validators
+    validator_logs = self.run_validator(
+                     ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 66, in run_validator
+    result = self.run_validator_sync(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 33, in run_validator_sync
+    result = self.execute_validator(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\validator_service_base.py", line 70, in execute_validator
+    result = traced_validator(value, metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\validator_tracing.py", line 147, in trace_validator_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\validator_tracing.py", line 117, in trace_validator_wrapper
+    resp = fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails_grhub_llamaguard_7b\main.py", line 60, in validate
+    (classification, subclass) = self._inference(value)
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_base.py", line 272, in _inference
+    return self._inference_local(model_input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails_grhub_llamaguard_7b\main.py", line 95, in _inference_local
+    raise NotImplementedError("Local inference is not supported for LlamaGuard7B validator.")
+NotImplementedError: Local inference is not supported for LlamaGuard7B validator.
+2025-04-05 13:07:00,336 - ERROR - base_events - base_events.py:1820 - _GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=TypeError("SequentialValidatorService.run_validator_sync() missing 1 required keyword-only argument: 'validation_session_id'")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 462, in _a_attack
+    actual_output = await target_model_callback(attack.input)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\RagFlow.py", line 302, in target_model_callback_guardrails
+    validated_response = self.guard(
+                         ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 911, in __call__
+    return trace_guard_execution(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 206, in trace_guard_execution
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\guard_tracing.py", line 195, in trace_guard_execution
+    result = _execute_fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 792, in _execute
+    return guard_context.run(
+           ^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\common.py", line 100, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 771, in __exec
+    return self._exec(
+           ^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\guard.py", line 870, in _exec
+    call = runner(call_log=call_log, prompt_params=prompt_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 200, in __call__
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 170, in __call__
+    iteration = self.step(
+                ^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 104, in trace_step_wrapper
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\telemetry\runner_tracing.py", line 96, in trace_step_wrapper
+    response = fn(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 284, in step
+    raise e
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 269, in step
+    validated_output = self.validate(
+                       ^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\hub_telemetry\hub_tracing.py", line 150, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\run\runner.py", line 465, in validate
+    validated_output, metadata = validator_service.validate(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\__init__.py", line 91, in validate
+    return validator_service.validate(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 459, in validate
+    value, metadata = self.run_validators(
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\guardrails\validator_service\sequential_validator_service.py", line 371, in run_validators
+    rechecked_value = self.run_validator_sync(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SequentialValidatorService.run_validator_sync() missing 1 required keyword-only argument: 'validation_session_id'

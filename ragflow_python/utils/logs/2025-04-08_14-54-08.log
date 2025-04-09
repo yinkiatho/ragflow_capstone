@@ -1,0 +1,189 @@
+2025-04-08 14:54:13,090 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-08 14:54:14,337 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-08 14:54:14,492 - INFO - testing_goldens_mak - testing_goldens_mak.py:227 - Testing Attack @ 2025-04-08 14:54:14.492469+08:00
+2025-04-08 14:54:20,520 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890A96DBB0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:20,520 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:23,190 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:24,358 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:28,466 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890A9F3260>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:28,467 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:29,059 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:29,932 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:34,039 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890A9F3530>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:34,039 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:34,468 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:35,215 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:39,317 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AAF2510>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:39,318 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:39,980 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:40,847 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:44,927 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AAF3770>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:44,927 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:50,169 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:51,708 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:55,818 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890A9F1A90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:54:55,818 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:54:56,385 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:54:57,347 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:01,450 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AB26300>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:55:01,450 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:55:04,906 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:06,074 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:10,172 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AB27CE0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:55:10,172 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:55:10,800 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:11,661 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:15,771 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AB55670>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:55:15,771 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:55:16,468 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:17,457 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:21,545 - ERROR - RagFlow - RagFlow.py:325 - Error in model call back guardrails: The callable `fn` passed to `Guard(fn, ...)` failed with the following error: `HTTPConnectionPool(host='localhost', port=9380): Max retries exceeded with url: /api/v1/datasets?page=1&page_size=30&orderby=create_time&desc=True (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002890AB55F10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))`. Make sure that `fn` can be called as a function
+that accepts a prompt string, **kwargs, and returns a string.
+ If you're using a custom LLM callable, please see docs
+ here: https://go.guardrailsai.com/B1igEy3
+2025-04-08 14:55:21,545 - INFO - RagFlow - RagFlow.py:326 - Defense Activated, using defense reponses........
+2025-04-08 14:55:22,123 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-08 14:55:23,750 - ERROR - __init__ - __init__.py:154 - Failed to detach context
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\trace\__init__.py", line 589, in use_span
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\sdk\trace\__init__.py", line 1105, in start_as_current_span
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\telemetry.py", line 237, in capture_red_teamer_run
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 379, in a_scan
+    vulnerability_results_list = await asyncio.gather(*tasks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\context\__init__.py", line 152, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\context\contextvars_context.py", line 50, in detach
+    self._current_context.reset(token)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x000002894EAAA4D0> at 0x0000028904BF7700> was created in a different Context
+2025-04-08 14:55:23,781 - WARNING - __init__ - __init__.py:213 - Already shutdown, dropping span.
+2025-04-08 14:55:23,798 - ERROR - base_events - base_events.py:1820 - Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<RedTeamer._a_attack() done, defined at G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py:439> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\main.py", line 37, in main
+    loop.run_until_complete(run_test(generate_attacks=False,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1986, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\testing_bot\testing_goldens_mak.py", line 241, in run_test
+    results = red_teamer.scan(
+              ^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 120, in scan
+    return loop.run_until_complete(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 303, in __step
+    self.__step_run_and_handle_result(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\red_teaming\red_teamer.py", line 477, in _a_attack
+    await metric.a_measure(test_case)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 84, in a_measure
+    score, reason = await self._a_evaluate(test_case)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\metrics\red_teaming_metrics\harm\harm.py", line 110, in _a_evaluate
+    res: ReasonScore = await self.model.a_generate(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\CustomLLama.py", line 42, in a_generate
+    return self.generate(prompt, schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\CustomLLama.py", line 26, in generate
+    response = self.client.chat(model=self.model_name,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 333, in chat
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 178, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 118, in _request_raw
+    r = self._client.request(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_backends\sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

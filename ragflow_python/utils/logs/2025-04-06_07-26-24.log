@@ -1,0 +1,126 @@
+2025-04-06 07:26:28,148 - INFO - _client - _client.py:1025 - HTTP Request: GET https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json "HTTP/1.1 200 OK"
+2025-04-06 07:26:29,659 - INFO - testing_goldens_mak - testing_goldens_mak.py:122 - Loaded total of 851 Chunks
+2025-04-06 07:27:38,170 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-06 07:28:01,208 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-06 07:28:07,642 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-06 07:28:33,378 - ERROR - __init__ - __init__.py:154 - Failed to detach context
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\trace\__init__.py", line 589, in use_span
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\sdk\trace\__init__.py", line 1105, in start_as_current_span
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\telemetry.py", line 203, in capture_synthesizer_run
+    yield span
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\progress_context.py", line 53, in synthesizer_progress_context
+    yield progress_bar
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 422, in a_generate_goldens_from_contexts
+    await asyncio.gather(*tasks)
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\context\__init__.py", line 152, in detach
+    _RUNTIME_CONTEXT.detach(token)
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\opentelemetry\context\contextvars_context.py", line 50, in detach
+    self._current_context.reset(token)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: <Token var=<ContextVar name='current_context' default={} at 0x000001E86109A2F0> at 0x000001E816F0CDC0> was created in a different Context
+2025-04-06 07:28:33,447 - WARNING - __init__ - __init__.py:213 - Already shutdown, dropping span.
+2025-04-06 07:28:33,447 - ERROR - base_events - base_events.py:1820 - Task exception was never retrieved
+future: <Task finished name='Task-2' coro=<Synthesizer.task_wrapper() done, defined at G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py:990> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\main.py", line 37, in main
+    loop.run_until_complete(run_test(generate_attacks=True, fetch_chunks=False,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1986, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\testing_bot\testing_goldens_mak.py", line 166, in run_test
+    attacks = synthesizer.generate_goldens_from_contexts(contexts=[randomized_chunk_window],
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 276, in generate_goldens_from_contexts
+    loop.run_until_complete(
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\nest_asyncio.py", line 92, in run_until_complete
+    self._run_once()
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\nest_asyncio.py", line 133, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 303, in __step
+    self.__step_run_and_handle_result(exc)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 314, in __step_run_and_handle_result
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 992, in task_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 460, in _a_generate_from_context
+    evolved_input, evolutions_used = await self._a_evolve_input(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 887, in _a_evolve_input
+    evolved_input = await self._a_generate(prompt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\deepeval\synthesizer\synthesizer.py", line 978, in _a_generate
+    res: Response = await self.model.a_generate(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\CustomLLama.py", line 42, in a_generate
+    return self.generate(prompt, schema)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\BT4240\ragflow\ragflow_capstone\ragflow_python\src\CustomLLama.py", line 26, in generate
+    response = self.client.chat(model=self.model_name,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 333, in chat
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 178, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\ollama\_client.py", line 118, in _request_raw
+    r = self._client.request(*args, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpx\_transports\default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 136, in handle_request
+    raise exc
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_sync\http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\inventoryScanner\.venv\ragflow_capstone\Lib\site-packages\httpcore\_backends\sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

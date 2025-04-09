@@ -96,20 +96,20 @@ class RagFlowTester:
         
         # Guard Rails Dataset 
         self.guard = Guard().use_many(DetectPII(["EMAIL_ADDRESS", "PHONE_NUMBER"]),
-                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", on_fail="fix_reask"),
+                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", on_fail=OnFailAction.NOOP),
                                       LlamaGuard7B(policies=[LlamaGuard7B.POLICY__NO_ILLEGAL_DRUGS, 
                                                              LlamaGuard7B.POLICY__NO_VIOLENCE_HATE,
                                                              LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT, 
                                                              LlamaGuard7B.POLICY__NO_CRIMINAL_PLANNING,
                                                              LlamaGuard7B.POLICY__NO_GUNS_AND_ILLEGAL_WEAPONS, 
-                                                             LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], on_fail=OnFailAction.FIX_REASK))
+                                                             LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], on_fail=OnFailAction.NOOP))
         
         self.df_defense = []
         
         
     def test_rag(self, test_id: int, 
                        attack_type: Attack_Type=None, 
-                       defense_type: Defense_Type=None,
+                       defense_type: Defense_Type=None, 
                        is_attack: bool = False,
                        is_defense: bool = False):
         '''
@@ -237,13 +237,14 @@ class RagFlowTester:
             #print(prompt)
             testing_time = int(time.time() * 1000)
             if self.dataset_ids is None:
-                datasets = self.rag_object.list_datasets()
+                datasets = self.rag_object.list_datasets(name="nomic")
                 dataset_ids = []
                 for dataset in datasets:
                     dataset_ids.append(dataset.id)
                 self.dataset_ids = dataset_ids
             if self.session is None:
-                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
+                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", 
+                                                            dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
             rag_response = self.session.ask(question=prompt, stream=True)
@@ -255,7 +256,7 @@ class RagFlowTester:
                 response_content = ans.content
 
            # print(response_content)
-            logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            #logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
         except Exception as e:
@@ -272,7 +273,7 @@ class RagFlowTester:
             raise ValueError("Messages list is empty.")
 
         if self.dataset_ids is None:
-            datasets = self.rag_object.list_datasets()
+            datasets = self.rag_object.list_datasets(name="nomic")
             self.dataset_ids = [dataset.id for dataset in datasets]
 
         if self.session is None:
@@ -299,28 +300,35 @@ class RagFlowTester:
 
         messages = [{"role": "user", "content": prompt}]
         
-        validated_response = self.guard(
-            self.target_model_callback_g,
-            messages=messages,
-            prompt=prompt,  # Pass as a keyword argument
-            metadata={"original_prompt": prompt},
-            #stream=True
-        )
-        
-        response_str = validated_response.raw_llm_output
-        validated_output = validated_response.validated_output
-        logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
-        
-        if validated_output:
-            logger.info(f"Have validated output.....")
-            return validated_output
-        
-        else:
+        try:
+            validated_response = self.guard(
+                self.target_model_callback_g,
+                messages=messages,
+                prompt=prompt,  # Pass as a keyword argument
+                metadata={"original_prompt": prompt},
+                #stream=True
+            )
+            logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
+            response_str = validated_response.raw_llm_output
+            validated_output = validated_response.validated_output
+            
+            
+            if validated_response.validation_passed is True:
+                logger.info(f"Validation Passed......")
+                return validated_output
+            
+            else:
+                logger.info(f"Defense Activated, using defense reponses........")
+                return self.get_defense_response(prompt)
+                    
+        except Exception as e:
+            logger.error(f"Error in model call back guardrails: {e}")
             logger.info(f"Defense Activated, using defense reponses........")
             return self.get_defense_response(prompt)
+            
+    
+    
         
-        # except Exception as e:
-        #     logger.error(f"Error in model call back guardrails: {e}")
         
     
     def get_defense_response(self, prompt: str):
