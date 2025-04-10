@@ -1,8 +1,0 @@
-2025-03-10 17:03:48,364 - INFO - testing_goldens - testing_goldens.py:78 - Loaded total of 791 Chunks
-2025-03-10 17:03:51,508 - INFO - testing_goldens - testing_goldens.py:243 - Testing Attack @ 2025-03-10 17:03:51.508546+08:00
-2025-03-10 17:04:37,691 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-2025-03-10 17:04:50,268 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-2025-03-10 17:05:04,828 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-2025-03-10 17:05:05,132 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist
-2025-03-10 17:05:05,163 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist
-2025-03-10 17:05:05,192 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist

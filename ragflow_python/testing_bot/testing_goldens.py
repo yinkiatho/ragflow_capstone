@@ -388,7 +388,11 @@ async def run_test(generate_attacks=False, fetch_chunks=False, activate_defense=
         time_of_eval = timestamp
         experiment_id = i
         
-        attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'].value + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
+        if not generate_attacks:
+            attack_name, attacked_answer = base_attacks[i]['Vulnerability Type'] + "_" + base_attacks[i]['Attack Enhancement'].value, relevant_llm_test_case.actual_output
+        else: 
+            attack_name, attacked_answer = results_breakdown.iloc[i]['Vulnerability Type'].value + "_" + results_breakdown.iloc[i]['Attack Enhancement'], relevant_llm_test_case.actual_output
+            
         attacked_chunks = relevant_llm_test_case.retrieval_context
         
         # Extract metric scores

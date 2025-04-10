@@ -2,7 +2,10 @@ import json
 import time
 import multiprocessing as mp
 from datetime import datetime
+<<<<<<< HEAD
 import asyncio
+=======
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 
 from deepeval.metrics import (
     ContextualPrecisionMetric,
@@ -12,6 +15,7 @@ from deepeval.metrics import (
     FaithfulnessMetric
 )
 from deepeval.test_case import LLMTestCase
+<<<<<<< HEAD
 from deepeval.metrics.contextual_relevancy import ContextualRelevancyTemplate
 
 
@@ -221,10 +225,22 @@ Retrieval Context:
 JSON:
 """
 
+=======
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+
+from metrics_template.custom_contextual_precision import CustomContextualPrecisionPrompt
+from metrics_template.custom_contextual_recall import CustomContextualRecallPrompt
+from metrics_template.custom_contextual_relevancy import CustomVerdictsTemplate
+from metrics_template.custom_answer_relevancy import CustomAnswerRelevancyTemplate
+from metrics_template.custom_faithfulness import CustomFaithfulnessTemplate
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 
 # -------------------------------------
 # Factory Functions for Custom Metrics
 # -------------------------------------
+<<<<<<< HEAD
 def custom_relevancy_metric():
     return ContextualRelevancyMetric(
         evaluation_template=CustomVerdictsTemplate,
@@ -246,22 +262,50 @@ def custom_faithfulness_metric():
     )
 
 
+=======
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 def custom_precision_metric():
     return ContextualPrecisionMetric(
         evaluation_template=CustomContextualPrecisionPrompt,
         async_mode=False
     )
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 def custom_recall_metric():
     return ContextualRecallMetric(
         evaluation_template=CustomContextualRecallPrompt,
         async_mode=False
     )
 
+<<<<<<< HEAD
 
 # -------------------------------------
 # Multiprocessing Worker and Metric Runner Functions
+=======
+def custom_relevancy_metric():
+    return ContextualRelevancyMetric(
+        evaluation_template=CustomVerdictsTemplate,
+        async_mode=False
+    )
+
+def custom_answer_relevancy_metric():
+    return AnswerRelevancyMetric(
+        evaluation_template=CustomAnswerRelevancyTemplate,
+        async_mode=False
+    )
+
+def custom_faithfulness_metric():
+    return FaithfulnessMetric(
+        evaluation_template=CustomFaithfulnessTemplate,
+        async_mode=False
+    )
+
+# -------------------------------------
+# Multiprocessing Worker and Metric Runner
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 # -------------------------------------
 def worker(metric_cls_or_factory, test_case, queue):
     try:
@@ -271,7 +315,10 @@ def worker(metric_cls_or_factory, test_case, queue):
     except Exception as e:
         queue.put(e)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 def measure_metric(metric_cls_or_factory, test_case, timeout=180, retries=3):
     for attempt in range(1, retries + 1):
         result_queue = mp.Queue()
@@ -281,12 +328,17 @@ def measure_metric(metric_cls_or_factory, test_case, timeout=180, retries=3):
         if process.is_alive():
             process.terminate()
             process.join()
+<<<<<<< HEAD
             print(
                 f"Attempt {attempt} for {getattr(metric_cls_or_factory, '__name__', str(metric_cls_or_factory))} timed out after {timeout} seconds.")
+=======
+            print(f"⚠️ Attempt {attempt} for {getattr(metric_cls_or_factory, '__name__', str(metric_cls_or_factory))} timed out after {timeout} seconds.")
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
         else:
             try:
                 result = result_queue.get_nowait()
                 if isinstance(result, Exception):
+<<<<<<< HEAD
                     print(
                         f"Attempt {attempt} for {getattr(metric_cls_or_factory, '__name__', str(metric_cls_or_factory))} raised exception: {result}")
                 else:
@@ -298,6 +350,17 @@ def measure_metric(metric_cls_or_factory, test_case, timeout=180, retries=3):
 
 # -------------------------------------
 # Test Case Processing Logic
+=======
+                    print(f"❌ Attempt {attempt} raised exception: {result}")
+                else:
+                    return result
+            except Exception as e:
+                print(f"❌ Attempt {attempt} failed to retrieve result: {e}")
+    return None
+
+# -------------------------------------
+# Test Case Processing
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 # -------------------------------------
 def process_test_case(case):
     start_time = time.time()
@@ -323,6 +386,7 @@ def process_test_case(case):
         retrieval_context=case["retrieval_context"]
     )
 
+<<<<<<< HEAD
     start_metric = time.time()
     precision_score = measure_metric(custom_precision_metric, test_case_contextual)
     print(f"✅ Precision score measured in {time.time() - start_metric:.2f} seconds.")
@@ -344,6 +408,23 @@ def process_test_case(case):
     print(f"✅ Faithfulness score measured in {time.time() - start_metric:.2f} seconds.")
 
     print(f"✅ Test case '{case['input_question']}' completed in {time.time() - start_time:.2f} seconds.")
+=======
+    precision_score = measure_metric(custom_precision_metric, test_case_contextual)
+    print(f"✅ Precision measured in {time.time() - start_time:.2f}s")
+
+    recall_score = measure_metric(custom_recall_metric, test_case_contextual)
+    print(f"✅ Recall measured in {time.time() - start_time:.2f}s")
+
+    relevancy_score = measure_metric(custom_relevancy_metric, test_case_relevancy)
+    print(f"✅ Contextual relevancy measured in {time.time() - start_time:.2f}s")
+
+    answer_score = measure_metric(custom_answer_relevancy_metric, test_case_answer)
+    print(f"✅ Answer relevancy measured in {time.time() - start_time:.2f}s")
+
+    faithfulness_score = measure_metric(custom_faithfulness_metric, test_case_faithfulness)
+    print(f"✅ Faithfulness measured in {time.time() - start_time:.2f}s")
+
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
     return {
         "input_question": case["input_question"],
         "actual_output": case["actual_output"],
@@ -356,11 +437,15 @@ def process_test_case(case):
         "faithfulness": faithfulness_score
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 # -------------------------------------
 # Main Runner
 # -------------------------------------
 def main():
+<<<<<<< HEAD
     json_path = "test_cases_score_20250401_203536.json"
     with open(json_path, "r") as f:
         test_cases = json.load(f)
@@ -368,6 +453,12 @@ def main():
     # Uncomment to test on a subset:
     # test_cases = test_cases[:8]
 
+=======
+    json_path = "ragflow_python/baseline_model/test_case_output/test_cases_output_new.json"
+    with open(json_path, "r") as f:
+        test_cases = json.load(f)
+
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
     scores_list = []
     total_cases = len(test_cases)
 
@@ -375,6 +466,7 @@ def main():
         scores = process_test_case(case)
         scores_list.append(scores)
         current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+<<<<<<< HEAD
         print(f"Current time: {current_time_str} | Processed test case {idx} out of {total_cases}")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -382,6 +474,15 @@ def main():
     with open(output_json_path, "w") as f:
         json.dump(scores_list, f, indent=2)
     print("✅ All test cases processed successfully and scores saved to", output_json_path)
+=======
+        print(f"🕒 {current_time_str} | Processed test case {idx}/{total_cases}")
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_path = f"ragflow_python/baseline_model/test_scores/test_cases_score_{timestamp}.json"
+    with open(output_path, "w") as f:
+        json.dump(scores_list, f, indent=2)
+    print("✅ All test cases evaluated and saved to", output_path)
+>>>>>>> 41d234eeea2af76a7d3f8efc5bf422bab522ed4b
 
 
 if __name__ == "__main__":

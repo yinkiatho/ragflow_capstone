@@ -1,4 +1,0 @@
-2025-03-11 12:58:55,380 - INFO - testing_goldens - testing_goldens.py:84 - Loaded total of 791 Chunks
-2025-03-11 12:58:56,096 - INFO - testing_goldens - testing_goldens.py:251 - Testing Attack @ 2025-03-11 12:58:56.096280+08:00
-2025-03-11 12:59:03,633 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"
-2025-03-11 12:59:03,638 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 404 Not Found"

@@ -1,5 +1,0 @@
-2025-03-10 17:11:23,354 - INFO - testing_goldens - testing_goldens.py:78 - Loaded total of 791 Chunks
-2025-03-10 17:11:26,451 - INFO - testing_goldens - testing_goldens.py:243 - Testing Attack @ 2025-03-10 17:11:26.451746+08:00
-2025-03-10 17:11:26,552 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist
-2025-03-10 17:11:26,581 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist
-2025-03-10 17:11:26,610 - ERROR - RagFlow - RagFlow.py:240 - Error at Target Model Callback: `model_name` llama3.2:latest doesn't exist
