@@ -1,5 +1,0 @@
-2025-03-27 15:18:59,456 - INFO - testing_goldens - testing_goldens.py:142 - Loaded total of 791 Chunks
-2025-03-27 15:19:01,128 - INFO - testing_goldens - testing_goldens.py:242 - Testing Attack @ 2025-03-27 15:19:01.128741+08:00
-2025-03-27 15:19:12,317 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-2025-03-27 15:19:23,715 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
-2025-03-27 15:19:37,210 - INFO - _client - _client.py:1025 - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
