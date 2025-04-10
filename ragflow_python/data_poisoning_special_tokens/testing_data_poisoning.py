@@ -27,8 +27,8 @@ load_dotenv()
 json_data = []
 
 # change directory to defense_results_10_new_qa
-directory = "./defense_results_50_new_qa"
-num_of_chunks_to_mask = 50 # defense_results_10_new_qa num_of_chunks_to_mask = 10
+directory = "./defense_results_10_new_qa"
+num_of_chunks_to_mask = 10 # defense_results_10_new_qa num_of_chunks_to_mask = 10
 perplexity_threshold = 500
 is_new_qa_pair =  True # True for both cases
 
@@ -148,11 +148,9 @@ for filename in os.listdir(directory):
             data = json.load(f)  # Load JSON data into a dictionary
             json_data.append(data)
 
-# Run test cases in parallel
-test_cases = json_data
-MAX_WORKERS = min(5, len(test_cases))  # Limit to 5 workers or number of test cases
-with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-    list(executor.map(process_attack_results, test_cases))
+for test_case in json_data:
+    process_attack_results(test_case)
+    print(f"Processed test case {json_data.index(test_case) + 1} of {len(json_data)}")
 
 print("✅ All test cases processed successfully!")
 
