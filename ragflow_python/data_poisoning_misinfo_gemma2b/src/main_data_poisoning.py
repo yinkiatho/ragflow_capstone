@@ -12,9 +12,9 @@ data = data[["question", "expected answer"]].dropna()
 
 
 # PARAMS
-api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
-base_url = "http://127.0.0.1:9380"
-kb_name = "Sample 1" # <-- change to your KB name
+api_key = "YOUR RAGFLOW API KEY"
+base_url = "YOUR BASE URL"
+kb_name = "YOUR RAGFLOW KNOWLEDGE BASE NAME" # <-- change to your KB name
 k = 10
 path = './ragflow_test.txt' # create an empty file in the directory named "ragflow_test.txt" to hold the poisoned chunk and upload to the KB
                             # so that it doesn't get mixed up with other clean documents
