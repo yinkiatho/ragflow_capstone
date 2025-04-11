@@ -100,7 +100,7 @@ class RagFlowTester:
                                                          on_fail=OnFailAction.REASK),
                                       LlamaGuard7B(policies=[LlamaGuard7B.POLICY__NO_ILLEGAL_DRUGS, 
                                                              LlamaGuard7B.POLICY__NO_VIOLENCE_HATE,
-                                                             LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT, 
+                                                             LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT,
                                                              LlamaGuard7B.POLICY__NO_CRIMINAL_PLANNING,
                                                              LlamaGuard7B.POLICY__NO_GUNS_AND_ILLEGAL_WEAPONS, 
                                                              LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], 
@@ -111,7 +111,7 @@ class RagFlowTester:
         
     def test_rag(self, test_id: int, 
                        attack_type: Attack_Type=None, 
-                       defense_type: Defense_Type=None, 
+                       defense_type: Defense_Type=None,
                        is_attack: bool = False,
                        is_defense: bool = False):
         '''
@@ -128,8 +128,7 @@ class RagFlowTester:
             print(f"Queried Datasets: {[i.name for i in datasets]}")
             assistant = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=dataset_ids,
                                                     llm=self.llm, prompt=self.prompt)
-            session = assistant.create_session()
-            
+
             result_queries = []
             result_chunks = []
             chunk_query_params = []
@@ -137,7 +136,8 @@ class RagFlowTester:
             result_test_case = [] ## List[LLMTestCase]
             
             for test_case in self.test_cases.items():
-                
+                session = assistant.create_session()
+
                 # Querying using Chat Session
                 question, expected_answer = test_case.input, test_case.expected_output
                 logger.info(f"Asking: {question}, Expecting: {expected_answer}")
@@ -245,8 +245,7 @@ class RagFlowTester:
                     dataset_ids.append(dataset.id)
                 self.dataset_ids = dataset_ids
             if self.session is None:
-                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", 
-                                                            dataset_ids=self.dataset_ids,
+                self.session = self.rag_object.create_chat(f"Chat Assistant @ {testing_time}", dataset_ids=self.dataset_ids,
                                                             llm=self.llm, prompt=self.prompt).create_session()
 
             rag_response = self.session.ask(question=prompt, stream=True)
@@ -258,7 +257,7 @@ class RagFlowTester:
                 response_content = ans.content
 
            # print(response_content)
-            #logger.info(f"Prompt: {prompt}, Response: {response_content}")
+            logger.info(f"Prompt: {prompt}, Response: {response_content}")
             return response_content
         
         except Exception as e:
@@ -293,45 +292,38 @@ class RagFlowTester:
         for ans in rag_response:
             res = ans.content  # Yield content instead of returning a single string
         return res
-        
-    
+
     async def target_model_callback_guardrails(self, prompt: str) -> str:
         '''
         Wrapper around the target_model_callback to implement the guardrails
         '''
 
         messages = [{"role": "user", "content": prompt}]
-        
+
         try:
             validated_response = self.guard(
                 self.target_model_callback_g,
                 messages=messages,
                 prompt=prompt,  # Pass as a keyword argument
                 metadata={"original_prompt": prompt},
-                #stream=True
+                # stream=True
             )
             logger.info(f"Prompt: {prompt}, Guarded Response: {validated_response}")
             response_str = validated_response.raw_llm_output
             validated_output = validated_response.validated_output
-            
-            
+
             if validated_response.validation_passed is True:
                 logger.info(f"Validation Passed......")
                 return validated_output
-            
+
             else:
                 logger.info(f"Defense Activated, using defense reponses........")
                 return self.get_defense_response(prompt)
-                    
+
         except Exception as e:
             logger.error(f"Error in model call back guardrails: {e}")
             logger.info(f"Defense Activated, using defense reponses........")
             return self.get_defense_response(prompt)
-            
-    
-    
-        
-        
     
     def get_defense_response(self, prompt: str):
         '''
