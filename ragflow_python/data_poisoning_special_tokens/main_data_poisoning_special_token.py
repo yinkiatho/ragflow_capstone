@@ -6,9 +6,8 @@ from pyplexity import PerplexityModel, PerplexityProcessor
 import time
 
 
-data = pd.read_csv("qa.csv")
-data = data[["Question", "Corrected Answers"]].dropna()
-
+data = pd.read_json("path/to/json/file")
+data = data[["question", "expected answer"]].dropna()
 
 
 api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
@@ -43,8 +42,8 @@ poisoned_rate = []
 # ITERATION
 for index, row in data.iterrows():
     print(f"Case # {index + 1} / {len(data)}")
-    prompt = row['Question']
-    ground_truth = row["Corrected Answers"]
+    prompt = row["question"]
+    ground_truth = row["expected answer"]
     simulator = DataPoisoningAttack(api_key, base_url, kb_name, prompt, ground_truth, k, path, display_name, special_tokens, n, chat_id, threshold, model)
     simulator.collect_data()
     simulator.save_results_to_json()
