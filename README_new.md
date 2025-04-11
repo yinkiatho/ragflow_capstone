@@ -60,8 +60,8 @@ This repository contains an end-to-end attack and defense implementations on a R
 You will need to have access to all of the following to run attack and defense scripts:
 1. `supabase API Key`
 2. `supabase URL`
-3. `Ragflow API Key`  
-
+3. `Ragflow API Key`
+4. `Ollama Base URL` OR the base url for other locally deployed LLMs
 
 After installing all the necessary package, we need to run the following commands in the terminal:  
 
