@@ -67,7 +67,7 @@ You will need to have access to all of the following to run attack and defense s
 After installing all the necessary package, we need to run the following commands in the terminal:  
 
 ### Data Poisoning with Special Tokens
-To collect results for attack and defense, run the following command in ~/ragflow_python/data_poisoning_special_tokens:  
+To collect results for attack and defense, run the following command in ~/ragflow_python/data_poisoning_special_tokens/src:  
 ```bash
 python main_data_poisoning_special_token.py
 ```
