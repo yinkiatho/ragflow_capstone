@@ -11,7 +11,8 @@ This repository contains an end-to-end attack and defense implementations on a R
 - RAGFlow system setup 
 - Baseline RAG system evaluations using .......
 - Generation Attacks using DeepEval, Ollama locally-hosted LLMs and Guardrails AI for Generation Attack Defenses
-- Data Poisoning Attacks using .......
+- Data Poisoning Attacks using special tokens with Perplexity-filtering defense
+- Data Poisoning Attacks using chunks that carry misinformation
 - Uploading of data to Supabase
 
 ## Prerequisites
