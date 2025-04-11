@@ -169,16 +169,6 @@ class DataPoisoningAttack:
         print("attack completed")
         post_attack_llm_ans = self.conduct_chat_session()
 
-
-        '''
-        INSERT DEFENSE FUNCTIONS:
-
-        1. mask the post att chunks with perplexity score >= 600
-        2. conduct chat again
-        3. collect post-defense retrieval + post-defense llm answer
-        4. recover the post att chunks
-
-        '''
         # Conduct defense
         threshold = self.THRESHOLD
         post_defense_chunks = self.post_defense_retrieval(threshold)
