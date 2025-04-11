@@ -68,9 +68,13 @@ To collect results for attack and defense, run the following command in ~/ragflo
 ```bash
 python main_data_poisoning_special_token.py
 ```
-This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA.  
+This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. The code for the main loop is demonstrated below:  
+![dp_ss_1](ragflow_python/documents/dp_ss_1.png)
 
-To collect results for ASR, DSR and Poison Rates, go to `collect_metrics.ipynb` and run the corresponding cells to save results into `.csv` format and save summary into `.txt` format.
+The code for each individual experiment is outlined by the following code in `DataPoisoningAttack.py`:
+![dp_ss_2](ragflow_python/documents/dp_ss_2.png)
+
+To collect results for ASR, DSR and Poison Rates, go to `collect_metrics.ipynb` and run all cells to save results into `.csv` format and save summary into `.txt` format.
 
 To run DeepEval results and upload them to supabase, run:
 ```bash
@@ -83,11 +87,18 @@ deepeval set-ollama gemma2:2b
 ```bash
 python testing_data_poisoning.py
 ```
+
+
 ### Data Poisoning with Misinformation attacks
 To collect results for attack and defense, run the following command in ~/ragflow_python/data_poisoning_misinfo_gemma2b/src:  
 ```bash
 main_data_poisoning.py
 ```
+The code for the main loop is demonstrated below:  
+![dp_ss_3](ragflow_python/documents/dp_ss_3.png)
+
+The code for each individual experiment is outlined by the following code in `DataPoisoningAttack.py`:
+![dp_ss_4](ragflow_python/documents/dp_ss_4.png)
 
 To collect results for ASR and Poison Rates, run:
 ```bash
