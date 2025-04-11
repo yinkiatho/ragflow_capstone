@@ -30,8 +30,8 @@ This repository contains an end-to-end attack and defense implementations on a R
 ├── ragflow_python/                                 # Main folder containing source codes
 │   ├── baseline_model/                             # Main folder containing source codes for evaluating baseline model
 │   ├── data/                                       # Locally saved results for Generation Attack scripts
-│   ├── data_poisoning_misinfo_gemma2b/             # Data Poisoning attack results for Gemma2b
-|   ├── data_poisoning_special_tokens/              # Data Poisoning attack results for using special tokens
+│   ├── data_poisoning_misinfo_gemma2b/             # Main folder containig source codes for Data Poisoning misinformation attack
+|   ├── data_poisoning_special_tokens/              # Main folder containig source codes for Data Poisoning special tokens attack and defense
 |   ├── documents/                                  # PDF files used in our Knowledge Base
 |   ├── src/                                        # RAG and Local LLM wrappers
 |   ├── testing_bot/                                # Attack/Defense scripts
@@ -61,7 +61,39 @@ This repository contains an end-to-end attack and defense implementations on a R
 
 
 ## Data Poisoning Attacks
+After installing all the necessary package, we need to run the following commands in the terminal:  
 
+### Data Poisoning with Special Tokens
+To collect results for attack and defense, run the following command in ~/ragflow_python/data_poisoning_special_tokens:  
+```bash
+python main_data_poisoning_special_token.py
+```
+This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA.  
+
+To collect results for ASR, DSR and Poison Rates, go to `collect_metrics.ipynb` and run the corresponding cells to save results into `.csv` format and save summary into `.txt` format.
+
+To run DeepEval results and upload them to supabase, run:
+```bash
+deepeval login
+```
+Optionally, you can set ur default model (gemma2:2b for eg.) in Deepeval via
+```bash
+deepeval set-ollama gemma2:2b
+```
+```bash
+python testing_data_poisoning.py
+```
+### Data Poisoning with Misinformation attacks
+To collect results for attack and defense, run the following command in ~/ragflow_python/data_poisoning_misinfo_gemma2b/src:  
+```bash
+main_data_poisoning.py
+```
+
+To collect results for ASR and Poison Rates, run:
+```bash
+python collect_asr.py
+```
+This will save results into `.csv` format and save summary into `.txt` format in the data results.
 
 ## 🚀 Generation Attacks 
 
