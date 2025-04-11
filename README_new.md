@@ -68,12 +68,14 @@ To collect results for attack and defense, run the following command in ~/ragflo
 ```bash
 python main_data_poisoning_special_token.py
 ```
-This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. The code for the main loop is demonstrated below:  
+This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. The following special tokens are inserted into the top 10 most relevant chunks:
+![dp_ss_6](ragflow_python/documents/dp_ss_6.png)
+
+The code for the main loop is demonstrated below:  
 ![dp_ss_1](ragflow_python/documents/dp_ss_1.png)
 
 The code for each individual experiment is outlined by the following code in `DataPoisoningAttack.py`:
 ![dp_ss_2](ragflow_python/documents/dp_ss_2.png)
-
 To collect results for ASR, DSR and Poison Rates, go to `collect_metrics.ipynb` and run all cells to save results into `.csv` format and save summary into `.txt` format.
 
 To run DeepEval results and upload them to supabase, run:
