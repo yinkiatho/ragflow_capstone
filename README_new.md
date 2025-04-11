@@ -51,14 +51,10 @@ This repository contains an end-to-end attack and defense implementations on a R
 1. Initialize the workspace and configuration:
    - Load the Docker Container from 
 
-
 2. Edit configuration files as needed:
    - `.env`: Environment variables, refer to the .env.example for list of environment keys required
 
-
 3. Start the services:
-
-
 
 ## Data Poisoning Attacks
 After installing all the necessary package, we need to run the following commands in the terminal:  
@@ -68,14 +64,8 @@ To collect results for attack and defense, run the following command in ~/ragflo
 ```bash
 python main_data_poisoning_special_token.py
 ```
-This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. The following special tokens are inserted into the top 10 most relevant chunks:
-![dp_ss_5](ragflow_python/documents/dp_ss_5.png)
+This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. 
 
-The code for the main loop is demonstrated below:  
-![dp_ss_1](ragflow_python/documents/dp_ss_1.png)
-
-The code for each individual experiment is outlined by the following code in `DataPoisoningAttack.py`:
-![dp_ss_2](ragflow_python/documents/dp_ss_2.png)
 To collect results for ASR, DSR and Poison Rates, go to `collect_metrics.ipynb` and run all cells to save results into `.csv` format and save summary into `.txt` format.
 
 To run DeepEval results and upload them to supabase, run:
@@ -96,14 +86,6 @@ To collect results for attack and defense, run the following command in ~/ragflo
 ```bash
 main_data_poisoning.py
 ```
-The code for generating poisoned chunks that carries misinformation is demonstrated below:  
-![dp_ss_6](ragflow_python/documents/dp_ss_6.png)
-
-The code for the main loop is demonstrated below:  
-![dp_ss_3](ragflow_python/documents/dp_ss_3.png)
-
-The code for each individual experiment is outlined by the following code in `DataPoisoningAttack.py`:
-![dp_ss_4](ragflow_python/documents/dp_ss_4.png)
 
 To collect results for ASR and Poison Rates, run:
 ```bash
