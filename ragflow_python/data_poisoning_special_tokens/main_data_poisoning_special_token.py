@@ -42,7 +42,7 @@ poisoned_rate = []
 
 # ITERATION
 for index, row in data.iterrows():
-    print(f"Case # {index + 1} / 26")
+    print(f"Case # {index + 1} / {len(data)}")
     prompt = row['Question']
     ground_truth = row["Corrected Answers"]
     simulator = DataPoisoningAttack(api_key, base_url, kb_name, prompt, ground_truth, k, path, display_name, special_tokens, n, chat_id, threshold, model)
