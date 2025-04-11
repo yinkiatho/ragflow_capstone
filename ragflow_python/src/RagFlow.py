@@ -94,15 +94,17 @@ class RagFlowTester:
         self.session = None
         self.dataset_ids = None
         
-        # Guard Rails Dataset 
+        # Guard Rails 
         self.guard = Guard().use_many(DetectPII(["EMAIL_ADDRESS", "PHONE_NUMBER"]),
-                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", on_fail=OnFailAction.NOOP),
+                                      QARelevanceLLMEval(llm_callable=f"ollama/{model_name}", 
+                                                         on_fail=OnFailAction.REASK),
                                       LlamaGuard7B(policies=[LlamaGuard7B.POLICY__NO_ILLEGAL_DRUGS, 
                                                              LlamaGuard7B.POLICY__NO_VIOLENCE_HATE,
                                                              LlamaGuard7B.POLICY__NO_SEXUAL_CONTENT, 
                                                              LlamaGuard7B.POLICY__NO_CRIMINAL_PLANNING,
                                                              LlamaGuard7B.POLICY__NO_GUNS_AND_ILLEGAL_WEAPONS, 
-                                                             LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], on_fail=OnFailAction.NOOP))
+                                                             LlamaGuard7B.POLICY__NO_ENOURAGE_SELF_HARM], 
+                                                            on_fail=OnFailAction.REASK))
         
         self.df_defense = []
         
