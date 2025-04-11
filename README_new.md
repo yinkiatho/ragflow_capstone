@@ -57,6 +57,12 @@ This repository contains an end-to-end attack and defense implementations on a R
 3. Start the services:
 
 ## Data Poisoning Attacks
+You will need to have access to all of the following to run attack and defense scripts:
+1. `supabase API Key`
+2. `supabase URL`
+3. `Ragflow API Key`  
+
+
 After installing all the necessary package, we need to run the following commands in the terminal:  
 
 ### Data Poisoning with Special Tokens
