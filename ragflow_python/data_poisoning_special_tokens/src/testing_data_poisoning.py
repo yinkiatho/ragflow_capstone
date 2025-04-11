@@ -27,7 +27,7 @@ load_dotenv()
 json_data = []
 
 # change directory to defense_results_10_new_qa
-directory = "./defense_results_10_new_qa"
+directory = "../defense_results_10_new_qa"
 num_of_chunks_to_mask = 10 # defense_results_10_new_qa num_of_chunks_to_mask = 10
 perplexity_threshold = 500
 is_new_qa_pair =  True # True for both cases
