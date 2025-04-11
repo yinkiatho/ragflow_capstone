@@ -10,11 +10,11 @@ data = pd.read_json("path/to/json/file")
 data = data[["question", "expected answer"]].dropna()
 
 
-api_key = "ragflow-Y1Y2NjZjQwZjVlNjExZWZiNTgxMDI0Mm"
-base_url = "http://127.0.0.1:9380"
-kb_name = "Sample 1" # <-- change to your KB name
+api_key = "YOUR RAGFLOW API KEY"
+base_url = "YOUR BASE URL"
+kb_name = "YOUR KNOWLEDGE BASE NAME" # <-- change to your KB name
 k = 50 # num of chunks to scan for perplexity
-path = './ragflow_test.txt'
+path = './ragflow_test.txt' # create a file names this in this directory
 display_name = "test_retrieve_chunks.txt"
 n = 5 # number of tests
 special_tokens = [
@@ -34,7 +34,7 @@ special_tokens = [
 threshold = 500
 model = PerplexityModel.from_str("bigrams-cord19")
 
-chat_id = "70563e72f38f11efb4780242ac110002"
+chat_id = "YOUR RAGFLOW CHAT ASSISTANT ID"
 succ_attacks = 0
 post_def_dirty = 0
 poisoned_rate = []
