@@ -48,10 +48,8 @@ chat_id = create_new_chat()
 # ITERATION
 for index, row in data.iterrows():
     print(f"Case {index} / {len(data)}")
-    prompt = row['Question']
-    ground_truth = row["Corrected Answers"]
-    # prompt = row["question"]
-    # ground_truth = row["expected answer"]
+    prompt = row["question"]
+    ground_truth = row["expected answer"]
 
     # create attack object
     simulator = DataPoisoningAttack(api_key, base_url, kb_name, prompt, ground_truth, k, path, display_name, llm, n, chat_id)
