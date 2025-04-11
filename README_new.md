@@ -69,7 +69,7 @@ To collect results for attack and defense, run the following command in ~/ragflo
 python main_data_poisoning_special_token.py
 ```
 This repeats the attack and defense experiments on all QA Pairs and stores the results in a `.json` file for each QA. The following special tokens are inserted into the top 10 most relevant chunks:
-![dp_ss_6](ragflow_python/documents/dp_ss_6.png)
+![dp_ss_5](ragflow_python/documents/dp_ss_5.png)
 
 The code for the main loop is demonstrated below:  
 ![dp_ss_1](ragflow_python/documents/dp_ss_1.png)
@@ -96,6 +96,9 @@ To collect results for attack and defense, run the following command in ~/ragflo
 ```bash
 main_data_poisoning.py
 ```
+The code for generating poisoned chunks that carries misinformation is demonstrated below:  
+![dp_ss_6](ragflow_python/documents/dp_ss_6.png)
+
 The code for the main loop is demonstrated below:  
 ![dp_ss_3](ragflow_python/documents/dp_ss_3.png)
 
