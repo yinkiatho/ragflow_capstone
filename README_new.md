@@ -57,6 +57,73 @@ This repository contains an end-to-end attack and defense implementations on a R
 
 3. Start the services:
 
+## Baseline Model
+
+This section describes the workflow for generating and evaluating QA test cases using our baseline model. The pipeline uses Ragflow for processing QA pairs and Deepeval for evaluation.
+
+### Prerequisites
+
+1. **QA Pairs File:**  
+   Ensure you have a JSON file named `QA_pairs_v1.json` located in the appropriate data folder. This file should contain objects with two fields:
+   - `"question"`: The question for the QA pair.
+   - `"expected answer"`: The expected answer for the corresponding question.
+
+2. **Ragflow Agent Setup:**  
+   Confirm that your Ragflow agent is properly configured with the desired settings. This includes setting up any necessary environment variables, credentials, or configuration files.
+
+3. **Python Environment:**  
+   Ensure that your Python environment is set up with all required dependencies (e.g., `deepeval`, `ragflow`, etc.).
+
+### Pipeline Overview
+
+1. **Generate Test Case Outputs:**
+   - Run the `generate_ragflow_qa_result.py` script.
+   - This script channels your QA pairs from `QA_pairs_v1.json` through Ragflow.
+   - The output is saved as a file (e.g., a JSON file) in the `test_case_output/` folder.  
+   - The resulting file includes details such as:
+     - `input_question`
+     - `actual_output`
+     - `expected_output`
+     - `retrieval_context`
+     - `session_id`
+   - **Example Command:**
+     ```bash
+     python src/generate_ragflow_qa_result.py
+     ```
+
+2. **Evaluate Test Cases with Deepeval:**
+   - Run the `test_cases_output_evaluation.py` script.
+   - This script reads the test cases from the file generated in the previous step.
+   - It then feeds these test cases to Deepeval for metric evaluation.
+   - The evaluation metrics include:
+     - `precision`
+     - `recall`
+     - `relevancy`
+     - `answer_relevancy`
+     - `faithfulness`
+   - The evaluation results are written to a file in the `test_scores/` folder named in the format `test_cases_score_YYYYMMDD_HHMMSS.json`, where the timestamp indicates when the processing completed.
+   - **Example Command:**
+     ```bash
+     python src/test_cases_output_evaluation.py
+     ```
+
+3. **Customize Prompts (Optional):**
+   - If you need to adjust the evaluation criteria, you can modify the LLM prompts in the `metrics_template/` folder.
+   - This allows you to fine-tune how relevancy, faithfulness, and other metrics are computed.
+
+### Output Details
+
+After running the evaluation, the resulting file in the `test_scores/` folder will include the following fields:
+- `input_question`
+- `actual_output`
+- `expected_output`
+- `retrieval_context`
+- `precision`
+- `recall`
+- `relevancy`
+- `answer_relevancy`
+- `faithfulness`
+
 ## Data Poisoning Attacks
 You will need to have access to all of the following to run attack and defense scripts:
 1. `supabase API Key`
