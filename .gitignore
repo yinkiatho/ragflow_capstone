@@ -1,3 +1,4 @@
 .env
 .deepeval
 .deepeval_telemetry.txt
+.deepeval-cache.json
