@@ -6,13 +6,13 @@ import os
 import requests
 
 
-data = pd.read_csv("../data/qa.csv", encoding="utf-8")
+data = pd.read_csv("path/to/json", encoding="utf-8")
 data = data[["Question", "Corrected Answers"]].dropna()
 # data = data[:1] # for smaller sampling
 
 # PARAMS
-api_key = 'ragflow-g5Y2UwOWFlZmM1NzExZWZhMzQ2MDI0Mm'
-base_url = "http://localhost:9380"
+api_key = 'YOUR API KEY'
+base_url = "YOUR BASE URL"
 kb_name = "Singapore Criminal Law" # <-- change to your KB name
 k = 5
 path = './ragflow_test.txt' # create an empty file in the directory named "ragflow_test.txt" to hold the poisoned chunk and upload to the KB
